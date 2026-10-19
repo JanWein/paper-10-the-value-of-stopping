@@ -1,0 +1,2438 @@
+{
+  "correlated": {
+    "local_root": {
+      "mask": 3,
+      "active": 1,
+      "components": [
+        {
+          "exact": "2258883/25000",
+          "decimal": 90.35532
+        },
+        {
+          "exact": "1281/20",
+          "decimal": 64.05
+        }
+      ],
+      "private": [
+        {
+          "exact": "2258883/25000",
+          "decimal": 90.35532
+        },
+        {
+          "exact": "1281/20",
+          "decimal": 64.05
+        }
+      ],
+      "payoff": {
+        "exact": "3860133/25000",
+        "decimal": 154.40532
+      }
+    },
+    "local_routes": [
+      {
+        "mask": 3,
+        "active": 0,
+        "components": [
+          {
+            "exact": "391/5",
+            "decimal": 78.2
+          },
+          {
+            "exact": "15337971/200000",
+            "decimal": 76.689855
+          }
+        ],
+        "private": [
+          {
+            "exact": "391/5",
+            "decimal": 78.2
+          },
+          {
+            "exact": "15337971/200000",
+            "decimal": 76.689855
+          }
+        ],
+        "payoff": {
+          "exact": "30977971/200000",
+          "decimal": 154.889855
+        }
+      },
+      {
+        "mask": 3,
+        "active": 1,
+        "components": [
+          {
+            "exact": "2258883/25000",
+            "decimal": 90.35532
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "private": [
+          {
+            "exact": "2258883/25000",
+            "decimal": 90.35532
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "payoff": {
+          "exact": "3860133/25000",
+          "decimal": 154.40532
+        }
+      },
+      {
+        "mask": 2,
+        "active": 1,
+        "components": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "private": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "payoff": {
+          "exact": "2481/20",
+          "decimal": 124.05
+        }
+      }
+    ],
+    "R1_marginal_toll": {
+      "exact": "1281/2000",
+      "decimal": 0.6405
+    },
+    "R1_rule_payoff": {
+      "exact": "3860133/25000",
+      "decimal": 154.40532
+    },
+    "prior": [
+      {
+        "exact": "29/50",
+        "decimal": 0.58
+      },
+      {
+        "exact": "1/50",
+        "decimal": 0.02
+      },
+      {
+        "exact": "1/50",
+        "decimal": 0.02
+      },
+      {
+        "exact": "19/50",
+        "decimal": 0.38
+      }
+    ],
+    "cases": [
+      {
+        "S": {
+          "exact": "100",
+          "decimal": 100.0
+        },
+        "r": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "q": {
+          "exact": "4/5",
+          "decimal": 0.8
+        },
+        "c": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "d": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "h": {
+          "exact": "1/100",
+          "decimal": 0.01
+        }
+      },
+      {
+        "S": {
+          "exact": "100",
+          "decimal": 100.0
+        },
+        "r": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "q": {
+          "exact": "19/20",
+          "decimal": 0.95
+        },
+        "c": {
+          "exact": "30",
+          "decimal": 30.0
+        },
+        "d": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "h": {
+          "exact": "1/100",
+          "decimal": 0.01
+        }
+      }
+    ],
+    "optimal": {
+      "root_mask": 3,
+      "root_active": 0,
+      "value": {
+        "exact": "249523577/1562500",
+        "decimal": 159.69508928
+      },
+      "components": [
+        {
+          "exact": "1069639201/12500000",
+          "decimal": 85.57113608
+        },
+        {
+          "exact": "185309883/2500000",
+          "decimal": 74.1239532
+        }
+      ],
+      "branches": [
+        {
+          "probability": "1/10000",
+          "survivors": "()",
+          "first_signal": "none",
+          "posterior": [
+            "29/50",
+            "1/50",
+            "1/50",
+            "19/50"
+          ],
+          "last_active": null,
+          "last_retained": "()",
+          "last_value": "0"
+        },
+        {
+          "probability": "99/10000",
+          "survivors": "(1,)",
+          "first_signal": "none",
+          "posterior": [
+            "29/50",
+            "1/50",
+            "1/50",
+            "19/50"
+          ],
+          "last_active": 1,
+          "last_retained": "(1,)",
+          "last_value": "1281/20"
+        },
+        {
+          "probability": "693/125000",
+          "survivors": "(0,)",
+          "first_signal": "0",
+          "posterior": [
+            "29/35",
+            "1/35",
+            "1/140",
+            "19/140"
+          ],
+          "last_active": null,
+          "last_retained": "()",
+          "last_value": "600/7"
+        },
+        {
+          "probability": "1089/250000",
+          "survivors": "(0,)",
+          "first_signal": "1",
+          "posterior": [
+            "29/110",
+            "1/110",
+            "2/55",
+            "38/55"
+          ],
+          "last_active": null,
+          "last_retained": "()",
+          "last_value": "800/11"
+        },
+        {
+          "probability": "68607/125000",
+          "survivors": "(0, 1)",
+          "first_signal": "0",
+          "posterior": [
+            "29/35",
+            "1/35",
+            "1/140",
+            "19/140"
+          ],
+          "last_active": null,
+          "last_retained": "()",
+          "last_value": "1185/7"
+        },
+        {
+          "probability": "107811/250000",
+          "survivors": "(0, 1)",
+          "first_signal": "1",
+          "posterior": [
+            "29/110",
+            "1/110",
+            "2/55",
+            "38/55"
+          ],
+          "last_active": 1,
+          "last_retained": "(0, 1)",
+          "last_value": "15387/100"
+        }
+      ]
+    },
+    "root_candidates": [
+      {
+        "root_mask": 0,
+        "root_active": null,
+        "value": {
+          "exact": "120",
+          "decimal": 120.0
+        },
+        "components": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "60",
+            "decimal": 60.0
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "29/50",
+              "1/50",
+              "1/50",
+              "19/50"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          }
+        ]
+      },
+      {
+        "root_mask": 1,
+        "root_active": null,
+        "value": {
+          "exact": "68709/500",
+          "decimal": 137.418
+        },
+        "components": [
+          {
+            "exact": "38709/500",
+            "decimal": 77.418
+          },
+          {
+            "exact": "60",
+            "decimal": 60.0
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1/100",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "29/50",
+              "1/50",
+              "1/50",
+              "19/50"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          },
+          {
+            "probability": "99/100",
+            "survivors": "(0,)",
+            "first_signal": "none",
+            "posterior": [
+              "29/50",
+              "1/50",
+              "1/50",
+              "19/50"
+            ],
+            "last_active": 0,
+            "last_retained": "(0,)",
+            "last_value": "391/5"
+          }
+        ]
+      },
+      {
+        "root_mask": 1,
+        "root_active": 0,
+        "value": {
+          "exact": "691/5",
+          "decimal": 138.2
+        },
+        "components": [
+          {
+            "exact": "391/5",
+            "decimal": 78.2
+          },
+          {
+            "exact": "60",
+            "decimal": 60.0
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1/100",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "29/50",
+              "1/50",
+              "1/50",
+              "19/50"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          },
+          {
+            "probability": "693/1250",
+            "survivors": "(0,)",
+            "first_signal": "0",
+            "posterior": [
+              "29/35",
+              "1/35",
+              "1/140",
+              "19/140"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "600/7"
+          },
+          {
+            "probability": "1089/2500",
+            "survivors": "(0,)",
+            "first_signal": "1",
+            "posterior": [
+              "29/110",
+              "1/110",
+              "2/55",
+              "38/55"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "800/11"
+          }
+        ]
+      },
+      {
+        "root_mask": 2,
+        "root_active": null,
+        "value": {
+          "exact": "246819/2000",
+          "decimal": 123.4095
+        },
+        "components": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "126819/2000",
+            "decimal": 63.4095
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1/100",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "29/50",
+              "1/50",
+              "1/50",
+              "19/50"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          },
+          {
+            "probability": "99/100",
+            "survivors": "(1,)",
+            "first_signal": "none",
+            "posterior": [
+              "29/50",
+              "1/50",
+              "1/50",
+              "19/50"
+            ],
+            "last_active": 1,
+            "last_retained": "(1,)",
+            "last_value": "1281/20"
+          }
+        ]
+      },
+      {
+        "root_mask": 2,
+        "root_active": 1,
+        "value": {
+          "exact": "2481/20",
+          "decimal": 124.05
+        },
+        "components": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1/100",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "29/50",
+              "1/50",
+              "1/50",
+              "19/50"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          },
+          {
+            "probability": "5841/10000",
+            "survivors": "(1,)",
+            "first_signal": "0",
+            "posterior": [
+              "551/590",
+              "1/590",
+              "19/590",
+              "19/590"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "5700/59"
+          },
+          {
+            "probability": "4059/10000",
+            "survivors": "(1,)",
+            "first_signal": "1",
+            "posterior": [
+              "29/410",
+              "19/410",
+              "1/410",
+              "361/410"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "3800/41"
+          }
+        ]
+      },
+      {
+        "root_mask": 3,
+        "root_active": null,
+        "value": {
+          "exact": "19147065597/125000000",
+          "decimal": 153.176524776
+        },
+        "components": [
+          {
+            "exact": "38709/500",
+            "decimal": 77.418
+          },
+          {
+            "exact": "9469815597/125000000",
+            "decimal": 75.758524776
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1/10000",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "29/50",
+              "1/50",
+              "1/50",
+              "19/50"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          },
+          {
+            "probability": "99/10000",
+            "survivors": "(1,)",
+            "first_signal": "none",
+            "posterior": [
+              "29/50",
+              "1/50",
+              "1/50",
+              "19/50"
+            ],
+            "last_active": 1,
+            "last_retained": "(1,)",
+            "last_value": "1281/20"
+          },
+          {
+            "probability": "99/10000",
+            "survivors": "(0,)",
+            "first_signal": "none",
+            "posterior": [
+              "29/50",
+              "1/50",
+              "1/50",
+              "19/50"
+            ],
+            "last_active": 0,
+            "last_retained": "(0,)",
+            "last_value": "391/5"
+          },
+          {
+            "probability": "9801/10000",
+            "survivors": "(0, 1)",
+            "first_signal": "none",
+            "posterior": [
+              "29/50",
+              "1/50",
+              "1/50",
+              "19/50"
+            ],
+            "last_active": 0,
+            "last_retained": "(0, 1)",
+            "last_value": "967811/6250"
+          }
+        ]
+      },
+      {
+        "root_mask": 3,
+        "root_active": 0,
+        "value": {
+          "exact": "249523577/1562500",
+          "decimal": 159.69508928
+        },
+        "components": [
+          {
+            "exact": "1069639201/12500000",
+            "decimal": 85.57113608
+          },
+          {
+            "exact": "185309883/2500000",
+            "decimal": 74.1239532
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1/10000",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "29/50",
+              "1/50",
+              "1/50",
+              "19/50"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          },
+          {
+            "probability": "99/10000",
+            "survivors": "(1,)",
+            "first_signal": "none",
+            "posterior": [
+              "29/50",
+              "1/50",
+              "1/50",
+              "19/50"
+            ],
+            "last_active": 1,
+            "last_retained": "(1,)",
+            "last_value": "1281/20"
+          },
+          {
+            "probability": "693/125000",
+            "survivors": "(0,)",
+            "first_signal": "0",
+            "posterior": [
+              "29/35",
+              "1/35",
+              "1/140",
+              "19/140"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "600/7"
+          },
+          {
+            "probability": "1089/250000",
+            "survivors": "(0,)",
+            "first_signal": "1",
+            "posterior": [
+              "29/110",
+              "1/110",
+              "2/55",
+              "38/55"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "800/11"
+          },
+          {
+            "probability": "68607/125000",
+            "survivors": "(0, 1)",
+            "first_signal": "0",
+            "posterior": [
+              "29/35",
+              "1/35",
+              "1/140",
+              "19/140"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "1185/7"
+          },
+          {
+            "probability": "107811/250000",
+            "survivors": "(0, 1)",
+            "first_signal": "1",
+            "posterior": [
+              "29/110",
+              "1/110",
+              "2/55",
+              "38/55"
+            ],
+            "last_active": 1,
+            "last_retained": "(0, 1)",
+            "last_value": "15387/100"
+          }
+        ]
+      },
+      {
+        "root_mask": 3,
+        "root_active": 1,
+        "value": {
+          "exact": "3860133/25000",
+          "decimal": 154.40532
+        },
+        "components": [
+          {
+            "exact": "2258883/25000",
+            "decimal": 90.35532
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1/10000",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "29/50",
+              "1/50",
+              "1/50",
+              "19/50"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          },
+          {
+            "probability": "5841/1000000",
+            "survivors": "(1,)",
+            "first_signal": "0",
+            "posterior": [
+              "551/590",
+              "1/590",
+              "19/590",
+              "19/590"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "5700/59"
+          },
+          {
+            "probability": "4059/1000000",
+            "survivors": "(1,)",
+            "first_signal": "1",
+            "posterior": [
+              "29/410",
+              "19/410",
+              "1/410",
+              "361/410"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "3800/41"
+          },
+          {
+            "probability": "99/10000",
+            "survivors": "(0,)",
+            "first_signal": "none",
+            "posterior": [
+              "29/50",
+              "1/50",
+              "1/50",
+              "19/50"
+            ],
+            "last_active": 0,
+            "last_retained": "(0,)",
+            "last_value": "391/5"
+          },
+          {
+            "probability": "578259/1000000",
+            "survivors": "(0, 1)",
+            "first_signal": "0",
+            "posterior": [
+              "551/590",
+              "1/590",
+              "19/590",
+              "19/590"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "11220/59"
+          },
+          {
+            "probability": "401841/1000000",
+            "survivors": "(0, 1)",
+            "first_signal": "1",
+            "posterior": [
+              "29/410",
+              "19/410",
+              "1/410",
+              "361/410"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "7420/41"
+          }
+        ]
+      }
+    ],
+    "positive_signal_branch": {
+      "probability_given_A_survival": {
+        "exact": "11/25",
+        "decimal": 0.44
+      },
+      "posterior": [
+        {
+          "exact": "29/110",
+          "decimal": 0.2636363636363636
+        },
+        {
+          "exact": "1/110",
+          "decimal": 0.00909090909090909
+        },
+        {
+          "exact": "2/55",
+          "decimal": 0.03636363636363636
+        },
+        {
+          "exact": "38/55",
+          "decimal": 0.6909090909090909
+        }
+      ],
+      "B_own_gain": {
+        "exact": "-119/20",
+        "decimal": -5.95
+      },
+      "A_cross_gain": {
+        "exact": "9401/550",
+        "decimal": 17.092727272727274
+      },
+      "joint_gain": {
+        "exact": "12257/1100",
+        "decimal": 11.142727272727273
+      },
+      "local_gain": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "last_optimal_plan": [
+        {
+          "exact": "15387/100",
+          "decimal": 153.87
+        },
+        1,
+        [
+          0,
+          1
+        ],
+        [
+          {
+            "exact": "4491/50",
+            "decimal": 89.82
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ]
+      ]
+    }
+  },
+  "perfect_correlation_zero_expiry": {
+    "local_root": {
+      "mask": 3,
+      "active": 1,
+      "components": [
+        {
+          "exact": "95",
+          "decimal": 95.0
+        },
+        {
+          "exact": "65",
+          "decimal": 65.0
+        }
+      ],
+      "private": [
+        {
+          "exact": "95",
+          "decimal": 95.0
+        },
+        {
+          "exact": "65",
+          "decimal": 65.0
+        }
+      ],
+      "payoff": {
+        "exact": "160",
+        "decimal": 160.0
+      }
+    },
+    "local_routes": [
+      {
+        "mask": 3,
+        "active": 0,
+        "components": [
+          {
+            "exact": "79",
+            "decimal": 79.0
+          },
+          {
+            "exact": "80",
+            "decimal": 80.0
+          }
+        ],
+        "private": [
+          {
+            "exact": "79",
+            "decimal": 79.0
+          },
+          {
+            "exact": "80",
+            "decimal": 80.0
+          }
+        ],
+        "payoff": {
+          "exact": "159",
+          "decimal": 159.0
+        }
+      },
+      {
+        "mask": 3,
+        "active": 1,
+        "components": [
+          {
+            "exact": "95",
+            "decimal": 95.0
+          },
+          {
+            "exact": "65",
+            "decimal": 65.0
+          }
+        ],
+        "private": [
+          {
+            "exact": "95",
+            "decimal": 95.0
+          },
+          {
+            "exact": "65",
+            "decimal": 65.0
+          }
+        ],
+        "payoff": {
+          "exact": "160",
+          "decimal": 160.0
+        }
+      },
+      {
+        "mask": 2,
+        "active": 1,
+        "components": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "65",
+            "decimal": 65.0
+          }
+        ],
+        "private": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "65",
+            "decimal": 65.0
+          }
+        ],
+        "payoff": {
+          "exact": "125",
+          "decimal": 125.0
+        }
+      }
+    ],
+    "R1_marginal_toll": {
+      "exact": "0",
+      "decimal": 0.0
+    },
+    "R1_rule_payoff": {
+      "exact": "160",
+      "decimal": 160.0
+    },
+    "prior": [
+      {
+        "exact": "3/5",
+        "decimal": 0.6
+      },
+      {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      {
+        "exact": "2/5",
+        "decimal": 0.4
+      }
+    ],
+    "cases": [
+      {
+        "S": {
+          "exact": "100",
+          "decimal": 100.0
+        },
+        "r": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "q": {
+          "exact": "4/5",
+          "decimal": 0.8
+        },
+        "c": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "d": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "h": {
+          "exact": "0",
+          "decimal": 0.0
+        }
+      },
+      {
+        "S": {
+          "exact": "100",
+          "decimal": 100.0
+        },
+        "r": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "q": {
+          "exact": "19/20",
+          "decimal": 0.95
+        },
+        "c": {
+          "exact": "30",
+          "decimal": 30.0
+        },
+        "d": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "h": {
+          "exact": "0",
+          "decimal": 0.0
+        }
+      }
+    ],
+    "optimal": {
+      "root_mask": 3,
+      "root_active": 0,
+      "value": {
+        "exact": "827/5",
+        "decimal": 165.4
+      },
+      "components": [
+        {
+          "exact": "444/5",
+          "decimal": 88.8
+        },
+        {
+          "exact": "383/5",
+          "decimal": 76.6
+        }
+      ],
+      "branches": [
+        {
+          "probability": "14/25",
+          "survivors": "(0, 1)",
+          "first_signal": "0",
+          "posterior": [
+            "6/7",
+            "0",
+            "0",
+            "1/7"
+          ],
+          "last_active": null,
+          "last_retained": "()",
+          "last_value": "1200/7"
+        },
+        {
+          "probability": "11/25",
+          "survivors": "(0, 1)",
+          "first_signal": "1",
+          "posterior": [
+            "3/11",
+            "0",
+            "0",
+            "8/11"
+          ],
+          "last_active": 1,
+          "last_retained": "(0, 1)",
+          "last_value": "160"
+        }
+      ]
+    },
+    "root_candidates": [
+      {
+        "root_mask": 0,
+        "root_active": null,
+        "value": {
+          "exact": "120",
+          "decimal": 120.0
+        },
+        "components": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "60",
+            "decimal": 60.0
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "3/5",
+              "0",
+              "0",
+              "2/5"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          }
+        ]
+      },
+      {
+        "root_mask": 1,
+        "root_active": null,
+        "value": {
+          "exact": "139",
+          "decimal": 139.0
+        },
+        "components": [
+          {
+            "exact": "79",
+            "decimal": 79.0
+          },
+          {
+            "exact": "60",
+            "decimal": 60.0
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1",
+            "survivors": "(0,)",
+            "first_signal": "none",
+            "posterior": [
+              "3/5",
+              "0",
+              "0",
+              "2/5"
+            ],
+            "last_active": 0,
+            "last_retained": "(0,)",
+            "last_value": "79"
+          }
+        ]
+      },
+      {
+        "root_mask": 1,
+        "root_active": 0,
+        "value": {
+          "exact": "139",
+          "decimal": 139.0
+        },
+        "components": [
+          {
+            "exact": "79",
+            "decimal": 79.0
+          },
+          {
+            "exact": "60",
+            "decimal": 60.0
+          }
+        ],
+        "branches": [
+          {
+            "probability": "14/25",
+            "survivors": "(0,)",
+            "first_signal": "0",
+            "posterior": [
+              "6/7",
+              "0",
+              "0",
+              "1/7"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "600/7"
+          },
+          {
+            "probability": "11/25",
+            "survivors": "(0,)",
+            "first_signal": "1",
+            "posterior": [
+              "3/11",
+              "0",
+              "0",
+              "8/11"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "800/11"
+          }
+        ]
+      },
+      {
+        "root_mask": 2,
+        "root_active": null,
+        "value": {
+          "exact": "125",
+          "decimal": 125.0
+        },
+        "components": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "65",
+            "decimal": 65.0
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1",
+            "survivors": "(1,)",
+            "first_signal": "none",
+            "posterior": [
+              "3/5",
+              "0",
+              "0",
+              "2/5"
+            ],
+            "last_active": 1,
+            "last_retained": "(1,)",
+            "last_value": "65"
+          }
+        ]
+      },
+      {
+        "root_mask": 2,
+        "root_active": 1,
+        "value": {
+          "exact": "125",
+          "decimal": 125.0
+        },
+        "components": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "65",
+            "decimal": 65.0
+          }
+        ],
+        "branches": [
+          {
+            "probability": "59/100",
+            "survivors": "(1,)",
+            "first_signal": "0",
+            "posterior": [
+              "57/59",
+              "0",
+              "0",
+              "2/59"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "5700/59"
+          },
+          {
+            "probability": "41/100",
+            "survivors": "(1,)",
+            "first_signal": "1",
+            "posterior": [
+              "3/41",
+              "0",
+              "0",
+              "38/41"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "3800/41"
+          }
+        ]
+      },
+      {
+        "root_mask": 3,
+        "root_active": null,
+        "value": {
+          "exact": "160",
+          "decimal": 160.0
+        },
+        "components": [
+          {
+            "exact": "95",
+            "decimal": 95.0
+          },
+          {
+            "exact": "65",
+            "decimal": 65.0
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1",
+            "survivors": "(0, 1)",
+            "first_signal": "none",
+            "posterior": [
+              "3/5",
+              "0",
+              "0",
+              "2/5"
+            ],
+            "last_active": 1,
+            "last_retained": "(0, 1)",
+            "last_value": "160"
+          }
+        ]
+      },
+      {
+        "root_mask": 3,
+        "root_active": 0,
+        "value": {
+          "exact": "827/5",
+          "decimal": 165.4
+        },
+        "components": [
+          {
+            "exact": "444/5",
+            "decimal": 88.8
+          },
+          {
+            "exact": "383/5",
+            "decimal": 76.6
+          }
+        ],
+        "branches": [
+          {
+            "probability": "14/25",
+            "survivors": "(0, 1)",
+            "first_signal": "0",
+            "posterior": [
+              "6/7",
+              "0",
+              "0",
+              "1/7"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "1200/7"
+          },
+          {
+            "probability": "11/25",
+            "survivors": "(0, 1)",
+            "first_signal": "1",
+            "posterior": [
+              "3/11",
+              "0",
+              "0",
+              "8/11"
+            ],
+            "last_active": 1,
+            "last_retained": "(0, 1)",
+            "last_value": "160"
+          }
+        ]
+      },
+      {
+        "root_mask": 3,
+        "root_active": 1,
+        "value": {
+          "exact": "160",
+          "decimal": 160.0
+        },
+        "components": [
+          {
+            "exact": "95",
+            "decimal": 95.0
+          },
+          {
+            "exact": "65",
+            "decimal": 65.0
+          }
+        ],
+        "branches": [
+          {
+            "probability": "59/100",
+            "survivors": "(0, 1)",
+            "first_signal": "0",
+            "posterior": [
+              "57/59",
+              "0",
+              "0",
+              "2/59"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "11400/59"
+          },
+          {
+            "probability": "41/100",
+            "survivors": "(0, 1)",
+            "first_signal": "1",
+            "posterior": [
+              "3/41",
+              "0",
+              "0",
+              "38/41"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "7600/41"
+          }
+        ]
+      }
+    ],
+    "positive_signal_branch": {
+      "probability_given_A_survival": {
+        "exact": "11/25",
+        "decimal": 0.44
+      },
+      "posterior": [
+        {
+          "exact": "3/11",
+          "decimal": 0.2727272727272727
+        },
+        {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        {
+          "exact": "8/11",
+          "decimal": 0.7272727272727273
+        }
+      ],
+      "B_own_gain": {
+        "exact": "-85/11",
+        "decimal": -7.7272727272727275
+      },
+      "A_cross_gain": {
+        "exact": "245/11",
+        "decimal": 22.272727272727273
+      },
+      "joint_gain": {
+        "exact": "160/11",
+        "decimal": 14.545454545454545
+      },
+      "local_gain": {
+        "exact": "0",
+        "decimal": 0.0
+      },
+      "last_optimal_plan": [
+        {
+          "exact": "160",
+          "decimal": 160.0
+        },
+        1,
+        [
+          0,
+          1
+        ],
+        [
+          {
+            "exact": "95",
+            "decimal": 95.0
+          },
+          {
+            "exact": "65",
+            "decimal": 65.0
+          }
+        ]
+      ]
+    }
+  },
+  "independent_same_marginals": {
+    "local_root": {
+      "mask": 3,
+      "active": 0,
+      "components": [
+        {
+          "exact": "391/5",
+          "decimal": 78.2
+        },
+        {
+          "exact": "126819/2000",
+          "decimal": 63.4095
+        }
+      ],
+      "private": [
+        {
+          "exact": "391/5",
+          "decimal": 78.2
+        },
+        {
+          "exact": "126819/2000",
+          "decimal": 63.4095
+        }
+      ],
+      "payoff": {
+        "exact": "283219/2000",
+        "decimal": 141.6095
+      }
+    },
+    "local_routes": [
+      {
+        "mask": 3,
+        "active": 0,
+        "components": [
+          {
+            "exact": "391/5",
+            "decimal": 78.2
+          },
+          {
+            "exact": "126819/2000",
+            "decimal": 63.4095
+          }
+        ],
+        "private": [
+          {
+            "exact": "391/5",
+            "decimal": 78.2
+          },
+          {
+            "exact": "126819/2000",
+            "decimal": 63.4095
+          }
+        ],
+        "payoff": {
+          "exact": "283219/2000",
+          "decimal": 141.6095
+        }
+      },
+      {
+        "mask": 3,
+        "active": 1,
+        "components": [
+          {
+            "exact": "38709/500",
+            "decimal": 77.418
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "private": [
+          {
+            "exact": "38709/500",
+            "decimal": 77.418
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "payoff": {
+          "exact": "35367/250",
+          "decimal": 141.468
+        }
+      },
+      {
+        "mask": 2,
+        "active": 1,
+        "components": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "private": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "payoff": {
+          "exact": "2481/20",
+          "decimal": 124.05
+        }
+      }
+    ],
+    "R1_marginal_toll": {
+      "exact": "1281/2000",
+      "decimal": 0.6405
+    },
+    "R1_rule_payoff": {
+      "exact": "283219/2000",
+      "decimal": 141.6095
+    },
+    "prior": [
+      {
+        "exact": "9/25",
+        "decimal": 0.36
+      },
+      {
+        "exact": "6/25",
+        "decimal": 0.24
+      },
+      {
+        "exact": "6/25",
+        "decimal": 0.24
+      },
+      {
+        "exact": "4/25",
+        "decimal": 0.16
+      }
+    ],
+    "cases": [
+      {
+        "S": {
+          "exact": "100",
+          "decimal": 100.0
+        },
+        "r": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "q": {
+          "exact": "4/5",
+          "decimal": 0.8
+        },
+        "c": {
+          "exact": "1",
+          "decimal": 1.0
+        },
+        "d": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "h": {
+          "exact": "1/100",
+          "decimal": 0.01
+        }
+      },
+      {
+        "S": {
+          "exact": "100",
+          "decimal": 100.0
+        },
+        "r": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "q": {
+          "exact": "19/20",
+          "decimal": 0.95
+        },
+        "c": {
+          "exact": "30",
+          "decimal": 30.0
+        },
+        "d": {
+          "exact": "0",
+          "decimal": 0.0
+        },
+        "h": {
+          "exact": "1/100",
+          "decimal": 0.01
+        }
+      }
+    ],
+    "optimal": {
+      "root_mask": 3,
+      "root_active": 0,
+      "value": {
+        "exact": "283219/2000",
+        "decimal": 141.6095
+      },
+      "components": [
+        {
+          "exact": "391/5",
+          "decimal": 78.2
+        },
+        {
+          "exact": "126819/2000",
+          "decimal": 63.4095
+        }
+      ],
+      "branches": [
+        {
+          "probability": "1/10000",
+          "survivors": "()",
+          "first_signal": "none",
+          "posterior": [
+            "9/25",
+            "6/25",
+            "6/25",
+            "4/25"
+          ],
+          "last_active": null,
+          "last_retained": "()",
+          "last_value": "0"
+        },
+        {
+          "probability": "99/10000",
+          "survivors": "(1,)",
+          "first_signal": "none",
+          "posterior": [
+            "9/25",
+            "6/25",
+            "6/25",
+            "4/25"
+          ],
+          "last_active": 1,
+          "last_retained": "(1,)",
+          "last_value": "1281/20"
+        },
+        {
+          "probability": "693/125000",
+          "survivors": "(0,)",
+          "first_signal": "0",
+          "posterior": [
+            "18/35",
+            "12/35",
+            "3/35",
+            "2/35"
+          ],
+          "last_active": null,
+          "last_retained": "()",
+          "last_value": "600/7"
+        },
+        {
+          "probability": "1089/250000",
+          "survivors": "(0,)",
+          "first_signal": "1",
+          "posterior": [
+            "9/55",
+            "6/55",
+            "24/55",
+            "16/55"
+          ],
+          "last_active": null,
+          "last_retained": "()",
+          "last_value": "800/11"
+        },
+        {
+          "probability": "68607/125000",
+          "survivors": "(0, 1)",
+          "first_signal": "0",
+          "posterior": [
+            "18/35",
+            "12/35",
+            "3/35",
+            "2/35"
+          ],
+          "last_active": 1,
+          "last_retained": "(1,)",
+          "last_value": "20967/140"
+        },
+        {
+          "probability": "107811/250000",
+          "survivors": "(0, 1)",
+          "first_signal": "1",
+          "posterior": [
+            "9/55",
+            "6/55",
+            "24/55",
+            "16/55"
+          ],
+          "last_active": 1,
+          "last_retained": "(1,)",
+          "last_value": "30091/220"
+        }
+      ]
+    },
+    "root_candidates": [
+      {
+        "root_mask": 0,
+        "root_active": null,
+        "value": {
+          "exact": "120",
+          "decimal": 120.0
+        },
+        "components": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "60",
+            "decimal": 60.0
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "9/25",
+              "6/25",
+              "6/25",
+              "4/25"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          }
+        ]
+      },
+      {
+        "root_mask": 1,
+        "root_active": null,
+        "value": {
+          "exact": "68709/500",
+          "decimal": 137.418
+        },
+        "components": [
+          {
+            "exact": "38709/500",
+            "decimal": 77.418
+          },
+          {
+            "exact": "60",
+            "decimal": 60.0
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1/100",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "9/25",
+              "6/25",
+              "6/25",
+              "4/25"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          },
+          {
+            "probability": "99/100",
+            "survivors": "(0,)",
+            "first_signal": "none",
+            "posterior": [
+              "9/25",
+              "6/25",
+              "6/25",
+              "4/25"
+            ],
+            "last_active": 0,
+            "last_retained": "(0,)",
+            "last_value": "391/5"
+          }
+        ]
+      },
+      {
+        "root_mask": 1,
+        "root_active": 0,
+        "value": {
+          "exact": "691/5",
+          "decimal": 138.2
+        },
+        "components": [
+          {
+            "exact": "391/5",
+            "decimal": 78.2
+          },
+          {
+            "exact": "60",
+            "decimal": 60.0
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1/100",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "9/25",
+              "6/25",
+              "6/25",
+              "4/25"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          },
+          {
+            "probability": "693/1250",
+            "survivors": "(0,)",
+            "first_signal": "0",
+            "posterior": [
+              "18/35",
+              "12/35",
+              "3/35",
+              "2/35"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "600/7"
+          },
+          {
+            "probability": "1089/2500",
+            "survivors": "(0,)",
+            "first_signal": "1",
+            "posterior": [
+              "9/55",
+              "6/55",
+              "24/55",
+              "16/55"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "800/11"
+          }
+        ]
+      },
+      {
+        "root_mask": 2,
+        "root_active": null,
+        "value": {
+          "exact": "246819/2000",
+          "decimal": 123.4095
+        },
+        "components": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "126819/2000",
+            "decimal": 63.4095
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1/100",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "9/25",
+              "6/25",
+              "6/25",
+              "4/25"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          },
+          {
+            "probability": "99/100",
+            "survivors": "(1,)",
+            "first_signal": "none",
+            "posterior": [
+              "9/25",
+              "6/25",
+              "6/25",
+              "4/25"
+            ],
+            "last_active": 1,
+            "last_retained": "(1,)",
+            "last_value": "1281/20"
+          }
+        ]
+      },
+      {
+        "root_mask": 2,
+        "root_active": 1,
+        "value": {
+          "exact": "2481/20",
+          "decimal": 124.05
+        },
+        "components": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1/100",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "9/25",
+              "6/25",
+              "6/25",
+              "4/25"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          },
+          {
+            "probability": "5841/10000",
+            "survivors": "(1,)",
+            "first_signal": "0",
+            "posterior": [
+              "171/295",
+              "6/295",
+              "114/295",
+              "4/295"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "5700/59"
+          },
+          {
+            "probability": "4059/10000",
+            "survivors": "(1,)",
+            "first_signal": "1",
+            "posterior": [
+              "9/205",
+              "114/205",
+              "6/205",
+              "76/205"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "3800/41"
+          }
+        ]
+      },
+      {
+        "root_mask": 3,
+        "root_active": null,
+        "value": {
+          "exact": "27371619/200000",
+          "decimal": 136.858095
+        },
+        "components": [
+          {
+            "exact": "38709/500",
+            "decimal": 77.418
+          },
+          {
+            "exact": "11888019/200000",
+            "decimal": 59.440095
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1/10000",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "9/25",
+              "6/25",
+              "6/25",
+              "4/25"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          },
+          {
+            "probability": "99/10000",
+            "survivors": "(1,)",
+            "first_signal": "none",
+            "posterior": [
+              "9/25",
+              "6/25",
+              "6/25",
+              "4/25"
+            ],
+            "last_active": 1,
+            "last_retained": "(1,)",
+            "last_value": "1281/20"
+          },
+          {
+            "probability": "99/10000",
+            "survivors": "(0,)",
+            "first_signal": "none",
+            "posterior": [
+              "9/25",
+              "6/25",
+              "6/25",
+              "4/25"
+            ],
+            "last_active": 0,
+            "last_retained": "(0,)",
+            "last_value": "391/5"
+          },
+          {
+            "probability": "9801/10000",
+            "survivors": "(0, 1)",
+            "first_signal": "none",
+            "posterior": [
+              "9/25",
+              "6/25",
+              "6/25",
+              "4/25"
+            ],
+            "last_active": 0,
+            "last_retained": "(0,)",
+            "last_value": "691/5"
+          }
+        ]
+      },
+      {
+        "root_mask": 3,
+        "root_active": 0,
+        "value": {
+          "exact": "283219/2000",
+          "decimal": 141.6095
+        },
+        "components": [
+          {
+            "exact": "391/5",
+            "decimal": 78.2
+          },
+          {
+            "exact": "126819/2000",
+            "decimal": 63.4095
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1/10000",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "9/25",
+              "6/25",
+              "6/25",
+              "4/25"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          },
+          {
+            "probability": "99/10000",
+            "survivors": "(1,)",
+            "first_signal": "none",
+            "posterior": [
+              "9/25",
+              "6/25",
+              "6/25",
+              "4/25"
+            ],
+            "last_active": 1,
+            "last_retained": "(1,)",
+            "last_value": "1281/20"
+          },
+          {
+            "probability": "693/125000",
+            "survivors": "(0,)",
+            "first_signal": "0",
+            "posterior": [
+              "18/35",
+              "12/35",
+              "3/35",
+              "2/35"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "600/7"
+          },
+          {
+            "probability": "1089/250000",
+            "survivors": "(0,)",
+            "first_signal": "1",
+            "posterior": [
+              "9/55",
+              "6/55",
+              "24/55",
+              "16/55"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "800/11"
+          },
+          {
+            "probability": "68607/125000",
+            "survivors": "(0, 1)",
+            "first_signal": "0",
+            "posterior": [
+              "18/35",
+              "12/35",
+              "3/35",
+              "2/35"
+            ],
+            "last_active": 1,
+            "last_retained": "(1,)",
+            "last_value": "20967/140"
+          },
+          {
+            "probability": "107811/250000",
+            "survivors": "(0, 1)",
+            "first_signal": "1",
+            "posterior": [
+              "9/55",
+              "6/55",
+              "24/55",
+              "16/55"
+            ],
+            "last_active": 1,
+            "last_retained": "(1,)",
+            "last_value": "30091/220"
+          }
+        ]
+      },
+      {
+        "root_mask": 3,
+        "root_active": 1,
+        "value": {
+          "exact": "35367/250",
+          "decimal": 141.468
+        },
+        "components": [
+          {
+            "exact": "38709/500",
+            "decimal": 77.418
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "branches": [
+          {
+            "probability": "1/10000",
+            "survivors": "()",
+            "first_signal": "none",
+            "posterior": [
+              "9/25",
+              "6/25",
+              "6/25",
+              "4/25"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "0"
+          },
+          {
+            "probability": "5841/1000000",
+            "survivors": "(1,)",
+            "first_signal": "0",
+            "posterior": [
+              "171/295",
+              "6/295",
+              "114/295",
+              "4/295"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "5700/59"
+          },
+          {
+            "probability": "4059/1000000",
+            "survivors": "(1,)",
+            "first_signal": "1",
+            "posterior": [
+              "9/205",
+              "114/205",
+              "6/205",
+              "76/205"
+            ],
+            "last_active": null,
+            "last_retained": "()",
+            "last_value": "3800/41"
+          },
+          {
+            "probability": "99/10000",
+            "survivors": "(0,)",
+            "first_signal": "none",
+            "posterior": [
+              "9/25",
+              "6/25",
+              "6/25",
+              "4/25"
+            ],
+            "last_active": 0,
+            "last_retained": "(0,)",
+            "last_value": "391/5"
+          },
+          {
+            "probability": "578259/1000000",
+            "survivors": "(0, 1)",
+            "first_signal": "0",
+            "posterior": [
+              "171/295",
+              "6/295",
+              "114/295",
+              "4/295"
+            ],
+            "last_active": 0,
+            "last_retained": "(0,)",
+            "last_value": "51569/295"
+          },
+          {
+            "probability": "401841/1000000",
+            "survivors": "(0, 1)",
+            "first_signal": "1",
+            "posterior": [
+              "9/205",
+              "114/205",
+              "6/205",
+              "76/205"
+            ],
+            "last_active": 0,
+            "last_retained": "(0,)",
+            "last_value": "35031/205"
+          }
+        ]
+      }
+    ],
+    "positive_signal_branch": {
+      "probability_given_A_survival": {
+        "exact": "11/25",
+        "decimal": 0.44
+      },
+      "posterior": [
+        {
+          "exact": "9/55",
+          "decimal": 0.16363636363636364
+        },
+        {
+          "exact": "6/55",
+          "decimal": 0.10909090909090909
+        },
+        {
+          "exact": "24/55",
+          "decimal": 0.43636363636363634
+        },
+        {
+          "exact": "16/55",
+          "decimal": 0.2909090909090909
+        }
+      ],
+      "B_own_gain": {
+        "exact": "81/20",
+        "decimal": 4.05
+      },
+      "A_cross_gain": {
+        "exact": "-8/11",
+        "decimal": -0.7272727272727273
+      },
+      "joint_gain": {
+        "exact": "81/20",
+        "decimal": 4.05
+      },
+      "local_gain": {
+        "exact": "81/20",
+        "decimal": 4.05
+      },
+      "last_optimal_plan": [
+        {
+          "exact": "30091/220",
+          "decimal": 136.77727272727273
+        },
+        1,
+        [
+          1
+        ],
+        [
+          {
+            "exact": "800/11",
+            "decimal": 72.72727272727273
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ]
+      ]
+    }
+  }
+}

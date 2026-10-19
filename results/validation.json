@@ -1,0 +1,20 @@
+{
+  "synthetic": true,
+  "method": "exact backward induction and forward expectation",
+  "checks_passed": 12002,
+  "frontier_unique_pairs_H3": 15,
+  "critical_delay_H3": 17.599999999999994,
+  "one_period_critical_delay": 17.599999999999994,
+  "python": "3.12.14",
+  "parameters_default": {
+    "S": 100,
+    "r": 0,
+    "q": 0.7,
+    "c": 1,
+    "d": 5,
+    "h": 0.02,
+    "H": 12,
+    "prior": 0.5
+  },
+  "note": "Horizon is finite and substantive. No asymptotic approximation."
+}

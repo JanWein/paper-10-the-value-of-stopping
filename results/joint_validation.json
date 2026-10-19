@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "checks_passed": 250,
+  "method": "closed-form optimum compared with independent exhaustive two-slot policy and latent-outcome enumeration",
+  "scope": "two cases; one binary experiment each; independent states; two slots; instant terminal action; independent expiration; nonnegative holding costs",
+  "named_scenarios": 6,
+  "named_policy_rows": 193,
+  "enumeration_includes": "idle slots, immediate retirement of any subset, signal-contingent last-slot choices, all positive-probability hazard and latent-state paths",
+  "no_seed_needed": true
+}

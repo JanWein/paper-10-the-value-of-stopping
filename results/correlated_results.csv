@@ -1,0 +1,4 @@
+scenario,root_mask,root_active,optimal_exact,optimal,policies,local_root_payoff,local_root_active,R1_rule_payoff,deadline0,deadline1
+correlated,3,0,249523577/1562500,159.69508928,63,154.40532,1,154.40532,120.0,154.22514
+perfect_correlation_zero_expiry,3,0,827/5,165.4,30,160.0,1,160.0,120.0,160.0
+independent_same_marginals,3,0,283219/2000,141.6095,63,141.6095,0,141.6095,120.0,138.2

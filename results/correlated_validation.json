@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "checks_passed": 37,
+  "named_cases": 3,
+  "total_policy_rows": 156,
+  "exact_rational_solution": true,
+  "independent_evaluator": "latent state x signal x expiry outcomes with contingent retention and action",
+  "includes_previously_researched_case_retained_for_cross_information": true,
+  "no_simulation": true
+}

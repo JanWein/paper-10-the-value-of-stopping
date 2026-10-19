@@ -1,0 +1,8 @@
+{
+  "checks_passed": 101,
+  "physical_policy_rows": 189,
+  "certificate_priors": 3,
+  "parameter_grid": false,
+  "exact_physical_arithmetic": true,
+  "scope": "Closed interval proved by affine target and convex competitors, not a sampled-prior claim"
+}

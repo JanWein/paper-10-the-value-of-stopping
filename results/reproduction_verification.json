@@ -1,0 +1,53 @@
+{
+  "revision": "R3",
+  "isolated_execution": true,
+  "python": "3.12.14",
+  "scripts": [
+    "analysis.py",
+    "joint_analysis.py",
+    "correlated_analysis.py",
+    "two_credits.py"
+  ],
+  "checks": [
+    12002,
+    250,
+    37,
+    101
+  ],
+  "matching_regenerated_output_files": [
+    "correlated_details.json",
+    "correlated_enumeration.csv",
+    "correlated_results.csv",
+    "correlated_validation.json",
+    "delay_bounds.csv",
+    "joint_enumerated_policies.csv",
+    "joint_parameters.json",
+    "joint_results.csv",
+    "joint_validation.json",
+    "policy_results.csv",
+    "two_credit_certificate.json",
+    "two_credit_physical_enumeration.csv",
+    "two_credit_validation.json",
+    "validation.json"
+  ],
+  "unchanged_R2_analysis_hashes": {
+    "analysis.py": "4014d070b335116ce35ae460ccdf17a11484468d8a919950734d663ef2246fca",
+    "joint_analysis.py": "33a62ab4dfbe51705d84c0ecd91d908454f8158ef523ab79949efcc31587b21e",
+    "correlated_analysis.py": "ecd9bcad0fbbda9182aa3ce39a0a9b32db85c2f1b8a30fbcb45b5a5c170661d6"
+  },
+  "R3_physical_policy_rows": 189,
+  "R3_certificate_priors": [
+    "17/100",
+    "11/50",
+    "23/100"
+  ],
+  "continuum_proof": "Affine fixed target; convex envelope of competing physical policies; strict endpoint comparison",
+  "R3_exact_rational_physical_enumeration": true,
+  "legacy_physical_tolerance": 1e-08,
+  "pdf_pages": {
+    "integrated": 46,
+    "response_R3": 3
+  },
+  "rendering": "Three completed LaTeX passes, corrected contents checked, all 46 integrated and 3 response pages rendered and visually reviewed, key pages inspected at higher detail, no overfull boxes",
+  "scope": "Synthetic finite-model reproducibility only; not empirical validity or exhaustive originality"
+}

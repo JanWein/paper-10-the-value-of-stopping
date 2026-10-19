@@ -1,0 +1,2305 @@
+{
+  "synthetic": true,
+  "interval": [
+    {
+      "exact": "17/100",
+      "decimal": 0.17
+    },
+    {
+      "exact": "23/100",
+      "decimal": 0.23
+    }
+  ],
+  "breakpoints": {
+    "release_experiment_tie": {
+      "exact": "7831/45000",
+      "decimal": 0.17402222222222222
+    },
+    "credit_zero_tie": {
+      "exact": "5291/30000",
+      "decimal": 0.17636666666666667
+    }
+  },
+  "event_probability": {
+    "exact": "107811/250000",
+    "decimal": 0.431244
+  },
+  "endpoint_and_witness_certificate": [
+    {
+      "delta": {
+        "exact": "17/100",
+        "decimal": 0.17
+      },
+      "target_components": [
+        {
+          "exact": "16249690807/200000000",
+          "decimal": 81.248454035
+        },
+        {
+          "exact": "177959133/2500000",
+          "decimal": 71.1836532
+        }
+      ],
+      "roots": [
+        {
+          "mask": 0,
+          "active": null,
+          "value": {
+            "exact": "120",
+            "decimal": 120.0
+          },
+          "target_gap": {
+            "exact": "6486421447/200000000",
+            "decimal": 32.432107235
+          }
+        },
+        {
+          "mask": 1,
+          "active": null,
+          "value": {
+            "exact": "68709/500",
+            "decimal": 137.418
+          },
+          "target_gap": {
+            "exact": "3002821447/200000000",
+            "decimal": 15.014107235
+          }
+        },
+        {
+          "mask": 1,
+          "active": 0,
+          "value": {
+            "exact": "691/5",
+            "decimal": 138.2
+          },
+          "target_gap": {
+            "exact": "2846421447/200000000",
+            "decimal": 14.232107235
+          }
+        },
+        {
+          "mask": 2,
+          "active": null,
+          "value": {
+            "exact": "246819/2000",
+            "decimal": 123.4095
+          },
+          "target_gap": {
+            "exact": "5804521447/200000000",
+            "decimal": 29.022607235
+          }
+        },
+        {
+          "mask": 2,
+          "active": 1,
+          "value": {
+            "exact": "2481/20",
+            "decimal": 124.05
+          },
+          "target_gap": {
+            "exact": "5676421447/200000000",
+            "decimal": 28.382107235
+          }
+        },
+        {
+          "mask": 3,
+          "active": null,
+          "value": {
+            "exact": "36853237179/250000000",
+            "decimal": 147.412948716
+          },
+          "target_gap": {
+            "exact": "5019158519/1000000000",
+            "decimal": 5.019158519
+          }
+        },
+        {
+          "mask": 3,
+          "active": 0,
+          "value": {
+            "exact": "30486421447/200000000",
+            "decimal": 152.432107235
+          },
+          "target_gap": {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        },
+        {
+          "mask": 3,
+          "active": 1,
+          "value": {
+            "exact": "729696081/5000000",
+            "decimal": 145.9392162
+          },
+          "target_gap": {
+            "exact": "1298578207/200000000",
+            "decimal": 6.492891035
+          }
+        }
+      ]
+    },
+    {
+      "delta": {
+        "exact": "11/50",
+        "decimal": 0.22
+      },
+      "target_components": [
+        {
+          "exact": "1069639201/12500000",
+          "decimal": 85.57113608
+        },
+        {
+          "exact": "185309883/2500000",
+          "decimal": 74.1239532
+        }
+      ],
+      "roots": [
+        {
+          "mask": 0,
+          "active": null,
+          "value": {
+            "exact": "120",
+            "decimal": 120.0
+          },
+          "target_gap": {
+            "exact": "62023577/1562500",
+            "decimal": 39.69508928
+          }
+        },
+        {
+          "mask": 1,
+          "active": null,
+          "value": {
+            "exact": "68709/500",
+            "decimal": 137.418
+          },
+          "target_gap": {
+            "exact": "8701988/390625",
+            "decimal": 22.27708928
+          }
+        },
+        {
+          "mask": 1,
+          "active": 0,
+          "value": {
+            "exact": "691/5",
+            "decimal": 138.2
+          },
+          "target_gap": {
+            "exact": "33586077/1562500",
+            "decimal": 21.49508928
+          }
+        },
+        {
+          "mask": 2,
+          "active": null,
+          "value": {
+            "exact": "246819/2000",
+            "decimal": 123.4095
+          },
+          "target_gap": {
+            "exact": "226784933/6250000",
+            "decimal": 36.28558928
+          }
+        },
+        {
+          "mask": 2,
+          "active": 1,
+          "value": {
+            "exact": "2481/20",
+            "decimal": 124.05
+          },
+          "target_gap": {
+            "exact": "13923863/390625",
+            "decimal": 35.64508928
+          }
+        },
+        {
+          "mask": 3,
+          "active": null,
+          "value": {
+            "exact": "19147065597/125000000",
+            "decimal": 153.176524776
+          },
+          "target_gap": {
+            "exact": "814820563/125000000",
+            "decimal": 6.518564504
+          }
+        },
+        {
+          "mask": 3,
+          "active": 0,
+          "value": {
+            "exact": "249523577/1562500",
+            "decimal": 159.69508928
+          },
+          "target_gap": {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        },
+        {
+          "mask": 3,
+          "active": 1,
+          "value": {
+            "exact": "3860133/25000",
+            "decimal": 154.40532
+          },
+          "target_gap": {
+            "exact": "16530529/3125000",
+            "decimal": 5.28976928
+          }
+        }
+      ]
+    },
+    {
+      "delta": {
+        "exact": "23/100",
+        "decimal": 0.23
+      },
+      "target_components": [
+        {
+          "exact": "86435672489/1000000000",
+          "decimal": 86.435672489
+        },
+        {
+          "exact": "186780033/2500000",
+          "decimal": 74.7120132
+        }
+      ],
+      "roots": [
+        {
+          "mask": 0,
+          "active": null,
+          "value": {
+            "exact": "120",
+            "decimal": 120.0
+          },
+          "target_gap": {
+            "exact": "41147685689/1000000000",
+            "decimal": 41.147685689
+          }
+        },
+        {
+          "mask": 1,
+          "active": null,
+          "value": {
+            "exact": "68709/500",
+            "decimal": 137.418
+          },
+          "target_gap": {
+            "exact": "23729685689/1000000000",
+            "decimal": 23.729685689
+          }
+        },
+        {
+          "mask": 1,
+          "active": 0,
+          "value": {
+            "exact": "691/5",
+            "decimal": 138.2
+          },
+          "target_gap": {
+            "exact": "22947685689/1000000000",
+            "decimal": 22.947685689
+          }
+        },
+        {
+          "mask": 2,
+          "active": null,
+          "value": {
+            "exact": "246819/2000",
+            "decimal": 123.4095
+          },
+          "target_gap": {
+            "exact": "37738185689/1000000000",
+            "decimal": 37.738185689
+          }
+        },
+        {
+          "mask": 2,
+          "active": 1,
+          "value": {
+            "exact": "2481/20",
+            "decimal": 124.05
+          },
+          "target_gap": {
+            "exact": "37097685689/1000000000",
+            "decimal": 37.097685689
+          }
+        },
+        {
+          "mask": 3,
+          "active": null,
+          "value": {
+            "exact": "38582309997/250000000",
+            "decimal": 154.329239988
+          },
+          "target_gap": {
+            "exact": "6818445701/1000000000",
+            "decimal": 6.818445701
+          }
+        },
+        {
+          "mask": 3,
+          "active": 0,
+          "value": {
+            "exact": "161147685689/1000000000",
+            "decimal": 161.147685689
+          },
+          "target_gap": {
+            "exact": "0",
+            "decimal": 0.0
+          }
+        },
+        {
+          "mask": 3,
+          "active": 1,
+          "value": {
+            "exact": "312339/2000",
+            "decimal": 156.1695
+          },
+          "target_gap": {
+            "exact": "4978185689/1000000000",
+            "decimal": 4.978185689
+          }
+        }
+      ]
+    }
+  ],
+  "witness_strict_game": {
+    "selected": {
+      "mask": 3,
+      "first": 0,
+      "resource": [
+        {
+          "exact": "1069639201/12500000",
+          "decimal": 85.57113608
+        },
+        {
+          "exact": "185309883/2500000",
+          "decimal": 74.1239532
+        }
+      ],
+      "private": [
+        {
+          "exact": "2259133/25000",
+          "decimal": 90.36532
+        },
+        {
+          "exact": "958677093/12500000",
+          "decimal": 76.69416744
+        }
+      ],
+      "history": [
+        {
+          "probability": {
+            "exact": "1/10000",
+            "decimal": 0.0001
+          },
+          "live": [],
+          "signal": "none",
+          "eligible": false,
+          "active": null,
+          "retained": [],
+          "resource": [
+            {
+              "exact": "0",
+              "decimal": 0.0
+            },
+            {
+              "exact": "0",
+              "decimal": 0.0
+            }
+          ],
+          "private": [
+            {
+              "exact": "0",
+              "decimal": 0.0
+            },
+            {
+              "exact": "0",
+              "decimal": 0.0
+            }
+          ]
+        },
+        {
+          "probability": {
+            "exact": "99/10000",
+            "decimal": 0.0099
+          },
+          "live": [
+            1
+          ],
+          "signal": "none",
+          "eligible": false,
+          "active": 1,
+          "retained": [
+            1
+          ],
+          "resource": [
+            {
+              "exact": "0",
+              "decimal": 0.0
+            },
+            {
+              "exact": "1281/20",
+              "decimal": 64.05
+            }
+          ],
+          "private": [
+            {
+              "exact": "0",
+              "decimal": 0.0
+            },
+            {
+              "exact": "1281/20",
+              "decimal": 64.05
+            }
+          ]
+        },
+        {
+          "probability": {
+            "exact": "693/125000",
+            "decimal": 0.005544
+          },
+          "live": [
+            0
+          ],
+          "signal": "0",
+          "eligible": false,
+          "active": null,
+          "retained": [],
+          "resource": [
+            {
+              "exact": "600/7",
+              "decimal": 85.71428571428571
+            },
+            {
+              "exact": "0",
+              "decimal": 0.0
+            }
+          ],
+          "private": [
+            {
+              "exact": "600/7",
+              "decimal": 85.71428571428571
+            },
+            {
+              "exact": "0",
+              "decimal": 0.0
+            }
+          ]
+        },
+        {
+          "probability": {
+            "exact": "1089/250000",
+            "decimal": 0.004356
+          },
+          "live": [
+            0
+          ],
+          "signal": "1",
+          "eligible": false,
+          "active": null,
+          "retained": [],
+          "resource": [
+            {
+              "exact": "800/11",
+              "decimal": 72.72727272727273
+            },
+            {
+              "exact": "0",
+              "decimal": 0.0
+            }
+          ],
+          "private": [
+            {
+              "exact": "800/11",
+              "decimal": 72.72727272727273
+            },
+            {
+              "exact": "0",
+              "decimal": 0.0
+            }
+          ]
+        },
+        {
+          "probability": {
+            "exact": "68607/125000",
+            "decimal": 0.548856
+          },
+          "live": [
+            0,
+            1
+          ],
+          "signal": "0",
+          "eligible": false,
+          "active": null,
+          "retained": [],
+          "resource": [
+            {
+              "exact": "600/7",
+              "decimal": 85.71428571428571
+            },
+            {
+              "exact": "585/7",
+              "decimal": 83.57142857142857
+            }
+          ],
+          "private": [
+            {
+              "exact": "600/7",
+              "decimal": 85.71428571428571
+            },
+            {
+              "exact": "585/7",
+              "decimal": 83.57142857142857
+            }
+          ]
+        },
+        {
+          "probability": {
+            "exact": "107811/250000",
+            "decimal": 0.431244
+          },
+          "live": [
+            0,
+            1
+          ],
+          "signal": "1",
+          "eligible": true,
+          "active": 1,
+          "retained": [
+            0,
+            1
+          ],
+          "resource": [
+            {
+              "exact": "4491/50",
+              "decimal": 89.82
+            },
+            {
+              "exact": "1281/20",
+              "decimal": 64.05
+            }
+          ],
+          "private": [
+            {
+              "exact": "4491/50",
+              "decimal": 89.82
+            },
+            {
+              "exact": "7001/100",
+              "decimal": 70.01
+            }
+          ]
+        }
+      ]
+    },
+    "routes": [
+      {
+        "mask": 3,
+        "first": 0,
+        "resource": [
+          {
+            "exact": "1069639201/12500000",
+            "decimal": 85.57113608
+          },
+          {
+            "exact": "185309883/2500000",
+            "decimal": 74.1239532
+          }
+        ],
+        "private": [
+          {
+            "exact": "2259133/25000",
+            "decimal": 90.36532
+          },
+          {
+            "exact": "958677093/12500000",
+            "decimal": 76.69416744
+          }
+        ],
+        "history": [
+          {
+            "probability": {
+              "exact": "1/10000",
+              "decimal": 0.0001
+            },
+            "live": [],
+            "signal": "none",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "99/10000",
+              "decimal": 0.0099
+            },
+            "live": [
+              1
+            ],
+            "signal": "none",
+            "eligible": false,
+            "active": 1,
+            "retained": [
+              1
+            ],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "1281/20",
+                "decimal": 64.05
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "1281/20",
+                "decimal": 64.05
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "693/125000",
+              "decimal": 0.005544
+            },
+            "live": [
+              0
+            ],
+            "signal": "0",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "600/7",
+                "decimal": 85.71428571428571
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "600/7",
+                "decimal": 85.71428571428571
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "1089/250000",
+              "decimal": 0.004356
+            },
+            "live": [
+              0
+            ],
+            "signal": "1",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "800/11",
+                "decimal": 72.72727272727273
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "800/11",
+                "decimal": 72.72727272727273
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "68607/125000",
+              "decimal": 0.548856
+            },
+            "live": [
+              0,
+              1
+            ],
+            "signal": "0",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "600/7",
+                "decimal": 85.71428571428571
+              },
+              {
+                "exact": "585/7",
+                "decimal": 83.57142857142857
+              }
+            ],
+            "private": [
+              {
+                "exact": "600/7",
+                "decimal": 85.71428571428571
+              },
+              {
+                "exact": "585/7",
+                "decimal": 83.57142857142857
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "107811/250000",
+              "decimal": 0.431244
+            },
+            "live": [
+              0,
+              1
+            ],
+            "signal": "1",
+            "eligible": true,
+            "active": 1,
+            "retained": [
+              0,
+              1
+            ],
+            "resource": [
+              {
+                "exact": "4491/50",
+                "decimal": 89.82
+              },
+              {
+                "exact": "1281/20",
+                "decimal": 64.05
+              }
+            ],
+            "private": [
+              {
+                "exact": "4491/50",
+                "decimal": 89.82
+              },
+              {
+                "exact": "7001/100",
+                "decimal": 70.01
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mask": 3,
+        "first": 1,
+        "resource": [
+          {
+            "exact": "2258883/25000",
+            "decimal": 90.35532
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "private": [
+          {
+            "exact": "2258883/25000",
+            "decimal": 90.35532
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "history": [
+          {
+            "probability": {
+              "exact": "1/10000",
+              "decimal": 0.0001
+            },
+            "live": [],
+            "signal": "none",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "5841/1000000",
+              "decimal": 0.005841
+            },
+            "live": [
+              1
+            ],
+            "signal": "0",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "5700/59",
+                "decimal": 96.61016949152543
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "5700/59",
+                "decimal": 96.61016949152543
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "4059/1000000",
+              "decimal": 0.004059
+            },
+            "live": [
+              1
+            ],
+            "signal": "1",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "3800/41",
+                "decimal": 92.6829268292683
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "3800/41",
+                "decimal": 92.6829268292683
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "99/10000",
+              "decimal": 0.0099
+            },
+            "live": [
+              0
+            ],
+            "signal": "none",
+            "eligible": false,
+            "active": 0,
+            "retained": [
+              0
+            ],
+            "resource": [
+              {
+                "exact": "391/5",
+                "decimal": 78.2
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "391/5",
+                "decimal": 78.2
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "578259/1000000",
+              "decimal": 0.578259
+            },
+            "live": [
+              0,
+              1
+            ],
+            "signal": "0",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "5520/59",
+                "decimal": 93.55932203389831
+              },
+              {
+                "exact": "5700/59",
+                "decimal": 96.61016949152543
+              }
+            ],
+            "private": [
+              {
+                "exact": "5520/59",
+                "decimal": 93.55932203389831
+              },
+              {
+                "exact": "5700/59",
+                "decimal": 96.61016949152543
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "401841/1000000",
+              "decimal": 0.401841
+            },
+            "live": [
+              0,
+              1
+            ],
+            "signal": "1",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "3620/41",
+                "decimal": 88.29268292682927
+              },
+              {
+                "exact": "3800/41",
+                "decimal": 92.6829268292683
+              }
+            ],
+            "private": [
+              {
+                "exact": "3620/41",
+                "decimal": 88.29268292682927
+              },
+              {
+                "exact": "3800/41",
+                "decimal": 92.6829268292683
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mask": 2,
+        "first": 1,
+        "resource": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "private": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "history": [
+          {
+            "probability": {
+              "exact": "1/100",
+              "decimal": 0.01
+            },
+            "live": [],
+            "signal": "none",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "5841/10000",
+              "decimal": 0.5841
+            },
+            "live": [
+              1
+            ],
+            "signal": "0",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "5700/59",
+                "decimal": 96.61016949152543
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "5700/59",
+                "decimal": 96.61016949152543
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "4059/10000",
+              "decimal": 0.4059
+            },
+            "live": [
+              1
+            ],
+            "signal": "1",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "3800/41",
+                "decimal": 92.6829268292683
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "3800/41",
+                "decimal": 92.6829268292683
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "all_roots": [
+      {
+        "mask": 0,
+        "first": null,
+        "resource": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "60",
+            "decimal": 60.0
+          }
+        ],
+        "private": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "60",
+            "decimal": 60.0
+          }
+        ],
+        "history": [
+          {
+            "probability": {
+              "exact": "1",
+              "decimal": 1.0
+            },
+            "live": [],
+            "signal": "none",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mask": 1,
+        "first": null,
+        "resource": [
+          {
+            "exact": "38709/500",
+            "decimal": 77.418
+          },
+          {
+            "exact": "60",
+            "decimal": 60.0
+          }
+        ],
+        "private": [
+          {
+            "exact": "38709/500",
+            "decimal": 77.418
+          },
+          {
+            "exact": "60",
+            "decimal": 60.0
+          }
+        ],
+        "history": [
+          {
+            "probability": {
+              "exact": "1/100",
+              "decimal": 0.01
+            },
+            "live": [],
+            "signal": "none",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "99/100",
+              "decimal": 0.99
+            },
+            "live": [
+              0
+            ],
+            "signal": "none",
+            "eligible": false,
+            "active": 0,
+            "retained": [
+              0
+            ],
+            "resource": [
+              {
+                "exact": "391/5",
+                "decimal": 78.2
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "391/5",
+                "decimal": 78.2
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mask": 1,
+        "first": 0,
+        "resource": [
+          {
+            "exact": "391/5",
+            "decimal": 78.2
+          },
+          {
+            "exact": "60",
+            "decimal": 60.0
+          }
+        ],
+        "private": [
+          {
+            "exact": "1037427299/12500000",
+            "decimal": 82.99418392
+          },
+          {
+            "exact": "60",
+            "decimal": 60.0
+          }
+        ],
+        "history": [
+          {
+            "probability": {
+              "exact": "1/100",
+              "decimal": 0.01
+            },
+            "live": [],
+            "signal": "none",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "693/1250",
+              "decimal": 0.5544
+            },
+            "live": [
+              0
+            ],
+            "signal": "0",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "600/7",
+                "decimal": 85.71428571428571
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "600/7",
+                "decimal": 85.71428571428571
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "1089/2500",
+              "decimal": 0.4356
+            },
+            "live": [
+              0
+            ],
+            "signal": "1",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "800/11",
+                "decimal": 72.72727272727273
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "800/11",
+                "decimal": 72.72727272727273
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mask": 2,
+        "first": null,
+        "resource": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "126819/2000",
+            "decimal": 63.4095
+          }
+        ],
+        "private": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "126819/2000",
+            "decimal": 63.4095
+          }
+        ],
+        "history": [
+          {
+            "probability": {
+              "exact": "1/100",
+              "decimal": 0.01
+            },
+            "live": [],
+            "signal": "none",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "99/100",
+              "decimal": 0.99
+            },
+            "live": [
+              1
+            ],
+            "signal": "none",
+            "eligible": false,
+            "active": 1,
+            "retained": [
+              1
+            ],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "1281/20",
+                "decimal": 64.05
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "1281/20",
+                "decimal": 64.05
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mask": 2,
+        "first": 1,
+        "resource": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "private": [
+          {
+            "exact": "60",
+            "decimal": 60.0
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "history": [
+          {
+            "probability": {
+              "exact": "1/100",
+              "decimal": 0.01
+            },
+            "live": [],
+            "signal": "none",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "5841/10000",
+              "decimal": 0.5841
+            },
+            "live": [
+              1
+            ],
+            "signal": "0",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "5700/59",
+                "decimal": 96.61016949152543
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "5700/59",
+                "decimal": 96.61016949152543
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "4059/10000",
+              "decimal": 0.4059
+            },
+            "live": [
+              1
+            ],
+            "signal": "1",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "3800/41",
+                "decimal": 92.6829268292683
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "3800/41",
+                "decimal": 92.6829268292683
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mask": 3,
+        "first": null,
+        "resource": [
+          {
+            "exact": "44577417357/500000000",
+            "decimal": 89.154834714
+          },
+          {
+            "exact": "126819/2000",
+            "decimal": 63.4095
+          }
+        ],
+        "private": [
+          {
+            "exact": "44577417357/500000000",
+            "decimal": 89.154834714
+          },
+          {
+            "exact": "126819/2000",
+            "decimal": 63.4095
+          }
+        ],
+        "history": [
+          {
+            "probability": {
+              "exact": "1/10000",
+              "decimal": 0.0001
+            },
+            "live": [],
+            "signal": "none",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "99/10000",
+              "decimal": 0.0099
+            },
+            "live": [
+              1
+            ],
+            "signal": "none",
+            "eligible": false,
+            "active": 1,
+            "retained": [
+              1
+            ],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "1281/20",
+                "decimal": 64.05
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "1281/20",
+                "decimal": 64.05
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "99/10000",
+              "decimal": 0.0099
+            },
+            "live": [
+              0
+            ],
+            "signal": "none",
+            "eligible": false,
+            "active": 0,
+            "retained": [
+              0
+            ],
+            "resource": [
+              {
+                "exact": "391/5",
+                "decimal": 78.2
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "391/5",
+                "decimal": 78.2
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "9801/10000",
+              "decimal": 0.9801
+            },
+            "live": [
+              0,
+              1
+            ],
+            "signal": "none",
+            "eligible": false,
+            "active": 1,
+            "retained": [
+              0,
+              1
+            ],
+            "resource": [
+              {
+                "exact": "4508757/50000",
+                "decimal": 90.17514
+              },
+              {
+                "exact": "1281/20",
+                "decimal": 64.05
+              }
+            ],
+            "private": [
+              {
+                "exact": "4508757/50000",
+                "decimal": 90.17514
+              },
+              {
+                "exact": "1281/20",
+                "decimal": 64.05
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mask": 3,
+        "first": 0,
+        "resource": [
+          {
+            "exact": "1069639201/12500000",
+            "decimal": 85.57113608
+          },
+          {
+            "exact": "185309883/2500000",
+            "decimal": 74.1239532
+          }
+        ],
+        "private": [
+          {
+            "exact": "2259133/25000",
+            "decimal": 90.36532
+          },
+          {
+            "exact": "958677093/12500000",
+            "decimal": 76.69416744
+          }
+        ],
+        "history": [
+          {
+            "probability": {
+              "exact": "1/10000",
+              "decimal": 0.0001
+            },
+            "live": [],
+            "signal": "none",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "99/10000",
+              "decimal": 0.0099
+            },
+            "live": [
+              1
+            ],
+            "signal": "none",
+            "eligible": false,
+            "active": 1,
+            "retained": [
+              1
+            ],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "1281/20",
+                "decimal": 64.05
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "1281/20",
+                "decimal": 64.05
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "693/125000",
+              "decimal": 0.005544
+            },
+            "live": [
+              0
+            ],
+            "signal": "0",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "600/7",
+                "decimal": 85.71428571428571
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "600/7",
+                "decimal": 85.71428571428571
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "1089/250000",
+              "decimal": 0.004356
+            },
+            "live": [
+              0
+            ],
+            "signal": "1",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "800/11",
+                "decimal": 72.72727272727273
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "800/11",
+                "decimal": 72.72727272727273
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "68607/125000",
+              "decimal": 0.548856
+            },
+            "live": [
+              0,
+              1
+            ],
+            "signal": "0",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "600/7",
+                "decimal": 85.71428571428571
+              },
+              {
+                "exact": "585/7",
+                "decimal": 83.57142857142857
+              }
+            ],
+            "private": [
+              {
+                "exact": "600/7",
+                "decimal": 85.71428571428571
+              },
+              {
+                "exact": "585/7",
+                "decimal": 83.57142857142857
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "107811/250000",
+              "decimal": 0.431244
+            },
+            "live": [
+              0,
+              1
+            ],
+            "signal": "1",
+            "eligible": true,
+            "active": 1,
+            "retained": [
+              0,
+              1
+            ],
+            "resource": [
+              {
+                "exact": "4491/50",
+                "decimal": 89.82
+              },
+              {
+                "exact": "1281/20",
+                "decimal": 64.05
+              }
+            ],
+            "private": [
+              {
+                "exact": "4491/50",
+                "decimal": 89.82
+              },
+              {
+                "exact": "7001/100",
+                "decimal": 70.01
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "mask": 3,
+        "first": 1,
+        "resource": [
+          {
+            "exact": "2258883/25000",
+            "decimal": 90.35532
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "private": [
+          {
+            "exact": "2258883/25000",
+            "decimal": 90.35532
+          },
+          {
+            "exact": "1281/20",
+            "decimal": 64.05
+          }
+        ],
+        "history": [
+          {
+            "probability": {
+              "exact": "1/10000",
+              "decimal": 0.0001
+            },
+            "live": [],
+            "signal": "none",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "5841/1000000",
+              "decimal": 0.005841
+            },
+            "live": [
+              1
+            ],
+            "signal": "0",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "5700/59",
+                "decimal": 96.61016949152543
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "5700/59",
+                "decimal": 96.61016949152543
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "4059/1000000",
+              "decimal": 0.004059
+            },
+            "live": [
+              1
+            ],
+            "signal": "1",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "3800/41",
+                "decimal": 92.6829268292683
+              }
+            ],
+            "private": [
+              {
+                "exact": "0",
+                "decimal": 0.0
+              },
+              {
+                "exact": "3800/41",
+                "decimal": 92.6829268292683
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "99/10000",
+              "decimal": 0.0099
+            },
+            "live": [
+              0
+            ],
+            "signal": "none",
+            "eligible": false,
+            "active": 0,
+            "retained": [
+              0
+            ],
+            "resource": [
+              {
+                "exact": "391/5",
+                "decimal": 78.2
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ],
+            "private": [
+              {
+                "exact": "391/5",
+                "decimal": 78.2
+              },
+              {
+                "exact": "0",
+                "decimal": 0.0
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "578259/1000000",
+              "decimal": 0.578259
+            },
+            "live": [
+              0,
+              1
+            ],
+            "signal": "0",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "5520/59",
+                "decimal": 93.55932203389831
+              },
+              {
+                "exact": "5700/59",
+                "decimal": 96.61016949152543
+              }
+            ],
+            "private": [
+              {
+                "exact": "5520/59",
+                "decimal": 93.55932203389831
+              },
+              {
+                "exact": "5700/59",
+                "decimal": 96.61016949152543
+              }
+            ]
+          },
+          {
+            "probability": {
+              "exact": "401841/1000000",
+              "decimal": 0.401841
+            },
+            "live": [
+              0,
+              1
+            ],
+            "signal": "1",
+            "eligible": false,
+            "active": null,
+            "retained": [],
+            "resource": [
+              {
+                "exact": "3620/41",
+                "decimal": 88.29268292682927
+              },
+              {
+                "exact": "3800/41",
+                "decimal": 92.6829268292683
+              }
+            ],
+            "private": [
+              {
+                "exact": "3620/41",
+                "decimal": 88.29268292682927
+              },
+              {
+                "exact": "3800/41",
+                "decimal": 92.6829268292683
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "witness_infima": {
+    "expected_infimum": {
+      "exact": "183752143/25000000",
+      "decimal": 7.35008572
+    },
+    "pathwise_infimum": {
+      "exact": "134177299/12500000",
+      "decimal": 10.73418392
+    },
+    "attained": false
+  },
+  "frontier": "C>=F(delta), kappa>=0, kappa>K(delta); strict root C>F(delta)",
+  "expected_budget": "C+p*kappa",
+  "pathwise_capacity": "C+kappa",
+  "exact_arithmetic": true
+}
