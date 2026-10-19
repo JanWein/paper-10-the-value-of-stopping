@@ -1,0 +1,2908 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  11pt,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{amsmath,amssymb}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={The Value of Stopping: Evidence Queues, Recoverability, and Priority Rights},
+  pdfauthor={Dr.~Jan-Hendrik Weinert},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{The Value of Stopping: Evidence Queues, Recoverability, and
+Priority Rights}
+\author{Dr. Jan-Hendrik Weinert}
+\date{19 October 2026}
+
+
+% Publication formatting edition, 19 October 2026. Scientific equations unchanged.
+\usepackage{xurl,needspace,etoolbox}
+\geometry{a4paper,margin=25.4mm}
+\hypersetup{hidelinks,pdfauthor={Dr. Jan-Hendrik Weinert}}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{3pt plus 1pt}
+\setlength{\emergencystretch}{3em}
+\hfuzz=0.2pt
+\raggedbottom
+\pagestyle{plain}
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\ifstrequal{#1}{section}{.}{}\quad}
+\renewcommand{\maketitle}{%
+  \begin{center}
+  {\LARGE\bfseries\@title\par}
+  \vspace{0.8em}
+  {\normalsize\@author\par}
+  \vspace{0.35em}
+  {\small\@date\par}
+  \end{center}
+  \vspace{0.4em}}
+\renewenvironment{abstract}{%
+  \begin{center}\small\bfseries Abstract\end{center}
+  \begin{list}{}{\setlength{\leftmargin}{0.5in}\setlength{\rightmargin}{0.5in}}
+  \item[]\small\setlength{\parindent}{0pt}\ignorespaces
+}{\end{list}\vspace{0.6em}}
+\makeatother
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Correlated evidence can make efficient research privately unattractive both initially and at continuation. In a two-case, two-slot model with expiration and optional terminal action, we derive the exact implementation and funding frontier for two nonnegative public-history credits. One rewards the initial experiment; the other rewards a specified contingent final experiment. Complete backward induction gives necessary and sufficient inequalities, separate expected and pathwise gross-funding limits, and attainment boundaries on a certified interval of binary priors. Credits are transfers rather than resource losses. The independent benchmark retains the recoverability-versus-priority comparison and common-charge classification. Complete proofs and exact synthetic enumeration support this restricted implementation result; no unrestricted mechanism optimum or empirical effect is claimed.
+\end{abstract}
+\noindent\small \textbf{Keywords:} evidence acquisition; scarce attention; decision
+queues; stopping; priority rights; expiration.\par\normalsize
+\vspace{0.6em}
+\section{1. Introduction}\label{introduction}
+
+A request for one more analysis can be justified for its own decision
+and still be costly for the organization. The analyst may have to
+postpone research on another case whose purchasing quote expires sooner,
+whose decision remains unusually uncertain, or whose recoverable value
+will be lost if action is delayed. The relevant opportunity cost is
+therefore endogenous to the competing case. It is not generally a fixed
+price for elapsed time.
+
+We study two evidence cases sharing one analyst for two research slots.
+Each case can be acted on immediately without new evidence, or receive
+one pre-specified experiment before action. While a case is kept
+unresolved, holding costs accrue and its opportunity may expire. A case
+assigned the second slot can instead be closed immediately. Thus the
+allocation of attention and the decision to stop researching must be
+determined jointly. The experiment is a bounded evidence packet, not an
+open-ended search process. This finite restriction makes the
+organizational equilibrium, corrective rule, and implementation
+boundaries fully solvable.
+
+For case \(i\), let \(b_i\) be the net gain from immediate research
+rather than immediate action. Let \(w_i\) be the optimal gain from being
+offered research only after one waiting slot, allowing immediate action
+instead. Then \(u_i=b_i^+-w_i\) is the loss from delaying that research
+option. The efficient order compares \(u_i\), not just \(b_i\). This
+loss depends on beliefs, signal precision, stakes, recoverability,
+holding costs, and expiration.
+
+We analyze a concrete decentralized institution: case A initially owns
+the right to the first slot. Its owner can claim that slot, release it
+and wait, or act without research. Case B then receives the available
+slot; final-slot choices are privately optimal. Owners value their own
+case's payoff and pay their own research and holding costs. Even with
+complete information and no split accounting of these direct costs, A
+generally claims early service whenever its own research has positive
+net value. It ignores how much B loses by waiting.
+
+The independent benchmark contributes a
+recoverability-versus-deferral-priority comparison and the exact
+restrictions under which a common research charge can implement
+efficient retention and order. The underlying scheduling interchange and
+externality toll are classical. We give a proposition-by-proposition
+comparison rather than claiming a new Gittins index or dynamic
+mechanism. We cannot certify that the bounded increments are unoccupied
+because one close predecessor remains unavailable in full text.
+
+We therefore also solve the smallest adjacent nonseparable margin, still
+with two cases, one experiment each, and two slots. An explicitly
+correlated prior makes the first public signal change the other case's
+research value. A previously researched case may remain unresolved to
+benefit from the second signal. This creates a cross-information benefit
+as well as congestion. We derive all contingent joint choices, the
+corresponding finite local game, and the exact final-slot boundary at
+which an information credit rather than a positive toll is needed. The
+central correlated result then closes the initial incentive gap using
+just two observable-history credits. We solve the complete local game,
+give exact necessary and sufficient implementation inequalities, and
+distinguish expected funding from pathwise capacity, including equality
+and nonattainment. An exact interval of priors around the original
+witness makes this a parameter-region result. Neither correlation nor
+conditional subsidies are claimed as new principles.
+
+\section{2. Literature and contribution
+boundary}\label{literature-and-contribution-boundary}
+
+Henry and Ottaviani (2019) study costly sequential research under
+divided control and conflicting terminal interests. Escobar and Zhang
+(2021) analyze private learning, communication, and prompt
+implementation in dynamic delegation. They already establish that
+organizational rules can alter learning and delay. We instead align
+owners with their own case's economic payoff, make primitives public,
+and introduce competition between cases for a single analyst. Our
+friction does not require persuasion, private signals withheld from the
+organization, or different action preferences within a case.
+
+Sequential sampling is the separable foundation, not a novelty claim.
+Fudenberg, Strack, and Strzalecki (2018) connect costly information
+gathering to decision timing. Xiao, Hu, and Wang (2026), published
+online in \emph{Management Science}, characterize recursive standards in
+delegated finite search. Their publisher abstract and publication status
+were verified; full technical access remained unavailable. We cannot
+certify priority against every result in that paper.
+
+The relevant scheduling comparison is broader than sequential sampling.
+Gittins (1979) develops dynamic allocation indices, with applications to
+scheduling and search; Weber (1992) provides a proof of the classical
+index policy. Those results are much more general than our two-job
+calculation in important respects. Our \(u_i\) is a finite pairwise
+interchange score, not a renamed Gittins benefit/time ratio. Inactive
+evidence cases can expire and the common finite horizon shrinks, so a
+general rested-bandit theorem cannot simply be invoked to justify an
+index policy for extensions of our model.
+
+Expiring-arm and dynamic-pivot precedents are mapped explicitly in
+Sections 2.1-2.3. Whittle (1988), Weber and Weiss (1990), Righter and
+Shanthikumar (1998), and Yu, Xu, and Tong (2017 preprint; later 2018
+journal publication) are scheduling comparators. Adiri and Yechiali
+(1974) and Bergemann and Välimäki (2010) are pricing precedents. The
+posted public-state toll is not claimed to duplicate a complete
+private-information pivot mechanism.
+
+Campbell, Ederer, and Spinnewijn (2014) study effort and communication
+around deadlines. Their mechanism cautions against interpreting our
+no-effort-response deadline result as universal. Eyring, Ferguson, and
+Koppers (2021) vary the composition of performance feedback, not
+acquisition or queue priority. Their experiment supports separating
+display from acquisition interventions. Xu, Zariphopoulou, and Zhang
+(2026, arXiv v4) study reversible choices with changing information
+regimes. Our recoverability parameter is more limited: it modifies the
+wrong-action payoff without creating post-action learning.
+
+The primary source ledger records the depth of reading and version
+differences. Full text was read for several close organizational and
+pricing papers and the deadline-scheduling preprint; original Gittins,
+Righter-Shanthikumar, and recent delegated-search technical coverage
+remains incomplete. We make no exhaustive-literature or
+established-priority claim.
+
+\subsection{2.1 Primitive mapping to expiring-arm
+scheduling}\label{primitive-mapping-to-expiring-arm-scheduling}
+
+Our independent-case state is \((p_i,e_i,l_i,t)\): belief, remaining
+experiment flag, live/retired status, and the common clock. An active
+arm pays \(-c_i-d_i\), faces expiry, and if surviving generates its one
+signal. A passive retained arm pays \(-d_i\), faces expiry, and keeps
+its belief. Retirement pays \(g_i(p_i)\) once and removes the case;
+expiry pays zero. Thus this is a finite-horizon expiring-arm stopping
+problem. Neither expiry nor the optional stopping action is a new
+scheduling principle.
+
+Subtracting the potential \(g_i\) makes the correspondence precise. The
+one-slot expected transformed reward is \(b_i\) when active, \(-\ell_i\)
+when passive, and zero when retired. The initial potential is added back
+once. This is just accounting; it does not identify a new index or prove
+indexability. The clock and passive expiry remain state changes even
+when the belief is frozen. The optional immediate payoff is not a reason
+to declare the problem outside every existing bandit framework: it can
+be encoded as a terminal action. Time augmentation likewise accommodates
+a finite horizon, although it need not preserve a rested-arm index
+theorem's assumptions.
+
+Righter-Shanthikumar's publisher abstract confirms index results under
+independent expiry. A lawful full version was not retrieved after
+checking the publisher and both authors' public bibliographies. We did
+\textbf{not} inspect their exact active/passive hazard assumptions, arm
+transition/reward restrictions, horizon/discount criterion, retirement
+options, information structure, or index optimality conditions on pages
+453-468. None of those cells is marked verified below. We therefore make
+no claim that their theorem excludes or includes our model. An abstract
+cannot supply that comparison.
+
+Whittle's publisher description concerns relaxed capacity prices and
+active/passive evolution. The author-hosted Weber-Weiss full text
+establishes that asymptotic index conclusions require additional
+conditions. The read Yu-Xu-Tong v5 preprint treats stochastic deadlines,
+capacity, costs and noncompletion penalties; it is not the same read
+object as its later journal publication. These precedents establish
+occupied problem classes, not a theorem-by-theorem novelty gap for this
+paper.
+
+\subsection{2.2 Primitive mapping to dynamic-pivot
+pricing}\label{primitive-mapping-to-dynamic-pivot-pricing}
+
+Bergemann-Välimäki's published Section 3 allocates a central facility,
+one task per period, with delay represented by discounting. Section 4,
+equations (5)-(7), prices current and continuation externalities using
+programs with and without an agent. Their independent private-value
+Markov framework yields truth-telling and participation results that are
+not proved here.
+
+For our two independent routes, B's optimal incremental value if A
+releases first service is \(b_B^+\); if A occupies it, B retains or acts
+and obtains \(w_B\). Their difference \(u_B\) is exactly the marginal
+externality algebra, with the common baseline \(g_B\) canceling. There
+is no extra loss to add after subtracting those two values. Our
+asymmetric right-holder charge and uncharged B are not the complete
+dynamic-pivot transfer vector. Internal charges are excluded from firm
+resource payoff. A finite absorbing horizon is not, by itself, an
+economic novelty relative to dynamic pricing; finite flows can be
+represented separately from a discount convention.
+
+In the correlated extension, one case's signal changes the other's
+posterior. The independently evolving private-value conditions in that
+published theorem are not directly satisfied. This is a boundary of that
+direct theorem mapping, not a claim that correlated-information
+externality pricing is absent from the wider literature. The extension
+keeps information public and makes no private-type truthfulness claim.
+
+The restricted credits in Sections 8.4-8.5 do not replicate realized
+team payoffs or the full dynamic-pivot payment vector. The published
+pivot equations compute each agent's flow and continuation externality
+from with/without-agent programs; our two instruments are constrained to
+specified history/action events. Their independent private-value
+truthfulness theorem is not being extended to correlated private types.
+Known public beliefs, observable research and enforceable credit
+commitment suffice here; eventual action-payoff observability is
+unnecessary. Their positive payment variable is subtracted from the
+agent's utility; our credits enter with the opposite sign. Their
+published no-deficit conclusion therefore does not supply our gross
+credit budget. The funding frontiers describe internal appropriation
+authority, not budget balance or the pivot mechanism's revenue
+properties.
+
+Moroni (2022), published introduction and model, studies
+history-dependent incentives and free-riding in a multistage risky
+project with privately observed effort and learning, limited liability
+and endogenous assignments. That precedent further rules out novelty
+claims for conditional experimentation rewards. Our observable
+one-experiment actions, two scarce slots and two fixed payment events
+define a different restricted calculation; we do not infer an
+unrestricted contracting advantage from that difference.
+
+\subsection{2.3 Result-by-result
+comparison}\label{result-by-result-comparison}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Result in this paper
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Closest established principle
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Exact bounded claim and remaining limit
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Separable benchmark, Section 3 & Standard sequential stopping and
+benefit/time accounting & No novelty claimed \\
+Theorem 1 & Finite two-job interchange; expiring-arm scheduling &
+Explicit optional retirement/retention solution; not a new index;
+Righter-Shanthikumar conditions uninspected \\
+Theorem 2 and exact fee set & Local queue priority and restricted
+pricing & Necessary/sufficient common-fee intervals within the stated
+institution and tie convention; no claim all price mechanisms fail \\
+Corollary 1 & Enumeration of feasible deadlines & Exact three-deadline
+comparison only \\
+Theorem 3 and Corollary 2 & Marginal externality and priority pricing &
+Public-state asymmetric implementation; not a new dynamic-pivot
+theorem \\
+Theorem 4 & Bayes-risk payoff comparison combined with
+deteriorating-option scheduling & Opposite recoverability derivatives on
+the retained-research region; priority crossing is conditional and
+priority remains uncertified \\
+Theorems 5-6 & Finite Bayesian dynamic programming; information
+externalities & Correlated joint solution and final-slot boundary,
+retained benchmarks \\
+Theorems 7-8 & Conditional subsidies, free-riding compensation,
+restricted dynamic transfers & Complete two-history-credit
+implementation and piecewise expected/pathwise funding frontier on I; no
+unrestricted optimal-contract or pivot claim \\
+\end{longtable}
+
+Klein and Rady (2011) already study strategic experimentation with
+correlated risky types. The June 23, 2010 author-hosted manuscript and
+2011 publisher metadata were checked; their continuous-time two-player
+experimentation setting is distinct from our two-slot retirement
+problem. Correlation and cross-learning themselves are not claimed new.
+The inspected working model permits simultaneous safe/risky choices with
+publicly observed payoffs and continuous-time learning, rather than our
+single analyst, two optional one-shot experiments and expiring action
+opportunities. Its public cross-learning and free-riding logic is
+inherited. Theorems 7-8 instead restrict the payment support to two
+existing observable research histories, preserve local stopping rights,
+and solve their funding limits. No located theorem was verified to state
+this exact restricted frontier; that bounded reading is not an
+exhaustive priority certification. The uninspected independent-expiry
+article is not a positive premise of the correlated-credit result.
+
+\section{3. Separable stopping
+benchmark}\label{separable-stopping-benchmark}
+
+To locate the new mechanism, consider first a single finite evidence
+tree. At live history \(x\), immediate action pays
+\(g(x)=\max_a E[u(a,\theta)\mid\mathcal F_x]\). An experiment costs
+\(c_e\), consumes a period with additive delay price \(d\), and survives
+with probability \(s_e\). The filtration records observed signals,
+research choices, elapsed slots, and opportunity survival. Feasible
+policies are adapted and terminate at a finite horizon. Expiration pays
+zero. The value obeys
+
+\[V_d(x)=\max\{g(x),\max_e[-c_e-d+s_eE_eV_d(x')]\}.\]
+
+For any adaptive policy \(\pi\) that continues first, define expected
+terminal reward \(R_\pi\), acquisition cost \(C_\pi\), and active
+periods \(T_\pi>0\). Then continuing is strictly better than acting now
+if and only if
+
+\[d<D(x),\qquad D(x)=\max_\pi\frac{R_\pi-C_\pi-g(x)}{T_\pi}.\]
+
+This follows by rewriting each policy's incremental payoff as
+\(R_\pi-C_\pi-g-dT_\pi\). It is elementary finite optimal stopping. If
+an analyst internalizes only \(\alpha d\), its continuation region uses
+\(\alpha d<D(x)\). Charging the missing cost aligns objectives only when
+this marginal charge enters actual preferences and work cannot escape
+the ledger.
+
+Likewise, Bellman action regret telescopes: optimal value minus any
+feasible policy's payoff equals the expected sum of optimal action-value
+gaps along that policy's path, including expiration. The complete proofs
+and earlier exact single-case illustrations are retained in Appendix B.
+They are not the revised paper's central contribution.
+
+A bound \(d\in[d_L,d_U]\) provides a stopping certificate only
+conditional on the full payoff, signal, expiration, action, and policy
+model. It is not robustness to misspecified likelihoods or missed
+alternatives. In the shared-resource models below, no exogenous \(d\)
+alone represents the forgone value of another case.
+
+\section{4. Two cases sharing one
+analyst}\label{two-cases-sharing-one-analyst}
+
+\subsection{4.1 Timing, primitives, and economic
+accounting}\label{timing-primitives-and-economic-accounting}
+
+There are two cases \(i\in\{A,B\}\), independent latent binary states
+\(\theta_i\), and public priors \(p_i\). Slots are \(t=0,1\), followed
+by mandatory terminal action on surviving unresolved cases at \(t=2\).
+One analyst can perform at most one experiment in each slot. Each case
+has at most one experiment. Its binary signal has accuracy
+\(q_i\in[1/2,1]\), conditionally independent of the other case. All
+parameters and available actions are public.
+
+At each slot boundary the organization may act on any subset of
+unresolved cases, with no analyst time required for that terminal
+action. Correct action yields \(S_i>0\); wrong action yields \(r_iS_i\),
+\(0\leq r_i\leq1\). A resolved case leaves permanently. A case retained
+unresolved over a slot incurs \(d_i\geq0\) and survives the slot with
+independent probability \(s_i=1-h_i\), where \(0\leq h_i<1\). If the
+analyst researches case \(i\), it also incurs acquisition cost
+\(c_i\geq0\). The signal is received only if the case survives; the
+researched surviving case can act immediately at the next boundary.
+Since it has no experiments left, additional waiting is weakly dominated
+by action.
+
+Expiration pays zero. Costs for an occupied slot are paid before
+expiration. Thus the same accounting applies whether a case is active or
+passively waiting. The additive holding cost is a residual resource or
+operating loss, excluding any loss already counted through the terminal
+payoff and expiration. A first-slot research on A with B retained costs
+\(c_A+d_A+d_B\), not \(c_A\) twice and not a second artificial
+queue-loss penalty. Internal corrective transfers are not firm resource
+costs.
+
+The filtration contains the public priors, decisions to stop or wait,
+analyst assignment, and observed survival and signals. An unrestricted
+joint policy may condition its final-slot assignment on all this
+information. Idle policies are feasible and included in the independent
+enumeration. The theorem will show that no idle policy improves on the
+stated solution. There are no new arrivals, strategic suppliers,
+correlated information, hidden effort, or endogenous experimental
+precision.
+
+\subsection{4.2 Information value and the option to
+retire}\label{information-value-and-the-option-to-retire}
+
+Write \(m_i=\min(p_i,1-p_i)\) and let \(\bar m_i\) be expected posterior
+Bayes error after the one available signal. Define
+
+\[g_i=S_i[1-(1-r_i)m_i],\quad
+M_i=S_i[1-(1-r_i)\bar m_i],\]
+
+\[b_i=s_iM_i-c_i-d_i-g_i,\qquad
+\ell_i=d_i+h_ig_i. \tag{1}\]
+
+Here \(g_i\) is immediate-action value, \(M_i\) the expected payoff
+after observing the signal conditional on survival, and \(b_i\) the net
+gain from researching in the next available slot. The quantity
+\(\ell_i\) is the expected loss from keeping the current decision
+unresolved for one slot even without acquiring evidence.
+
+If case \(i\) is offered only the second slot, it may act now or wait
+and, conditional on survival, choose whether to research. Its
+incremental value relative to immediate action is
+
+\[w_i=[s_ib_i-\ell_i]^+,\qquad z^+=\max(z,0). \tag{2}\]
+
+Since \(s_i\leq1\) and \(\ell_i\geq0\), \(0\leq w_i\leq b_i^+\). Define
+the option's deferral loss
+
+\[u_i=b_i^+-w_i\geq0. \tag{3}\]
+
+This loss includes optimal stopping. In particular, when deferred
+research is no longer worthwhile, \(w_i=0\) and \(u_i=b_i^+\):
+displacing that case removes its entire positive research option, but it
+can still act now. It is incorrect to add its immediate payoff \(g_i\)
+as a second loss after using this expression.
+
+\section{5. Optimal joint stopping and
+scheduling}\label{optimal-joint-stopping-and-scheduling}
+
+\textbf{Theorem 1 (independent two-case solution).} Let \(G=g_A+g_B\).
+The optimal expected total payoff is
+
+\[W^*=G+\max\{0,\ b_A+w_B,\ b_B+w_A\}. \tag{4}\]
+
+If both \(b_i>0\), researching A first is optimal rather than
+researching B first exactly when \(u_A\geq u_B\). After assigning \(i\)
+first, the other case \(j\) waits precisely when \(s_jb_j>\ell_j\);
+otherwise it acts immediately. A surviving second-slot case is
+researched if \(b_j>0\), otherwise acted on. After the single signal,
+the researched case selects its posterior-optimal terminal action.
+
+\textbf{Proof.} If case \(i\) is researched first, its expected
+incremental payoff is \(b_i\). Independence implies that the other case
+learns nothing about its own state from \(i\)'s signal or expiration.
+Its best alternative to immediate action is one slot of waiting followed
+by its own optimal research-or-act choice. That incremental payoff is
+\(w_j\) by (2). Therefore the best value conditional on \(i\) first is
+\(G+b_i+w_j\). Stopping both gives \(G\).
+
+An idle first slot leaves at most one later experiment. Each retained
+case loses \(\ell_i\) from baseline while waiting. If at most one
+retained case survives, its later research gain cannot exceed its
+immediate positive research gain. If both survive, the final allocation
+selects at most one. Removing the idle slot and performing that chosen
+experiment immediately is no worse in expectation: the expected maximum
+of the gains of surviving cases is at most \(\max(b_A^+,b_B^+)\), and
+waiting losses are nonnegative. Immediate research on a maximizer and
+immediate action on the other case attains \(G+\max(b_A^+,b_B^+)\).
+Hence idle policies cannot beat the candidates in (4). No other
+first-slot policy exists.
+
+When both \(b_i>0\), subtracting the two research-order values gives
+\((b_A-w_A)-(b_B-w_B)=u_A-u_B\). The retention and final action rules
+follow from the same comparison. \(\square\)
+
+The formula is a finite scheduling interchange, not a general bandit
+index theorem. In this model signals affect posterior terminal action
+but do not create further research choices on the same case.
+Independence therefore eliminates informational cross-effects in the
+final schedule. The stochastic tree still includes both signal outcomes
+and both cases' expiration; a stronger multi-experiment model would
+generally need a joint Bellman solution and is not claimed solved here.
+
+\section{6. Decentralized priority rights and corrective
+policies}\label{decentralized-priority-rights-and-corrective-policies}
+
+\subsection{6.1 Local equilibrium}\label{local-equilibrium}
+
+Case A owns the first-slot priority right. Its owner may research now,
+act now, or release the slot and wait while B chooses whether to
+research. If A claims the slot, B chooses whether to act now or wait for
+the second slot. Subsequent research and terminal actions are locally
+optimal. Owners maximize their own case's expected payoff; no owner
+receives the other's payoff. Internal transfers enter their objectives
+linearly. Ties between acting and costly research favor action; ties
+between using an available slot now and waiting with identical payoff
+favor earlier service. These conventions and public primitives define a
+perfect-information sequential game.
+
+A common nonnegative charge \(\tau\) is paid for every experiment,
+regardless of when it occurs, to a central budget. Let
+\(\tilde b_i=b_i-\tau\) and
+
+\[\tilde w_i=[s_i(b_i-\tau)-\ell_i]^+.\]
+
+\textbf{Theorem 2 (independent local equilibrium and common-charge
+boundary).} Under the stated tie convention, if \(b_A>\tau\), A
+researches first and B waits if and only if \(\tilde w_B>0\). If
+\(b_A\leq\tau\), A acts immediately and B researches if and only if
+\(b_B>\tau\). When \(\ell_A>0\), A's preference for immediate research
+over waiting is strict whenever \(b_A>\tau\).
+
+Suppose the unique efficient order is B first, \(b_A,b_B>0\), and
+\(\ell_A>0\).
+
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\item
+  If \(w_A>0\), no common \(\tau\geq0\) implements the efficient
+  schedule and retention policy.
+\item
+  If \(w_A=0\), every \(\tau\in[b_A,b_B)\) implements it; this interval
+  is nonempty.
+\end{enumerate}
+
+If A first is efficient, \(\tau=0\) implements an efficient policy. If
+\(b_A\leq0\), \(\tau=0\) lets B research when worthwhile. Thus failure
+is conditional, not universal.
+
+\textbf{Proof.} With positive \(\tilde b_A\), immediate research gives A
+gain \(\tilde b_A\). If A releases the first slot, its best waiting gain
+when B uses it is \(\tilde w_A\leq\tilde b_A\). The difference before
+truncation is \(h_A\tilde b_A+\ell_A\), positive if \(\ell_A>0\). If B
+does not use the released slot, idling provides no improvement. Hence A
+claims service. If \(\tilde b_A\leq0\), waiting cannot help and A acts.
+B's behavior follows (2) with the charged research cost.
+
+For (a), reversing A's strictly preferred first claim requires
+\(\tau\geq b_A\). But then \(b_A-\tau\leq0\), so A will not research in
+the last slot and cannot have positive retained research value. If
+\(\tau<b_A\), A takes the first slot. Neither case gives the desired
+policy.
+
+For (b), unique B-first optimality and \(w_A=0\) imply
+\(b_B>b_A+w_B\geq b_A\). The displayed interval makes A act and B
+research. The other implementation claims follow from the equilibrium at
+\(\tau=0\). \(\square\)
+
+For an exact classification, let \(t_B=b_B-\ell_B/s_B\). Excluding
+transfers from resource payoff, the equilibrium value at every
+\(\tau\geq0\) is
+
+\[J_\tau=\begin{cases}
+G+b_A+\mathbf1\{\tau<t_B\}w_B,&\tau<b_A,\\
+G+\mathbf1\{\tau<b_B\}b_B,&\tau\geq b_A.
+\end{cases} \tag{5a}\]
+
+Thus the exact implementation set, including ties, is
+\(\{\tau\geq0:J_\tau=W^*\}\). For a unique A-first optimum with
+\(w_B>0\), it is \([0,\min\{b_A,t_B\})\); with \(w_B=0\), it is
+\([0,b_A)\). For a unique B-first optimum with \(b_A\leq0\), it is
+\([0,b_B)\); with \(b_A>0,w_A=0\), it is \([b_A,b_B)\); with
+\(b_A>0,w_A>0\), it is empty under the early-service tie convention. If
+both research gains are nonpositive, every nonnegative fee implements
+immediate action. The strict-urgency qualification below distinguishes
+the empty-set claim from an impossibility under all favorable
+alternative tie-breaking. Equation (5a) follows directly from the two
+equilibrium branches: a charge can change a choice, but the charge is
+not itself a social resource expense.
+
+If \(\ell_A=0\), then \(h_A=d_A=0\) because \(g_A>0\). Early and late
+private service can tie. Under favorable alternative tie-breaking, an
+efficient B-first schedule with A retained can then be supported at zero
+charge. Our robust impossibility result requires strict local urgency,
+not an arbitrary unfavorable tie. A change in priority ownership or a
+dispatcher that already assigns the efficient order can likewise
+implement at zero charge. We are evaluating charges within the specified
+decentralized institution, not proving every constant-price mechanism
+impossible.
+
+\subsection{6.2 Common deadline}\label{common-deadline}
+
+A common binding deadline leaves \(D=0,1,\) or \(2\) slots for both
+cases; it changes neither priors nor priority rights. At zero charge its
+equilibrium payoffs are
+
+\[J_0=G,\]
+
+\[J_1=\begin{cases}G+b_A,&b_A>0,\\G+b_B^+,&b_A\leq0,\end{cases}\]
+
+\[J_2=\begin{cases}G+b_A+w_B,&b_A>0,\\G+b_B^+,&b_A\leq0.\end{cases} \tag{5}\]
+
+\textbf{Corollary 1.} If B first is uniquely efficient and \(b_A>0\), no
+unpriced common deadline implements the optimum. Conversely, if A first
+is efficient, \(D=2\) implements an efficient policy; if no research is
+valuable, \(D=0\) does so. Equation (5) gives the exact test including
+ties and other cases.
+
+\textbf{Proof.} Under unique B-first optimality,
+\(W^*>G+b_A+w_B\geq G+b_A>G\). These three quantities bound the payoffs
+of the three deadlines when A has positive research value. The converse
+statements follow from (4)-(5). \(\square\)
+
+The deadline can reduce total research while preserving the wrong
+service order. This is a different failure from an externally imposed
+time price that is simply too low. A deadline with case-specific
+priority reassignment is a different intervention and can work.
+
+\subsection{6.3 State-contingent opportunity-loss
+charge}\label{state-contingent-opportunity-loss-charge}
+
+Replace the common charge by a posted priority-right rule. If A claims
+the first slot, it pays \(u_B=b_B^+-w_B\) once. If it releases the slot,
+it pays zero. Deferred experiments and B's use are uncharged. B can
+decline research and act; A can retain its second-slot option. The
+charge is public, computed before choices from the competing case's
+primitives, and does not count as a social expense.
+
+\textbf{Theorem 3 (public-state implementation).} The posted
+priority-right rule implements an optimal joint stopping and scheduling
+policy for every parameter configuration in the model, with
+payoff-equivalent tie choices allowed. If both cases have positive
+research value, A chooses first service exactly when \(u_A>u_B\),
+otherwise it releases the slot. Waiting and action choices remain
+efficient.
+
+\textbf{Proof.} A's payoff gain from claiming is \(b_A-u_B\). Its payoff
+gain from releasing to a willing B and choosing its best waiting-or-act
+option is \(w_A\). For positive \(b_A,b_B\), the difference is
+\(u_A-u_B\). B waits after an A claim if \(w_B>0\) and researches
+immediately after a release if \(b_B>0\). Thus the selected route is
+exactly the larger route in (4).
+
+If \(b_A\leq0\), its claim cannot improve on releasing and acting; B
+then researches if worthwhile. If \(b_B\leq0\), \(u_B=w_B=0\). A claims
+if immediate research dominates its waiting option, and otherwise may
+take its identical-payoff research option in the final slot. If neither
+has positive \(b\), both act. At equality either order has the same
+total value. No future charge distorts the second-slot option.
+\(\square\)
+
+\textbf{Corollary 2 (when rival-state variation is necessary).} Fix A
+with positive b\_A and w\_A. Suppose two public rival states both have
+b\_B\textgreater0 and satisfy \(u_B^{L}<u_A<u_B^{H}\). No single
+first-slot fee k, independent of the rival state and with uncharged
+deferred service, implements the efficient order in both states under
+the same tie rule. The opportunity-loss charge does.
+
+\textbf{Proof.} For a constant first-slot fee, A compares \(b_A-k\) with
+w\_A, so it claims exactly when \(k<u_A\), independently of B's state.
+Efficiency requires claiming in the low state and releasing in the high
+state, contradictory strict requirements on k. Posting \(u_B\)
+implements each state by Theorem 3. \(\square\)
+
+The rule charges the rival's \emph{loss from deferral}, not its entire
+research value. Charging \(b_B^+\) would overstate the externality
+whenever \(w_B>0\). Repeating the priority toll on a later slot would
+charge for the same lost option twice and could recreate underresearch.
+This is precisely why the distinction between a first-slot right and
+every unit of research is substantive.
+
+Implementation requires observable case states, enforceable priority
+rights and marginal budget incentives. A recommendation that does not
+affect behavior is not an implementation. The rule is feasible as an
+internal booked priority charge or as equivalent dispatcher assignment
+with recorded opportunity cost. It does not require an outside payment.
+It is not claimed budget balanced among owners, a truthful auction, or
+valid under private misreporting. Dynamic pivot and congestion pricing
+precedents remain the appropriate conceptual comparison.
+
+\section{7. Recoverability separates research value from
+priority}\label{recoverability-separates-research-value-from-priority}
+
+Consider a case in the interior region \(b_i>0,w_i>0\). Its priority
+loss simplifies to
+
+\[u_i=h_ib_i+\ell_i=h_is_iM_i-h_ic_i+s_id_i. \tag{6}\]
+
+\textbf{Theorem 4 (recoverability-priority reversal).} Holding the
+prior, signal law, cost, and expiration fixed, within this region
+
+\[\frac{\partial b_i}{\partial r_i}=-S_i[(m_i-\bar m_i)+h_i\bar m_i]\leq0,\]
+
+\[\frac{\partial u_i}{\partial r_i}=h_is_iS_i\bar m_i\geq0. \tag{7}\]
+
+The inequalities are strict when their respective coefficients are
+positive. Therefore increasing recoverability can lower a case's
+standalone research gain while raising its scheduling priority. Against
+a rival with fixed \(u_j\), a priority reversal occurs whenever two
+recoverability levels inside this region satisfy
+\(u_i(r_0)<u_j<u_i(r_1)\).
+
+\textbf{Proof.} Differentiate \(g_i\) and \(M_i\) in (1): their
+derivatives are \(S_im_i\) and \(S_i\bar m_i\). The derivative of
+\(b_i\) is \(s_iS_i\bar m_i-S_im_i\). With \(w_i=s_ib_i-\ell_i>0\), (6)
+follows algebraically and its derivative yields (7). Theorem 1 converts
+crossing losses into a reversed order. \(\square\)
+
+The economic reason is conditional. Recoverability raises the value
+preserved by acting in the wrong state. Within the region where research
+still occurs, it also raises the expected reward whose availability is
+threatened by expiration during an extra waiting slot. The value of
+improving the choice falls, but the cost of delaying that
+research-and-action option can rise. Once deferred research becomes
+unattractive, \(u_i=b_i^+\) and the rising-priority conclusion need not
+hold. At \(h_i=0\), the positive derivative in (7) vanishes.
+
+This reduced-form result is not a theorem that reversible trials should
+be prioritized. A trial that generates new information after action or
+changes the opportunity's hazard requires a different model. Nor is
+increased recoverability equivalent to a lower loss from expiration:
+expiration destroys the entire still-unresolved opportunity here. If
+salvage survives expiration, (1) and the comparative statics change. The
+theorem makes those boundaries explicit.
+
+\section{8. Correlated states: the smallest nonseparable
+extension}\label{correlated-states-the-smallest-nonseparable-extension}
+
+\subsection{8.1 Information and the contingent joint
+policy}\label{information-and-the-contingent-joint-policy}
+
+Keep the same two cases, two slots, one experiment per case,
+holding/expiry technology and immediate terminal-action option. Replace
+the product prior by a public joint binary distribution
+\(\mu=(\mu_{00},\mu_{01},\mu_{10},\mu_{11})\). Conditional on the latent
+state vector, signal errors remain independent. Survival is independent
+of latent states and signals. Terminal action locks a payoff, but the
+realized action outcome is not revealed during the two-slot window;
+otherwise correlated cases could learn for free from action outcomes.
+Only research signals provide new state information here.
+
+Let \(L\) be the live unresolved cases and \(E\) the cases with an
+unused experiment. Observing signal y from research on k updates the
+\emph{whole} joint distribution to \(\mu^{k,y}\). Write \(g_i(\mu)\) for
+immediate-action value and
+
+\[M_{i|k}(\mu)=E_y g_i(\mu^{k,y}),\qquad
+b_k(\mu)=s_kM_{k|k}(\mu)-c_k-d_k-g_k(\mu).\]
+
+The cross-information net gain for a passive case i retained while k is
+researched is
+
+\[a_{i|k}(\mu)=s_is_k[M_{i|k}(\mu)-g_i(\mu)]-\ell_i(\mu),
+\quad\ell_i(\mu)=d_i+h_ig_i(\mu). \tag{8}\]
+
+The factor \(s_is_k\) matters: i must remain actionable and k must
+survive to deliver the signal. If k expires, i still acts on the
+unchanged posterior, provided i survives. A previously researched case
+can now have \(a_{i|k}>0\) and should not be automatically retired.
+
+\textbf{Theorem 5 (complete correlated two-slot solution).} With one
+slot left,
+
+\[V_1(\mu,L,E)=\sum_{i\in L}g_i(\mu)+
+\max\left\{0,\max_{k\in L\cap E}
+\left[b_k(\mu)+\sum_{i\in L\setminus\{k\}}a_{i|k}(\mu)^+\right]\right\}. \tag{9}\]
+
+If k is selected, retain each other live case i exactly when
+\(a_{i|k}>0\); otherwise act on it before the signal. After survival and
+signal revelation, choose posterior-optimal terminal actions.
+
+At the initial boundary choose a retained subset \(R\subseteq\{A,B\}\)
+and research \(k\in R\) or \(k=\varnothing\). Define
+\(E_k=\{A,B\}\setminus\{k\}\) when k is a case, and
+\(E_\varnothing=\{A,B\}\). For each survivor subset \(S\subseteq R\) let
+\(P_R(S)=\prod_{i\in S}s_i\prod_{i\in R\setminus S}h_i\). Let
+\(\mathcal T_k V_1\) be the signal expectation of
+\(V_1(\mu^{k,y},S,E_k)\) if \(k\in S\), or \(V_1(\mu,S,E_k)\) otherwise.
+Then
+
+\[Q_0(R,k)=\sum_{i\notin R}g_i(\mu)-\sum_{i\in R}d_i
+-\mathbf1\{k\ne\varnothing\}c_k
++\sum_{S\subseteq R}P_R(S)\mathcal T_kV_1, \tag{10}\]
+
+\[V_2(\mu)=\max_{R,k}Q_0(R,k). \tag{11}\]
+
+There are exactly eight root choices: stop both; keep only A with
+research or idling; keep only B with research or idling; keep both with
+A research, B research, or idling. Equations (8)-(11), involving only
+finite sums, posterior updates and maxima, solve every initial and
+signal-contingent decision; no general queue equation is left unsolved.
+
+\textbf{Proof.} In the final slot either all cases act or one unused
+experiment is selected. Its own payoff relative to acting is b\_k. For
+another case i, retaining it produces
+\(-d_i+s_i[(1-s_k)g_i+s_kM_{i|k}]\), so its incremental gain is (8).
+Choose retention separately by its sign; terminal payoffs are additive
+and there are at most two cases. Final idling gives no information and
+is dominated by immediate action because costs are nonnegative and
+rewards nonnegative. This proves (9). For the first slot, outside-R
+actions are irrevocable, every retained case pays its holding cost once,
+and the selected experiment costs c\_k once. Condition on independent
+survival and the signal, if delivered; the remaining optimum is (9). The
+eight choices exhaust the initial action set, including idle policies.
+This proves (10)-(11) and the contingent policy. \(\square\)
+
+For a product prior, \(M_{i|k}=g_i\) when i differs from k, so every
+passive cross gain is nonpositive. Previously researched cases then
+retire immediately, and (9)-(11) reduce to Theorem 1. This proves an
+exact separable boundary rather than treating correlation as another
+scalar delay cost.
+
+\subsection{8.2 Local behavior and a signed incentive
+boundary}\label{local-behavior-and-a-signed-incentive-boundary}
+
+The local-priority game extends the earlier one without preventing
+cross-learning. In the last slot, if A still has an experiment, it
+compares its own charged research gain \(b_A-\tau\) with the gain
+\(a_{A|B}^+\) from releasing to B, provided B has an experiment and
+\(b_B>\tau\). If A claims, B retains only when \(a_{B|A}>0\). If A
+releases, B researches only when its own \(b_B>\tau\), and A retains
+only when \(a_{A|B}>0\). If A has no experiment, B has the research
+choice. Each owner may act immediately rather than wait. Ties between
+research and action favor action; otherwise use the earlier priority
+convention. This explicitly solves the last-slot local game.
+
+For completeness the root game is also finite and solved. Let
+\(Q_i^L(R,k)\) be case i's component of (10) when its final continuation
+is the just-described local game rather than (9), and subtract any own
+research charges in computing its private component \(P_i^L\). A
+initially chooses claim, release-and-retain, or act-and-release. B's
+feasible root choices in those three branches are respectively
+
+\[\mathcal C=\{(\{A\},A),(\{A,B\},A)\},\]
+\[\mathcal R=\{(\{A\},\varnothing),(\{A,B\},B),(\{A,B\},\varnothing)\},\]
+\[\mathcal X=\{(\varnothing,\varnothing),(\{B\},B),(\{B\},\varnothing)\}.\]
+
+In each branch B selects a maximizer of \(P_B^L\); A then selects the
+resulting branch maximizing \(P_A^L\). This is an explicit two-level
+maximum over 2, 3, and 3 choices with known finite continuation values.
+It specifies off-path actions as well as the equilibrium. Appendix D
+proves the backward-induction construction and the code reports all
+route payoffs. It reduces to the earlier local equilibrium for
+independent states.
+
+\textbf{Theorem 6 (information-credit boundary).} At a last-slot history
+with live cases i,j and only i's experiment remaining, joint research is
+strictly optimal if and only if \(b_i+a_{j|i}^+>0\). Local research at a
+nonnegative common fee requires \(b_i>\tau\). Therefore, if
+
+\[b_i\leq0<b_i+a_{j|i}^+, \tag{12}\]
+
+no nonnegative research charge implements the joint-optimal
+continuation. A public credit \(\kappa_i=a_{j|i}^+\) conditional on
+conducting the experiment, with no further charge, implements the joint
+research-or-action decision. A credit strictly exceeding \(-b_i\) is
+necessary for strict local research in the negative-own-gain case; its
+infimum is \(-b_i\). These statements concern the last-slot decision,
+not a claim that this credit alone implements all root incentives.
+
+\textbf{Proof.} Equation (9) compares exactly those two choices when
+only one experiment remains. The passive owner retains iff its own a is
+positive. The active owner's charged gain is \(b_i-\tau\), which is
+nonpositive under (12). With the credit its gain becomes
+\(b_i+a_{j|i}^+\), identical to the joint comparison. Equality can
+select action, which is then jointly optimal. Strict local research
+requires \(b_i+\kappa_i>0\). \(\square\)
+
+The independent common-fee classification and positive first-slot toll
+remain correct on the product-prior subspace; they do not extend by
+substituting marginal beliefs into b,w,u. Correlation can create both an
+incentive to free-ride on another case's signal and an incentive to stop
+socially valuable cross-informing research. A blanket assertion that
+local objectives always overacquire evidence would now be false.
+
+A sufficient \emph{full} public-state implementation is available if
+unrestricted signed internal transfers and observable eventual resource
+payoffs are allowed: give owner i its own resource payoff plus the other
+case's resource payoff minus a fixed initial constant. Each owner then
+maximizes total firm payoff minus a constant at every decision. Backward
+induction through the finite game implements (9)-(11). This elementary
+team-payoff alignment is not a new pivot theorem, not budget balanced
+between owners, and not a private-information mechanism. It requires
+stronger incentive and accounting authority than the one-time toll. The
+last-slot credit alone should not be described as implementing the full
+root policy.
+
+\subsection{8.3 Exact positive-expiry example and contingent
+choices}\label{exact-positive-expiry-example-and-contingent-choices}
+
+Take \(\mu=(.58,.02,.02,.38)\), so both marginal state-1 probabilities
+are .4 and all joint states have positive probability. Let
+\(S_A=S_B=100\), \(r_A=r_B=0\), \(d_A=d_B=0\), \(h_A=h_B=.01\),
+\(q_A=.8,c_A=1\), and \(q_B=.95,c_B=30\). These are arbitrary synthetic
+model units.
+
+The unique best root choice retains both and researches A first,
+yielding
+
+\[V_2=\frac{249523577}{1562500}=159.69508928.\]
+
+The complete root comparison is:
+
+\begin{longtable}[]{@{}llr@{}}
+\toprule\noalign{}
+Retained cases & First research & Optimal joint continuation payoff \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+None & None & 120.000000 \\
+A & None & 137.418000 \\
+A & A & 138.200000 \\
+B & None & 123.409500 \\
+B & B & 124.050000 \\
+A and B & None & 153.176525 \\
+A and B & A & 159.695089 \\
+A and B & B & 154.405320 \\
+\end{longtable}
+
+If both survive and A's signal is 1, the joint posterior is
+\((29/110,1/110,2/55,38/55)\). The posterior marginals are \(p_A=8/11\)
+and \(p_B=.7\). B's own last-slot research gain is \(-5.95\), but A's
+net gain from being retained to learn B's signal is
+\(9401/550=17.09272727\). Thus the joint incremental gain is
+\(12257/1100=11.14272727\). Research B and retain A, even though A has
+already used its experiment. This is a supported branch with probability
+.431244 from the root.
+
+If both survive and A's signal is 0, act on both immediately: the second
+experiment is not jointly worthwhile. If A expires but B survives, B's
+posterior is unchanged and B researches, with own gain 4.05. If only A
+survives, it acts on its observed posterior. If neither survives, there
+is no action reward. These six branches are the complete contingent
+optimum and are reported with exact probabilities in the reproduction
+output.
+
+In the solved local game A instead releases to B initially to obtain
+more valuable free cross-information; the total payoff is 154.40532. The
+R1 priority toll calculated only from initial marginals is .6405 and
+gives the same suboptimal outcome. Independently of this root
+comparison, every nonnegative uniform research fee fails to implement
+the efficient full policy, since the positive-probability second-slot
+branch requires B to research with negative own gain. The unpriced
+common-deadline payoffs are 120 for zero slots, 154.22514 for one slot,
+and 154.40532 for two slots, all below the joint optimum. Unlike the
+independent proof, these comparisons use the correlated local game.
+
+For an exact independence check, replacing the joint prior by
+\((.36,.24,.24,.16)\) preserves both marginals and every other
+primitive. The resulting joint and local values both equal 141.6095 and
+the passive cross-information gain is nonpositive. For a simple boundary
+check with perfect positive correlation and no expiry,
+\(\mu=(.6,0,0,.4)\) gives a joint value 165.4 versus local 160. These
+are three exact small instances, not a simulation campaign or empirical
+estimates.
+
+The rational solver and independent physical-outcome enumeration agree
+on all eight root values in each instance. The enumerator includes
+contingent retention of the already researched case, actual terminal
+action success/error, and all positive-probability signal and expiry
+paths. There are 63 policy maps in each full-support instance and 30 in
+the zero-expiry boundary, 156 total. Final idle policies are
+analytically dominated; initial idle policies are enumerated. The new
+script reports 37 checks. A separately evaluated full physical tree, not
+merely the same Bellman recursion twice, supplies the comparison.
+
+\subsection{8.4 Two public-history credits: complete
+implementation}\label{two-public-history-credits-complete-implementation}
+
+The final-slot information credit in Theorem 6 does not resolve A's
+initial incentive to free-ride on B's information. We now close that gap
+within the \textbf{same} model using only two nonnegative internal
+credits. Credit C is paid to A when its initial-slot experiment is
+conducted, even if A then expires. Credit \(\kappa\) is paid to B when
+its final-slot experiment is conducted after initial research on A, both
+cases surviving that first slot, and public signal \(Y_A=1\). Payment
+precedes second-slot survival. All other payments are zero, including
+every research fee. The announced credits are committed and enter the
+owners' quasilinear objectives; they depend on public research/history,
+never eventual action rewards. They do not add to firm resource losses.
+
+Keep the synthetic full-support witness's primitives: \(p_A=p_B=.4\),
+\(q_A=.8\), \(q_B=.95\), \(c_A=1\), \(c_B=30\), \(h_A=h_B=.01\),
+\(S_A=S_B=100\), and \(d_i=r_i=0\). Vary only
+
+\[\mu(\delta)=(.36+\delta,.24-\delta,.24-\delta,.16+\delta),
+\qquad -.16\leq\delta\leq .24.\]
+
+We prove the following result on the exact, nonempty closed interval
+
+\[I=[17/100,23/100]. \tag{13}\]
+
+This is a certified interval around .22, not an asserted maximal region
+or a classification of the entire admissible prior range. Independence
+remains at \(\delta=0\), outside I, and retains Theorems 1-4's
+appropriate scope.
+
+The efficient contingent policy \(\pi^*\) on I retains both cases and
+researches A initially. If both survive and \(Y_A=1\), it retains A and
+researches B; if \(Y_A=0\), both act immediately. If A expires and B
+survives, B researches without a credit. If only A survives, A acts on
+its own signal. Neither survivor means no terminal reward. After the
+second experiment, survivors act using exactly their available public
+signals. With \(s=99/100\), its resource components are
+
+\[X_A(\delta)=\frac{43226820450\delta+33275667541}{500000000},\]
+\[X_B(\delta)=\frac{297(495000\delta+515039)}{2500000}. \tag{14}\]
+
+Define the credit-event probability, two switch points, and B's
+continuation deficit by
+
+\[p=\frac{107811}{250000}=s^2\Pr(Y_A=1),\quad
+\delta_0=\frac{7831}{45000},\quad
+\delta_1=\frac{5291}{30000},\quad
+K(\delta)=\frac{30000\delta-5291}{220}. \tag{15}\]
+
+Here p is \textbf{not} multiplied by second-slot survival: B is paid on
+conducting research. Define A's required initial compensation
+
+\[F(\delta)=\begin{cases}
+(877679550\delta+171175559)/500000000,&\delta\leq\delta_0,\\
+(44982179550\delta-7503987541)/500000000,&\delta\geq\delta_0.
+\end{cases} \tag{16}\]
+
+The pieces agree at \(\delta_0\) and F is strictly positive throughout
+I.
+
+\textbf{Theorem 7 (two-credit implementation and initial toll failure).}
+On I the root action and supported continuation of \(\pi^*\) are
+strictly efficient. Under the stipulated zero-gain action tie and
+positive initial-priority tie conventions, the two-credit local game
+implements its entire contingent policy if and only if
+
+\[C\geq F(\delta),\qquad \kappa\geq0,\qquad
+\kappa>K(\delta). \tag{17}\]
+
+Strict implementation at the initial comparison and every supported
+discretionary research/retention decision additionally requires
+\(C>F(\delta)\). A positive tie between initial claim and release
+selects A's initial claim; at \(\kappa=K\geq0\), B instead selects
+action and implementation fails. The strict-implementation statement
+concerns the efficient outcome and its supported decisions, not
+elimination of all possible indifferences in off-path subgames.
+
+Replacing C by an initial A-claim \textbf{toll} \(T\geq0\), while
+retaining the same B-only continuation credit and zero other payments,
+cannot implement \(\pi^*\) anywhere on I. This is a claim about that
+restricted instrument class, not arbitrary taxes, subsidies, or
+budget-balanced mechanisms.
+
+\textbf{Proof.} The joint-policy certificate and all off-path
+continuation calculations are given in Appendix E. Conditional on both
+cases alive after \(Y_A=1\), B's own research gain is \(-K\), and A's
+net passive cross gain is
+
+\[a_{A|B}=\frac{4410450\delta-594259}{22000}>0.\]
+
+Their joint increment is \((1410450\delta-65159)/22000>0\) on I. B
+conducts research exactly when \(\kappa>K\). A then strictly retains.
+After \(Y_A=0\), B's uncredited research gain is
+\(-3(5000\delta-189)/140<0\); neither research nor idle continuation is
+chosen. On the B-only survival branch, its uncredited gain is
+\(81/20>0\). All these decisions use the actual local continuation, not
+a prescribed dispatcher.
+
+When \(\kappa>K\), B's root private payoff from retention after an A
+claim is \(X_B+p\kappa>60\), so it strictly retains instead of acting.
+If A releases and remains unresolved, B strictly researches initially:
+its own value is \(1281/20=64.05\), versus \(126819/2000=63.4095\) from
+waiting and 60 from acting. These comparisons include the off-path
+no-signal final game. The same choices hold if A acts and releases. A's
+release-and-retain resource payoff is
+
+\[R_A(\delta)=51.54336+176.418\delta+
+\frac{401841}{1000000}\left[\frac{7831-45000\delta}{205}\right]^+ . \tag{18}\]
+
+This includes A's own later research when beneficial after B's first
+signal, and research if B expires without delivering a signal. Direct
+subtraction gives \(R_A-X_A=F>0\). A's three resulting private payoffs
+are \(X_A+C\), \(R_A\), and 60. Since \(R_A>60\), the initial comparison
+is exactly \(C\geq F\), with strictness as stated. If \(\kappa\leq K\),
+a positive-probability efficient continuation is absent regardless of C;
+necessity follows. Conversely all the displayed strict continuation
+comparisons and the root comparison imply the complete target policy,
+proving sufficiency. With a toll the claim payoff is \(X_A-T<R_A\)
+whenever B's target continuation is induced; if not induced the
+continuation already fails. This proves the restricted toll
+impossibility. \(\square\)
+
+The threshold at \(\delta_0\simeq .17402222\) comes from A's uncredited
+own experiment after B's initial signal 1, an off-path continuation that
+changes its release payoff. The threshold at
+\(\delta_1\simeq .17636667\) comes from B's credited on-path experiment
+changing from privately profitable to nonpositive. Both are inside I.
+The full game therefore yields piecewise initial and continuation
+requirements even though its efficient policy is unchanged.
+
+\subsection{8.5 Funding frontiers, attainment, and exact
+witness}\label{funding-frontiers-attainment-and-exact-witness}
+
+Let \(k(\delta)=\max\{0,K(\delta)\}\). A gross expected-credit
+constraint \(\bar E\) limits expected transfers, while gross pathwise
+capacity \(\bar H\) must fund the largest possible payment total. These
+are institutional limits on credits, not welfare-cost terms. Under
+implementation, A is always paid C and B is paid \(\kappa\) on an event
+of probability p.~Therefore
+
+\[E=C+p\kappa,\qquad H=C+\kappa. \tag{19}\]
+
+\textbf{Theorem 8 (restricted funding frontier).} For weak
+implementation selected by the stated ties, the two infima are
+
+\[E_{\inf}(\delta)=F(\delta)+p k(\delta),\qquad
+H_{\inf}(\delta)=F(\delta)+k(\delta). \tag{20}\]
+
+If \(\delta<\delta_1\), both are attained together at
+\((C,\kappa)=(F,0)\). If \(\delta\geq\delta_1\), neither is attained.
+Strict supported implementation has the same two infima and attains
+neither at any \(\delta\in I\).
+
+For a weak implementation, the exact budget-feasibility conditions are
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Prior region & Expected cap only & Pathwise cap only \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(\delta<\delta_1\) & \(\bar E\geq F\) & \(\bar H\geq F\) \\
+\(\delta\geq\delta_1\) & \(\bar E>F+pk\) & \(\bar H>F+k\) \\
+\end{longtable}
+
+For strict supported implementation, both respective conditions are
+strict throughout I. If both budgets are imposed, \textbf{both}
+corresponding inequalities are necessary and sufficient. Expected and
+pathwise caps cannot be substituted for each other. These statements
+completely classify funding inside the two-credit class, without
+optimizing over other contracts.
+
+\textbf{Proof.} Equation (17) is the complete feasible payment set. Both
+objectives in (19) increase strictly in each payment since \(0<p<1\).
+When K is negative, \((F,0)\) is feasible and minimizes both. At K zero
+or positive, B's strict research incentive requires \(\kappa>k\);
+approach but do not reach k while C equals F. Strict root implementation
+also requires C above F. These facts prove the infima and attainment
+statements. For simultaneous caps with positive slack, choose
+sufficiently small nonnegative increments above F and k; the expected
+increment is \(\epsilon_C+p\epsilon_\kappa\), and the pathwise increment
+is \(\epsilon_C+\epsilon_\kappa\). They fit both caps. If K is negative
+and only weak implementation is required, the attained pair fits both
+weak caps directly. Necessity follows from monotonicity. \(\square\)
+
+At the preserved witness \(\delta=11/50\), the exact values are
+
+\[X_A=\frac{1069639201}{12500000}=85.57113608,\quad
+R_A=\frac{2258883}{25000}=90.35532,\]
+\[F=\frac{59802299}{12500000}=4.78418392,\qquad K=\frac{119}{20}=5.95,\]
+\[E_{\inf}=\frac{183752143}{25000000}=7.35008572,\quad
+H_{\inf}=\frac{134177299}{12500000}=10.73418392. \tag{21}\]
+
+Neither weak nor strict implementation attains these witness infima: B
+chooses action at \(\kappa=5.95\). At that limiting value B's root
+retained-route private value is \(X_B+pK=76.689855>60\), verifying that
+retention is slack. For example \(C=F+.01\) and \(\kappa=K+.01\)
+implement strictly, with \(E=7.36439816\) and \(H=10.75418392\). The
+firm's physical payoff remains 159.69508928; adding or subtracting the
+credits from it would conflate internal funding with resource
+accounting.
+
+The exact endpoint certificate and witness computations enumerate
+physical latent states, signals and survival with rational arithmetic,
+independently of the joint-value solver. They verify 63 contingent
+schedule/retention maps at each of two interval endpoints and the
+retained witness. This is a proof certificate and accounting check, not
+a parameter grid or new simulation campaign. The 101 checks include all
+root alternatives, complete credited local-game choices, both binding
+incentive endpoints, piece continuity, and the original fractions.
+
+\section{9. Exact synthetic
+verification}\label{exact-synthetic-verification}
+
+\subsection{9.1 Independent computation and
+counting}\label{independent-computation-and-counting}
+
+All reported numbers are synthetic model units. The retained
+independent-case script \texttt{joint\_analysis.py} computes (1)-(5) and
+the posted policy. Independently, a second evaluator enumerates every
+root choice of retained subset and active case or idling, every feasible
+signal-contingent final-slot research map, both latent states, both
+signal outcomes, and all positive-probability survival paths. It values
+realized correct and incorrect terminal actions and actual costs
+directly; it does not use the \(b,w,u\) formulas in the evaluator.
+
+With strictly interior hazards the full two-case tree contains 35
+distinct scheduling policies in this representation: immediate action on
+both; one-case research; one-case idling with terminal choice; two-case
+idling with survivor-contingent scheduling; and research on either case
+with signal-contingent final allocation. When zero-probability branches
+are removed the count can be smaller. Terminal actions after each
+available signal use Bayes-optimal classification; all possible research
+schedules are enumerated. The separate posterior computation does not
+import the closed-form scheduling optimum.
+
+For the six named scenarios the output contains 193 policy rows,
+including 35 for each interior-hazard example and 18 when both hazards
+vanish. The script also checks additional parameter configurations and
+the policy boundaries; 250 independent-case checks pass. These checks
+validate implementation in this finite model, not external validity or
+originality. The earlier single-case script separately passes 12,002
+checks and remains in the reproduction package.
+
+\subsection{9.2 Congestion, charge failure, and deadline
+failure}\label{congestion-charge-failure-and-deadline-failure}
+
+Let both cases have \(p=.5,S=100,r=0,c=1,d=0\). Let A have
+\(q_A=.7,h_A=.02\), and B have \(q_B=.9,h_B=.20\). Then
+
+\[b_A=17.6,\quad w_A=16.248,\quad u_A=1.352,\]
+\[b_B=21,\quad w_B=6.8,\quad u_B=14.2.\]
+
+The joint optimum researches B first, retains A, and obtains
+\(100+21+16.248=137.248\). Local priority gives A first and B later,
+yielding \(124.4\). A one-slot common deadline yields \(117.6\); an
+immediate deadline yields \(100\). For every common charge
+\(\tau<17.6\), A still takes the first slot; for \(\tau\geq17.6\), A
+does not perform the valuable deferred experiment. Thus no common charge
+implements the optimum, a conclusion from the theorem rather than a
+finite tax grid. The posted priority charge is 14.2. A compares
+\(17.6-14.2=3.4\) with its retained value 16.248 and releases the slot,
+implementing the optimum.
+
+Changing only B's prior to .705 in this example gives \(g_B=70.5\),
+\(b_B=.5\), \(w_B=0\), and \(u_B=.5\). A should then be first, with
+total payoff 138.1. A's own primitives are unchanged. The pair of B
+priors .5 and .705 straddles A's priority loss, so even a constant
+first-slot fee cannot implement both states. This demonstrates why the
+correction must respond to the competing belief rather than merely to
+the focal analyst's own research cost.
+
+\subsection{9.3 Priority reversal and positive implementation
+examples}\label{priority-reversal-and-positive-implementation-examples}
+
+For the reversal, keep A as above and set B to \(q_B=.7,h_B=.022\), with
+the other primitives unchanged. Initially \(u_A=1.352<u_B=1.48412\), so
+B is first. Increase A's recoverable share to .5. Its research gain
+falls from 17.6 to 7.3, but its priority loss rises to 1.646; both
+research-retention inequalities remain strict. A is now first. The
+payoff levels differ because recoverability changes the primitive
+rewards; the comparison identifies an ordering reversal, not a
+treatment-effect estimate.
+
+If both hazards and holding costs are zero, \(w_i=b_i^+\) and all
+deferral losses vanish. Both positive-value experiments can be performed
+in either order at no loss, and a zero common charge works. If A's
+acquisition cost rises to 30 in the congestion example, \(b_A=-11.4\)
+and it acts immediately; B researches first at zero common charge, also
+efficiently. These examples prevent an unconditional claim that constant
+charges or existing priority rights always fail.
+
+\section{10. Welfare measurement and prospective queue
+experiment}\label{welfare-measurement-and-prospective-queue-experiment}
+
+The proposed empirical unit changes with the shared-resource mechanism.
+The primary unit is a pre-registered analyst-queue episode containing a
+frozen cohort of eligible decisions and a specified capacity window, not
+a completed individual case. The estimand is the intention-to-treat
+effect of an offered opportunity-loss scheduling aid on total payoff
+over all cases in that episode. Per-case effects and cross-case
+spillovers are secondary. No firm data, partner agreement, recruitment,
+treatment assignments, or implemented experiment exist.
+
+The protocol crosses an incremental evidence packet with a queue-level
+priority aid, keeping analyst capacity and the economic alternatives
+comparable. The aid explicitly records immediate action, deferred
+research, expiration, and the foregone value of the competing case. It
+compares a local-order baseline with opportunity-cost scheduling. It
+does not purport to identify the behavior of real budget charges if only
+a recommendation is offered. Any charge experiment would require actual
+internal authority and an additional registered arm. A common-deadline
+arm is neither necessary nor currently authorized. If cases have
+correlated underlying conditions, record cross-case prior links,
+posterior revisions after each public signal, and decisions to retain an
+already researched case. The independent u-score is not applied to such
+cases as if a marginal-prior update were sufficient; the two-slot
+correlated formula or an explicitly limited recommendation must be used.
+
+Randomization must occur at the entire shared analyst pool or
+independent pool-period level, with buffer periods and all displaced
+work tracked. Randomizing individual cases within the same queue would
+expose controls to treatment-induced delay and cannot identify an
+isolated case effect without an interference design. The episode cohort
+includes rejected, expired, and unresolved cases. Primary payoffs
+include every case and every worker, not just those served before the
+measurement window ends.
+
+Double counting is a central risk. Actual action margin, research cost,
+residual holding cost, expiration consequence, and correction/rework
+expense must have exclusive ledger categories. The theoretical \(u_j\)
+already summarizes the rival's modeled forgone option and is not added
+to its observed payoff loss. Internal tolls are transfers. Uncertain
+costs produce conditional valuation bounds rather than arbitrary
+monetary estimates. Confidence intervals must account for both
+assignment and partial identification.
+
+If only \(d_i\) is interval valued, every comparison remains conditional
+on priors, signal laws, terminal rewards, expiration, and feasible
+actions. If those are also uncertain, the entire set of candidate joint
+policy values must be recomputed over a documented joint uncertainty
+set. A policy is certified only if its worst comparison is nonnegative
+throughout that set. No unconditional model-robust claim follows from
+bounding delay prices alone.
+
+The detailed prospective protocol contains queue and case dictionaries,
+inclusion rules, interference assumptions, missing-outcome bounds, and
+illustrative precision calculations. Public BPI Challenge 2019
+documentation provides procurement-process context; its repository file
+and license were not verified and no rows were analyzed. It cannot
+identify the proposed mechanism without resource rosters, evidence
+requests, complete intake, and linked economic outcomes.
+
+\section{11. Conclusion}\label{limitations-and-conclusion}
+
+The scarce resource is research, not terminal authorization; action
+consumes no shared capacity. There are exactly two cases, one experiment
+per case, and two slots. Sections 4-7 assume independent states; Section
+8 solves the explicitly correlated counterpart. Neither model includes
+more experiments per case, arrivals, heterogeneous durations, endogenous
+effort, private reporting, or commitment problems. Terminal outcomes do
+not reveal latent states during the two-slot decision window; only
+public research signals provide new state information. We do not present
+an unsolved general queue as a completed result.
+
+The bounded independent-case contribution is the recoverability/priority
+derivative and the exact common-charge implementation set, not the
+scheduling interchange or public externality charge themselves. Under
+correlation, the first signal changes the second case's research and
+retention values. A supported branch can require research despite its
+negative own-case gain, so the positive-toll-only extension fails. The
+full contingent joint policy and finite local game are solved. Theorems
+7-8 close the initial incentive gap for the two specified credits, with
+exact piecewise thresholds and expected/pathwise funding limits. Their
+nonnegative-payment constraint and public-history support are essential
+scope conditions.
+
+These results are stronger than a separable benefit/time ratio but
+remain applications of established scheduling and externality
+principles. Bergemann-Välimäki provides a much broader mechanism-design
+framework, and expiring/restless scheduling is a substantial existing
+literature. The strongest remaining objection is that the small
+public-state implementation characterization and comparative static may
+still be too modest for a leading general-interest journal. No amount of
+synthetic verification establishes empirical relevance or priority. The
+two-credit frontier is a complete restricted implementation result, but
+uses standard incentive comparisons and Bayesian backward induction and
+does not certify a substantial originality claim. It does not solve
+private reports, optimal choice of payment support, budget balance,
+endogenous funding, or arbitrary correlations outside the certified
+interval. No empirical evidence resolves practical importance. This is
+an integrated revised theoretical paper with a separate prospective
+study, not a claim of scientific acceptance.
+
+
+{
+\small
+\setlength{\parindent}{0pt}
+\section*{References}\label{references}
+
+Adiri, Igal, and Uri Yechiali. 1974. ``Optimal Priority-Purchasing and
+Pricing Decisions in Nonmonopoly and Monopoly Queues.'' \emph{Operations
+Research} 22(5): 1051-1066. \url{https://doi.org/10.1287/opre.22.5.1051}.
+
+Bergemann, Dirk, and Juuso Välimäki. 2010. ``The Dynamic Pivot
+Mechanism.'' \emph{Econometrica} 78(2): 771-789.
+\url{https://doi.org/10.3982/ECTA7260}.
+
+Campbell, Arthur, Florian Ederer, and Johannes Spinnewijn. 2014. ``Delay
+and Deadlines: Freeriding and Information Revelation in Partnerships.''
+\emph{American Economic Journal: Microeconomics} 6(2): 163-204.
+\url{https://doi.org/10.1257/mic.6.2.163}.
+
+Escobar, Juan F., and Qiaoxi Zhang. 2021. ``Delegating Learning.''
+\emph{Theoretical Economics} 16(2): 571-603.
+\url{https://doi.org/10.3982/TE4191}.
+
+Eyring, Henry, Patrick J. Ferguson, and Sebastian Koppers. 2021. ``Less
+Information, More Comparison, and Better Performance: Evidence from a
+Field Experiment.'' \emph{Journal of Accounting Research} 59(2):
+657-711. \url{https://doi.org/10.1111/1475-679X.12362}.
+
+Fudenberg, Drew, Philipp Strack, and Tomasz Strzalecki. 2018. ``Speed,
+Accuracy, and the Optimal Timing of Choices.'' \emph{American Economic
+Review} 108(12): 3651-3684. \url{https://doi.org/10.1257/aer.20150742}.
+
+Gittins, John C. 1979. ``Bandit Processes and Dynamic Allocation
+Indices.'' \emph{Journal of the Royal Statistical Society, Series B}
+41(2): 148-164. \url{https://doi.org/10.1111/j.2517-6161.1979.tb01068.x}.
+
+Henry, Emeric, and Marco Ottaviani. 2019. ``Research and the Approval
+Process: The Organization of Persuasion.'' \emph{American Economic
+Review} 109(3): 911-955. \url{https://doi.org/10.1257/aer.20171919}.
+
+Klein, Nicolas, and Sven Rady. 2011. ``Negatively Correlated Bandits.''
+\emph{Review of Economic Studies} 78(2): 693-732.
+\url{https://doi.org/10.1093/restud/rdq025}. Read version: author-hosted
+manuscript dated June 23, 2010,
+\url{https://nicolasklein.com/data/documents/Klein}\_Rady\_CB.pdf; publisher
+metadata verifies the later journal version, whose full text was not
+read.
+
+Moroni, Sofia. 2022. ``Experimentation in Organizations.''
+\emph{Theoretical Economics} 17(3): 1403-1450.
+\url{https://doi.org/10.3982/TE3069}. Published introduction and model
+inspected.
+
+Righter, Rhonda, and J. George Shanthikumar. 1998. ``Independently
+Expiring Multiarmed Bandits.'' \emph{Probability in the Engineering and
+Informational Sciences} 12(4): 453-468.
+\url{https://doi.org/10.1017/S0269964800005325}.
+
+Weber, Richard R. 1992. ``On the Gittins Index for Multiarmed Bandits.''
+\emph{Annals of Applied Probability} 2(4): 1024-1033.
+\url{https://doi.org/10.1214/aoap/1177005588}.
+
+Weber, Richard R., and Gideon Weiss. 1990. ``On an Index Policy for
+Restless Bandits.'' \emph{Journal of Applied Probability} 27(3):
+637-648. \url{https://doi.org/10.2307/3214547}.
+
+Whittle, Peter. 1988. ``Restless Bandits: Activity Allocation in a
+Changing World.'' \emph{Journal of Applied Probability} 25(A): 287-298.
+\url{https://doi.org/10.2307/3214163}.
+
+Xiao, Yangge, Zhenyu Hu, and Shouqiang Wang. 2026. ``Information Design
+of a Delegated Search.'' \emph{Management Science}, Articles in Advance,
+published online May 14. \url{https://doi.org/10.1287/mnsc.2024.05925}.
+
+Xu, Renyuan, Thaleia Zariphopoulou, and Luhao Zhang. 2026. ``Decision
+Making under Costly Sequential Information Acquisition: the Paradigm of
+Reversible and Irreversible Decisions.'' arXiv:2401.00569v4, January 6.
+Initial submission December 31, 2023. \url{https://arxiv.org/abs/2401.00569}.
+Working-paper version read.
+
+Yu, Zhe, Yunjian Xu, and Lang Tong. 2017. ``Deadline Scheduling as
+Restless Bandits.'' arXiv:1610.00399v5, July 6.
+\url{https://arxiv.org/abs/1610.00399}. Preprint read. Later publication:
+\emph{IEEE Transactions on Automatic Control} 63(8), August 2018, DOI
+\url{https://doi.org/10.1109/TAC.2018.2807924}; journal existence and issue
+verified from the author's Cornell bibliography, journal full text not
+read. No assertion of unchanged theorem numbering between versions.
+
+}
+\clearpage
+\section{Appendix A. Shared-resource model: complete derivations and
+verification}\label{appendix-a.-shared-resource-model-complete-derivations-and-verification}
+
+\subsection{A.1 Binary signal and posterior
+actions}\label{a.1-binary-signal-and-posterior-actions}
+
+For case i with prior p and accuracy q, the joint probabilities of state
+1 and signal 1, state 0 and signal 1 are pq and (1-p)(1-q). The joint
+probabilities for signal 0 are p(1-q) and (1-p)q. Bayes-optimal expected
+classification accuracy is
+
+\[a(p,q)=\max\{pq,(1-p)(1-q)\}+\max\{p(1-q),(1-p)q\}.\]
+
+Thus \(\bar m=1-a(p,q)\) and \(M=S[r+(1-r)a(p,q)]\). At any
+zero-probability signal branch, the posterior action is irrelevant to
+the expected payoff. At a posterior tie either terminal action has the
+same value. The enumeration uses a fixed state-1 tie convention. The
+formula applies to asymmetric priors without presuming that the signal
+always overturns the prior-optimal action.
+
+\subsection{A.2 Deferred value and no double
+counting}\label{a.2-deferred-value-and-no-double-counting}
+
+If the case acts now, it receives g. If it waits one slot before
+deciding whether to research, it incurs d immediately; expiration
+destroys the opportunity with probability h. Conditional on survival the
+last-slot optimal value is \(g+b^+\). Waiting's incremental payoff is
+
+\[-d+s(g+b^+)-g=-\ell+sb^+.\]
+
+The best of action now and this option gives \([-\ell+sb^+]^+\). Since
+\(\ell\geq0\), this equals \([sb-\ell]^+\) for every real b, which is w.
+In particular, w\textgreater0 implies b\textgreater0. The expression
+includes the cost of the later experiment through b, the first waiting
+slot's cost through ell, and two distinct opportunities for expiration
+through s and b. It does not charge a separate hypothetical missed
+opportunity in addition to those losses.
+
+For i first and j waiting, a direct physical-outcome calculation gives
+
+\[s_iM_i-c_i-d_i-d_j+s_j(s_jM_j-c_j-d_j).\]
+
+Subtract \(g_i+g_j\) and rearrange to \(b_i+s_jb_j-\ell_j\). If waiting
+j is not profitable, immediately act on j and obtain \(G+b_i\). Taking
+their maximum yields \(G+b_i+w_j\). This identity is checked by the
+independent latent-outcome evaluator, not assumed in that evaluator.
+
+\subsection{A.3 Exhaustiveness of Theorem
+1}\label{a.3-exhaustiveness-of-theorem-1}
+
+At the initial boundary there are four retained subsets, including the
+empty one. For each retained subset R, the active choice is one case in
+R or no research. Cases outside R act immediately. If some case is
+active, its experiment uses its only research opportunity; if it
+survives, action immediately after its signal weakly dominates further
+waiting because no additional own-state information or reward becomes
+available. The independent state assumption means its public signal
+cannot improve the remaining case's posterior. Therefore the only
+remaining decision is whether an unserved case was retained and, if it
+survived, whether to research it in the last slot. This gives the two
+research-first candidates in Theorem 1, with optional immediate
+retirement of the unserved case embedded in w.
+
+If no case is active initially, fix the retained subset R. Its expected
+value relative to immediate action on all cases is
+
+\[-\sum_{i\in R}\ell_i+E\max\{0,\{b_i:i\in R\text{ survives}\}\}.\]
+
+The expectation is bounded above by \(\max(0,b_A,b_B)\). Immediate
+research on a positive maximizer, if one exists, followed by immediate
+action on the other case attains that upper bound without incurring the
+idle waiting losses. If none exists, stopping both dominates idling.
+This proves exhaustion even for policies that idle while retaining only
+one case. Signal-dependent final research choices cannot improve on w,
+because the other case's independent signal changes neither b nor the
+feasible final choices.
+
+For both b positive, order comparison is exactly
+
+\[[b_A+w_B]-[b_B+w_A]=u_A-u_B.\]
+
+When b is nonpositive, that case's w is zero and it never needs
+research; Theorem 1's maximum also captures these corners. A case with
+h=0,d=0 can be deferred without loss. This yields payoff ties, not a
+failure of the formula.
+
+\subsection{A.4 Sequential equilibrium with a common
+charge}\label{a.4-sequential-equilibrium-with-a-common-charge}
+
+The game is complete information. At the final slot each surviving case
+researches only if its charged gain b-tau is strictly positive. At the
+initial boundary A moves first. If A researches now, B's best wait gain
+is \([s_B(b_B-\tau)-\ell_B]^+\) and its alternative is immediate action.
+If A releases, B researches immediately whenever \(b_B-\tau>0\);
+otherwise it acts. In the latter event A cannot gain by idling instead
+of taking its own available experiment immediately. If A releases to a
+researching B, its best waiting gain is \([s_A(b_A-\tau)-\ell_A]^+\).
+
+For b\_A-tau\textgreater0, its own immediate gain minus the untruncated
+deferred gain is
+
+\[h_A(b_A-\tau)+\ell_A\geq0.\]
+
+Truncating a negative deferred gain at zero preserves weak preference
+for immediate research. It is strict when ell\_A\textgreater0. If both
+h\_A and ell\_A are zero, early and late gains tie and the stated
+early-service convention selects the first slot. For
+b\_A-tau\textless=0, immediate action weakly dominates both research and
+waiting; the research-action tie convention selects action. Backward
+induction therefore yields Theorem 2, including off-path choices.
+
+The actual firm payoff for b\_A\textgreater tau is
+
+\[G+b_A+\mathbf 1\{s_B(b_B-\tau)>\ell_B\}\,w_B.\]
+
+The charge affects the private choice but is not subtracted again from
+social payoff. For b\_A\textless=tau it is
+\(G+\mathbf 1\{b_B>\tau\}b_B\). These formulas permit evaluation of all
+tau, not just sampled values.
+
+\subsection{A.5 Full implementation classification and tie
+boundaries}\label{a.5-full-implementation-classification-and-tie-boundaries}
+
+Assume first that the efficient first research assignment is unique. If
+A first is optimal, b\_A\textgreater0 and tau=0 reproduces its efficient
+retention decision for B. If B first is optimal and b\_A\textless=0,
+tau=0 implements it. If neither case has positive b, acting immediately
+is efficient and tau=0 implements it.
+
+The remaining case has unique B first and b\_A\textgreater0. If w\_A=0,
+strict optimality implies b\_B\textgreater b\_A+w\_B\textgreater=b\_A. A
+releases and stops for tau\textgreater=b\_A, while B researches for
+tau\textless b\_B; hence {[}b\_A,b\_B) is sufficient and, under the
+early-service convention, necessary. If w\_A\textgreater0,
+tau\textless b\_A preserves A's first claim and tau\textgreater=b\_A
+destroys its later research incentive. Thus no tau works under that
+convention. With ell\_A\textgreater0 this conclusion is independent of
+first-slot tie-breaking because A strictly prefers early service for
+every tau\textless b\_A.
+
+If ell\_A=0, h\_A=d\_A=0 because g\_A\textgreater0. For
+tau\textless b\_A A can be indifferent between early and late service.
+Selecting release in that tie can support the efficient B-first route.
+The stronger claim that \emph{no equilibrium with any tie-breaking}
+implements the optimum would therefore be false. We do not make it. At
+ties in the joint optimum, implementation requires attaining any
+joint-optimal policy, not a predetermined labeled ordering. The formulas
+in the main text directly test such cases.
+
+A common deadline can leave zero, one, or two slots because the model is
+discrete. Equation (5) is the exhaustive equilibrium payoff list for an
+unpriced unchanged priority game. A strict B-first optimum with
+b\_A\textgreater0 exceeds all three. If deadline design includes
+changing priority rights, case-specific deadlines, or contingent
+exceptions, it is outside this impossibility statement.
+
+\subsection{A.6 Opportunity-loss pricing and
+transfers}\label{a.6-opportunity-loss-pricing-and-transfers}
+
+Corollary 2 follows because a fixed first-slot fee k induces the same
+comparison \(b_A-k\) versus w\_A in every rival state. With A fixed and
+both rivals willing to use a released slot, low and high rival deferral
+losses that straddle u\_A require opposite strict inequalities on k. In
+the synthetic belief example, changing only B's prior from .5 to .705
+changes its loss from 14.2 to .5, straddling u\_A=1.352.
+
+The posted first-slot charge for A is \(u_B=b_B^+-w_B\). If both cases
+have positive b, A compares its early gain \(b_A-u_B\) with its
+release-and-retain gain w\_A. The difference is u\_A-u\_B. B's
+first-service and deferred-service choices are uncharged, so b\_B and
+w\_B are undistorted. The resulting joint policy selects exactly a
+maximizing route in Theorem 1. The same argument applies if A
+immediately acts after release because w\_A=0.
+
+If b\_B\textless=0, u\_B=w\_B=0, B immediately acts. A's early versus
+deferred comparison is b\_A versus w\_A. If these tie at a positive
+value, A has h\_A=d\_A=0, so waiting and using the otherwise idle final
+slot is payoff equivalent. If b\_A\textless=0 it cannot obtain positive
+gain by claiming or waiting. Both nonpositive cases stop. This proves
+all corners of Theorem 3.
+
+The charge equals the change in B's optimal incremental payoff between
+being offered first service and being offered deferred service. It is
+not B's gross reward or all of its evidence value. A central budget can
+retain it. The implementation claim assumes marginal booked transfers
+enter objectives and cannot be evaded; it does not establish budget
+balance, individual participation relative to every alternative
+institutional entitlement, or private-type revelation. The general
+dynamic-pivot literature is therefore a precedent, not a theorem proved
+anew here.
+
+\subsection{A.7 Comparative statics and a reversed
+order}\label{a.7-comparative-statics-and-a-reversed-order}
+
+Let delta=m-mbar\textgreater=0. At fixed signal law,
+
+\[\partial_r b=sS\bar m-Sm=-S(\delta+h\bar m).\]
+
+Within b\textgreater0,w\textgreater0,
+
+\[u=b-(sb-\ell)=hb+\ell=hsM-hc+sd,\]
+
+so \(\partial_r u=hsS\bar m\). At p=.5,q=.7,S=100,c=1,d=0,h=.02,
+b(r)=17.6-20.6r and u(r)=1.352+.588r on this interior segment. At r=.5,
+b=7.3,w=5.654,u=1.646. A fixed rival u=1.48412 is crossed at r
+approximately .22469, inside the region where deferred research remains
+profitable. The exact crossing is (1.48412-1.352)/.588. All reported
+endpoints and ordering are in the generated output.
+
+For other parameters within this region,
+\(\partial_S u=hs[1-(1-r)\bar m]>0\) when h\textgreater0, whereas
+\(\partial_S b=s[1-(1-r)\bar m]-[1-(1-r)m]\) may have either sign.
+Increasing signal informativeness lowers mbar and raises M; its effect
+on b and, in this interior, u is nonnegative. The hazard derivative of u
+is \((1-2h)M-c-d\), which need not be positive. Near a stopping
+boundary, positive-part kinks require evaluating the piecewise formula,
+not extrapolating derivatives. These statements do not extend without
+modification to trials, state-dependent expiration, correlated cases, or
+multiple remaining signals.
+
+\subsection{A.8 Independent enumeration: policies and physical
+paths}\label{a.8-independent-enumeration-policies-and-physical-paths}
+
+The enumerator and closed-form solver share primitive inputs only. It
+enumerates theta\_A,theta\_B; one potential binary signal for each case;
+and two potential survival coins per case. Unused draws integrate out.
+Actual action success or error is evaluated against the latent state;
+costs are charged only when a case is retained or researched. A case
+stopped at intake earns its actual prior-optimal action payoff on that
+latent path, not zero. A case expiring before action receives zero
+terminal reward.
+
+For strictly interior hazards, the eight root actions are: stop both;
+retain A with active A or no research; retain B with active B or no
+research; retain both with A active, B active, or no research. Their
+feasible final-slot contingent policies number 1,1,2,1,2,8,8,12,
+respectively, totaling 35. For root A-active with both retained, A has
+three public outcomes (expiry, signal 0, signal 1); for each, if B
+survives the policy can act or research B. Thus there are 2\^{}3=8 maps,
+even though independence ultimately makes their optimal choices the same
+across A's outcomes. For root idle-both, the both-survive node allows
+three final assignments and each one-survive node two; the
+neither-survive node has one, giving 3\emph{2}2=12. Zero-probability
+nodes are removed, reducing counts in boundary cases.
+
+All positive-probability latent/signal/hazard paths are integrated for
+each map. The maximum is compared with Theorem 1. The code also compares
+the posted rule with the optimum over a deterministic parameter grid,
+verifies local payoff does not exceed it, and checks the charge-failure
+and recoverability examples. New validation output reports 250 checks;
+these are computational tests, not additional formal results or
+estimated observations. The primitive grid is deliberately heterogeneous
+and is not a calibration. Complete named-scenario policy rows are
+supplied in CSV, including dominated idle policies.
+
+\subsection{A.9 Conditional valuation
+bounds}\label{a.9-conditional-valuation-bounds}
+
+For an implemented fixed joint policy z, expected total payoff can be
+written \(A_z-\sum_i d_iT_{iz}\), where A includes terminal rewards and
+acquisition expenses, and T\_i is expected unresolved case-period
+exposure. Expiration is already inside A and T. Holding intervals
+\(d_i\in[l_i,u_i]\) give endpoint bounds for each fixed-policy contrast
+by selecting endpoints according to the signs of the exposure
+differences. Do not add u\_i as another resource expense.
+
+If priors, precision, stakes, recoverability, or hazards are uncertain,
+these quantities and even the optimal policy change. A cost-only
+endpoint calculation holds them fixed. For a full uncertainty set Omega,
+a proposed fixed policy is certified over a comparator set only if the
+minimum of each payoff contrast over Omega is nonnegative. Without a
+justified Omega and actual parameter restrictions there is no claim of
+model robustness. The paper implements synthetic point-primitives only.
+
+\section{Appendix B. Retained separable benchmark and previous
+checks}\label{appendix-b.-retained-separable-benchmark-and-previous-checks}
+
+\subsection{B.1 Existence, admissibility, and the cost
+frontier}\label{b.1-existence-admissibility-and-the-cost-frontier}
+
+The finite history tree has finitely many actions at each node. A
+deterministic strategy assigns stop-and-act or an experiment to each
+live nonterminal node. Backward induction gives an optimal deterministic
+strategy for every cost price \(b\). Randomized strategies are mixtures
+and cannot exceed the best deterministic expected payoff. All rewards
+and costs are bounded because the tree is finite.
+
+Fix a live history \(x\) and a deterministic strategy \(\pi\)
+constrained to continue first. Let \(\tau\) count the number of research
+choices before terminal action or expiration. Expected resource expense
+is \(C_\pi=E_\pi\sum_{s<\tau}c_s\). Delay exposure is
+\(T_\pi=E_\pi\tau\geq1\). Let \(R_\pi\) count the action reward only on
+histories where action precedes expiration. Then
+
+\[J_b(\pi)-g(x)=R_\pi-C_\pi-g(x)-bT_\pi.\]
+
+The maximum over \(\Pi^+\) is strictly positive if and only if \(b\) is
+below the maximum ratio. A negative ratio means that strategy is
+inferior even with free additive delay. When \(b\) equals the largest
+ratio, stopping ties with a best continuation and is selected by
+convention. At histories where continuation is impossible use
+\(D=-\infty\). The binary continuation region is nested in \(b\), even
+though the optimal experiment need not remain the same. This proof does
+not rely on a Gaussian posterior, stationary boundaries, or a one-signal
+approximation.
+
+\subsection{B.2 Bellman regret
+identity}\label{b.2-bellman-regret-identity}
+
+For a continuation action \(e\) let
+
+\[Q_d(x,e)=-c_e-d+(1-h_e)E_e V_d(x').\]
+
+For a terminal action \(a\), let \(Q_d(x,a)=E[u(a,\theta,x)\mid x]\).
+Optimal action payoff \(g\) is the maximum over terminal actions. Extend
+\(V\) by zero to the absorbing expired state. At a live continuation
+state, the realized period reward is \(-c_e-d\). Its conditional
+expectation plus the next-state value equals \(Q_d\). At a terminal
+state, realized terminal reward has conditional expectation \(Q_d(x,a)\)
+and next value zero.
+
+Subtract the conditional equality from \(V_d(x)\), sum along the
+realized finite path, and apply iterated expectations. Intermediate
+values cancel. The initial value minus all expected realized rewards is
+the expected sum of \(V_d-Q_d\). This yields the formula in separable
+benchmark. There is no survival conditioning or exclusion of incomplete
+cases. A deadline alters \(\mu\) at every history where its anticipation
+changes behavior, and the identity still holds.
+
+\subsection{B.3 State-specific stopping
+interventions}\label{b.3-state-specific-stopping-interventions}
+
+Let \(\mu\) be the original analyst policy evaluated at firm costs. At
+every selected history \(x\) with \(V_d(x)=g(x)\),
+\(J_d(\mu\mid x)\leq g(x)\). Changing the policy to stop there gives at
+least its old continuation value. At unselected histories retain the old
+action. By induction from terminal histories, improvements in successor
+continuation values weakly improve predecessor payoffs, while selected
+histories weakly improve because no feasible continuation beats \(g\).
+Thus expected firm payoff cannot fall. If some selected reachable
+history had a strictly negative old continuation gain and is reached
+with positive probability under the new prefix, the improvement is
+strict. This argument presumes fixed signal technology and no queue or
+effort response.
+
+\subsection{B.4 Worked nonmyopic
+example}\label{b.4-worked-nonmyopic-example}
+
+Let current probability of state 1 be .7, signal accuracy .7, no
+expiration, correct action reward 100, wrong action zero. One positive
+signal has probability .58 and posterior \(.49/.58\); a negative signal
+has probability .42 and posterior .5. Expected maximum posterior is
+\(.49+.21=.70\). Immediate one-step value of information is zero.
+
+Two further signals yield unconditional state-likelihood pairs:
+positive-positive \((.343,.027)\); each mixed path \((.147,.063)\);
+negative-negative \((.063,.147)\). Summing maxima gives
+\(.343+2(.147)+.147=.784\). Two samples cost two when \(c=1,d=0\), so a
+feasible continuation gains 6.4. This is a lower bound on optimal
+adaptive continuation value, sufficient to disprove the myopic converse.
+The delivered code checks the posterior arithmetic independently of the
+Bellman recursion.
+
+\subsection{B.5 Final-period derivation and
+boundaries}\label{b.5-final-period-derivation-and-boundaries}
+
+Expected payoff after one experiment followed by action is
+\((1-h)(S-L\bar m)-c-d\). Subtract \(S-Lm\). Rearrangement yields
+\((1-h)L(m-\bar m)-h(S-Lm)-c-d\). Blackwell precision lowers expected
+Bayes classification error at fixed prior and payoff. Hazard lowers the
+value through both foregone learning and destruction of immediate
+opportunity value. The derivative with respect to \(r\) is nonpositive
+even though wrong-action salvage increases the level of immediate
+reward.
+
+Higher stakes do not universally favor waiting. For example, at prior
+.5, \(r=0,q=.55,h=.2\), the coefficient of \(S\) is \(.8(.55)-.5=-.06\).
+With nonnegative costs, continuation is inferior at every positive
+stake. Here greater stakes increase the value destroyed by expiration
+faster than the value of learning. This is consistent with the reported
+high-hazard scenario, but is a separate final-period analytical example.
+
+\subsection{B.6 Delay-cost uncertainty and policy
+ranking}\label{b.6-delay-cost-uncertainty-and-policy-ranking}
+
+For fixed policies \(z=0,1\), define \(A_z=R_z-C_z\), so
+\(W_z(d)=A_z-dT_z\). For \(d\in[d_L,d_U]\), the contrast interval is
+
+\[[\min\{\Delta A-d_L\Delta T,\Delta A-d_U\Delta T\},
+\max\{\Delta A-d_L\Delta T,\Delta A-d_U\Delta T\}].\]
+
+If \(\Delta T=0\), delay price cannot change the ranking. Otherwise the
+break-even price is \(\Delta A/\Delta T\), which need not lie in the
+admissible interval. This formula values fixed implemented policies. It
+is distinct from optimizing \(V_d\) separately for every price.
+
+With heterogeneous \(d_i\in[l_i,u_i]\), use case-level extrema of
+\(A_i-d_iT_i\). For a treatment-control difference, subtract the control
+upper bound from the treatment lower bound for the lower contrast, and
+conversely for the upper. This is conservative when cross-case cost
+restrictions are ignored. It does not identify a missing payoff
+component merely because its interval is assigned a number.
+
+\subsection{B.7 Optional stopping and
+inference}\label{b.7-optional-stopping-and-inference}
+
+The model is a Bayesian economic stopping problem, not repeated
+null-hypothesis testing. No signal is a sequence of unadjusted p-values.
+The proposed trial uses a fixed final analysis date and fixed enrollment
+after feasibility. Exploratory interim monitoring cannot trigger an
+ordinary fixed-sample significance claim. If operational needs require
+sequential confirmatory monitoring, an alpha-spending plan or an
+always-valid method and its assumptions must be chosen and registered
+before treatment outcomes are examined. No sequential frequentist method
+is implemented in this package.
+
+\subsection{B.8 Computational
+verification}\label{b.8-computational-verification}
+
+Python 3 standard-library code implements exact posterior updating on
+\((n,k)\), backward induction under perceived costs, and separate
+forward evaluation at full costs. In the pre-R1 separable
+implementation, 12,002 assertions/checks pass. The parameter-grid count
+is 324: three stakes, three recovery fractions, three precisions, four
+delay prices, and three hazards. Each compares all 36 nonterminal
+histories of an eight-period tree and the initial welfare ordering,
+yielding 11,988 checks. Seven frontier comparisons, three posterior
+checks, and four derivatives give 12,002 total. The posterior pair
+calculation is one of the three posterior checks.
+
+For an independent check, the script enumerates all distinct pairs
+\((R-C,T)\) at horizon three, allowing independent policy choices at the
+two signal descendants. It retains 15 distinct pairs at the root and
+verifies their upper envelope against the Bellman solution. This is
+numerical agreement with a finite tree, not a proof for an infinite
+horizon. The policy CSV uses a 12-period horizon. Floating-point
+comparisons use tolerances; no random seed is required.
+
+\section{Appendix C. Earlier single-case synthetic
+illustrations}\label{appendix-c.-earlier-single-case-synthetic-illustrations}
+
+These are retained separable benchmarks, not evidence for the
+shared-resource mechanism. The prior is .5, signal accuracy .7, correct
+payoff 100, wrong payoff zero, acquisition cost 1, additive delay cost
+5, expiration probability .02 per research period, and a 12-sample
+finite horizon. The silo internalizes ten percent of additive delay
+cost. Values are arbitrary model units, computed by exact backward
+induction and separate full-cost policy evaluation.
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{2.55in}rrrr@{}}
+\toprule
+Policy or environment & Payoff & Periods & Complete & Accuracy \\
+\midrule
+Firm optimum & 62.600 & 1.000 & .980 & .700 \\
+Silo analyst & 59.002 & 3.294 & .934 & .843 \\
+Silo, immediate deadline & 50.000 & 0.000 & 1.000 & .500 \\
+Silo, one-sample deadline & 62.600 & 1.000 & .980 & .700 \\
+Silo, four-sample deadline & 60.430 & 2.383 & .952 & .785 \\
+Firm, minimum two samples & 60.430 & 2.383 & .952 & .785 \\
+Firm, recoverable share .8 & 90.000 & 0.000 & 1.000 & .500 \\
+Silo, recoverable share .8 & 86.120 & 1.000 & .980 & .700 \\
+Firm, correct payoff 500 & 374.065 & 3.294 & .934 & .843 \\
+Firm, expiration hazard .20 & 50.000 & 0.000 & 1.000 & .500 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Accuracy is conditional on completion. Payoff and completion include
+every opportunity. Relative to the silo policy, a one-sample deadline
+raises total payoff by 3.598 despite lowering completed-case accuracy.
+An immediate deadline lowers payoff to 50. A mandatory second sample can
+reduce value by making the intermediate work compulsory while leaving
+further continuation endogenous.
+
+The executed legacy script independently checks a three-period
+payoff/time frontier against backward induction, verifies
+continuation-set nesting on a grid, and checks the nonmyopic
+counterexample and final-period derivatives. It reports 12,002 checks.
+These results neither identify firm behavior nor establish a novel
+single-case index.
+
+The fixed-policy delay-price file separates gross reward less
+acquisition expense from active-period exposure. Its break-even
+comparison for the frozen one-sample and silo policies is approximately
+3.432 delay-cost units. Those bounds hold the full
+signal/reward/expiration model and implemented policies fixed.
+Reoptimizing at each price answers another question.
+
+The horizon is a substantive finite assumption, not an unverified
+infinite-horizon approximation. The R1 main model instead has exactly
+two cases, one experiment each, and two slots.
+
+\section{Appendix D. Correlated two-case/two-slot extension: complete
+details}\label{appendix-d.-correlated-two-casetwo-slot-extension-complete-details}
+
+\subsection{D.1 Probability space and
+filtration}\label{d.1-probability-space-and-filtration}
+
+The latent state vector takes values (0,0),(0,1),(1,0),(1,1) with public
+prior mu. Each case has one potential binary signal, conditionally
+independent given that vector, with likelihood q\_i for a correct
+signal. There are two potential independent survival coins for each
+case, independent of the states and signals. A survival coin is used
+only when that case is unresolved across that slot. The potential signal
+is observed only when its experiment is conducted and its case survives
+the corresponding slot. Unused draws integrate out. No latent outcome of
+an irrevocable terminal action is revealed during the window;
+realization is settled later. This is essential to avoiding unmodeled
+free information from action outcomes.
+
+The filtration consists of all observed research assignments, stops,
+survival events, and delivered signals. Expiry itself is uninformative
+about latent types. For any nonzero-probability observed signal y from
+case k,
+
+\[\mu^{k,y}_{ab}=\frac{\mu_{ab}\Pr(y\mid\theta_k)}{\sum_{a',b'}\mu_{a'b'}\Pr(y\mid\theta_k')}.\]
+
+All continuing policies are adapted to this public filtration. At most
+two experiments occur in total, never more than one on a particular
+case. Case payoffs remain additive even though their conditional
+expectations respond to common information.
+
+\subsection{D.2 Final-slot formula}\label{d.2-final-slot-formula}
+
+Fix the current posterior, live set L, and unused-experiment set E.
+Stopping every case gives \(G_L=\sum_{i\in L}g_i\). If k is researched,
+its own expected resource payoff is \(-c_k-d_k+s_kM_{k|k}\), a gain
+b\_k. A passive case i may stop for g\_i or remain unresolved across the
+slot. If retained, its expected payoff is
+
+\[-d_i+s_i[(1-s_k)g_i+s_kM_{i|k}].\]
+
+Subtracting g\_i gives
+
+\[-d_i-h_ig_i+s_is_k(M_{i|k}-g_i)=a_{i|k}.\]
+
+This accounts separately for expiry of the recipient and nonarrival of
+the source signal. Their hazards are independent, even though the latent
+states are correlated. The optimal retention gain is a\^{}+. Summing
+this and b\_k, and taking the best single k or stopping all, proves
+equation (9). A previously used case may be a recipient and therefore
+belongs in L even if absent from E. This is the key difference from the
+independent-case enumeration.
+
+If no experiment is selected in the final slot, waiting creates no
+signal or action improvement; holding costs and expiry cannot improve
+nonnegative expected terminal rewards. Thus final idle policies are
+weakly dominated. All researched and retained survivors choose
+Bayes-optimal terminal actions after the selected signal, if delivered.
+No retrospective reuse of a future signal is allowed for a case that
+acted before it.
+
+\subsection{D.3 Initial action exhaustion and rational
+solution}\label{d.3-initial-action-exhaustion-and-rational-solution}
+
+There are four retained subsets R. When R is empty there is one active
+choice; for each singleton R there are two (no research or that case);
+when both are retained there are three. The total is eight. Every case
+outside R locks its immediate-action payoff and can neither be reopened
+nor researched later. Every case in R pays d\_i for this slot, and a
+selected experiment pays c\_k once whether or not its case survives.
+Conditional on survivors, if k survived, Bayes-update on its signal; if
+not, do not update. These are exactly the terms in (10).
+
+The remaining value is explicitly (9), so (10)-(11) are a finite closed
+evaluation of eight rational expressions with maxima, not an unsolved
+infinite or general queue recursion. Posterior probabilities and signal
+probabilities are rational whenever the primitives are rational. The
+supplied solver uses Fraction arithmetic throughout this calculation.
+
+Under independence, the passive mean \(M_{i|k}\) equals g\_i. Thus
+passive research-information retention in the last slot is dominated,
+including for the previously studied case. The unused case's posterior
+is unchanged by the first signal. If scheduled second its optimal
+initial retention gain is the independent w\_i, so the eight-action
+formula reduces to Theorem 1, with initial idle options dominated as
+already proved. This verifies preservation of the original 137.248
+independent example; the correlated model does not replace its
+assumptions retroactively.
+
+\subsection{D.4 Complete local game}\label{d.4-complete-local-game}
+
+At one remaining slot, define charged own research gains \(b_i-\tau\).
+If B has an experiment and \(b_B>\tau\), A's own best release-and-learn
+gain is \(a_{A|B}^+\); otherwise it is zero. If A also has an experiment
+it claims research precisely when its charged own gain is positive and
+weakly exceeds that release gain. A positive tie between early research
+and later free learning favors its priority claim; a zero tie favors
+immediate action. If A releases or has no experiment, B researches iff
+\(b_B>\tau\). Given the active case, each passive owner retains iff its
+own a is positive; otherwise it acts before the signal. These are
+optimal local actions because passive retention does not alter the
+active owner's own signal or resource costs. If no case researches, both
+act.
+
+Let the resulting two components be \(L_i^1(\mu,L,E;\tau)\), expressed
+at full resource costs without subtracting transfers. For a root choice
+(R,k), the actual component is
+
+\[Q_i^L(R,k)=\mathbf1\{i\notin R\}g_i
+-\mathbf1\{i\in R\}d_i-\mathbf1\{k=i\}c_i
++E[L_i^1(\mu',L',E_k;\tau)].\]
+
+The private component subtracts the root experiment charge and expected
+future experiment charge, each paid only by the active owner. If a
+priority toll is applied only when A claims the initial slot, subtract
+it only from A's private component on that branch. The transfer is never
+subtracted from total resource payoff.
+
+B's follower alternatives after A claims are its immediate action or
+retention, giving the set C. If A releases and stays unresolved, B can
+act, research now, or wait, giving R. If A acts and releases, B has the
+same three own choices with A removed, giving X. These sets of size
+2,3,3 exhaust the eight feasible root actions. Choose B's highest
+private component in each set, then A's highest private component among
+the three resulting routes. This is full backward induction of the
+finite perfect-information local game, including off-path choices. No
+equilibrium is inferred from a joint-optimal dispatcher policy.
+
+In the full-support synthetic example, at zero charge the three locally
+optimal route pairs (A resource payoff, B resource payoff) are:
+
+\begin{itemize}
+\tightlist
+\item
+  A claims, B retains: (78.2, 76.689855).
+\item
+  A releases and stays, B researches: (90.35532, 64.05).
+\item
+  A acts and releases, B researches: (60, 64.05).
+\end{itemize}
+
+A therefore releases and stays, so the local total is 154.40532. Its
+claim route has total 154.889855 but is privately worse for A. Even that
+route does not achieve the efficient 159.69508928 because B declines a
+later experiment with negative own gain. Adding the R1 marginal-only
+priority toll .6405 to the claim route does not change the equilibrium.
+This computation exposes both initial free-riding and a supported
+continuation underresearch boundary.
+
+\subsection{D.5 Signed continuation incentive and full payoff
+alignment}\label{d.5-signed-continuation-incentive-and-full-payoff-alignment}
+
+At a last-slot history with only i's experiment available, the joint
+gain is b\_i+a\_j\textbar i\^{}+. At a nonnegative fee the active owner
+will not undertake an experiment with nonpositive own b\_i. If the sum
+is positive despite that, no such fee implements. A conditional credit
+equal to a\_j\textbar i\^{}+ makes the owner's gain equal to the joint
+comparison. A strict credit above -b\_i is required for strict research
+if b\_i\textless0, with equality permitting the prescribed action tie.
+This proves Theorem 6's exact boundary.
+
+This final-slot credit is not enough to certify the root equilibrium.
+A's release-and-free-learn payoff and B's retention responses can also
+change. The full finite-game solution above must be recomputed under any
+proposed transfer scheme, including future credits. The paper does not
+claim that the last-slot credit alone attains the optimal root value.
+
+For the stronger theoretical team-payoff contract, let realized resource
+payoffs, including all own costs and terminal reward, be X\_A and X\_B.
+Give i a signed additional internal transfer X\_j-K\_i, where K\_i is an
+initial fixed constant independent of subsequent choices and signals.
+Its private total becomes X\_A+X\_B-K\_i. At every public decision,
+maximizing conditional expected private payoff is maximizing the same
+total resource value. The finite game's backward induction then selects
+the joint-optimal feasible continuation at every history, and hence
+(9)-(11). All eight root choices and all final retention plans are
+attainable through the defined sequential moves, so no central-feasible
+action is excluded by the priority right when both owners share this
+objective.
+
+This is an elementary sufficient alignment result, not a new
+private-type mechanism. Transfers may be positive or negative, need not
+balance within owners, and require observable eventual payoffs and
+authority over internal marginal incentives. Adding both transfers to
+social payoff would be wrong: the firm objective is still X\_A+X\_B, not
+twice that quantity. A fixed constant changes distribution, not
+decisions. These assumptions are stronger than those of the restricted
+one-time priority fee, and the construction is not asserted to satisfy
+the published dynamic-pivot participation or truthfulness conditions
+under correlated private information.
+
+\subsection{D.6 Exact example and independent
+enumeration}\label{d.6-exact-example-and-independent-enumeration}
+
+\begin{sloppypar}
+For mu=(.58,.02,.02,.38), q\_A=.8, q\_B=.95, c\_A=1, c\_B=30,
+h\_A=h\_B=.01, S\_A=S\_B=100, and zero d and r, all state and relevant
+signal branches have positive probability. Conditional on A surviving,
+its signal is 1 with probability 11/25 and 0 with probability 14/25.
+After signal 1 the posterior is (29/110,1/110,2/55,38/55). After signal
+0 it is (29/35,1/35,1/140,19/140).
+\end{sloppypar}
+
+If both survive and the first signal is 1, the final research plan keeps
+both unresolved and researches B. At this posterior, g\_A=800/11,
+g\_B=70. B's own gain is -119/20, while A's cross-information gain is
+9401/550. The total increment is 12257/1100. Expected final case payoffs
+are 4491/50 for A and 1281/20 for B, totaling 15387/100. With a first
+signal 0, both act for a total 1185/7. These values include the
+final-slot costs and hazards.
+
+The six first-slot branches have probabilities 1/10000 (neither alive),
+99/10000 (only B alive, no delivered A signal), 693/125000 (only A
+alive, signal 0), 1089/250000 (only A alive, signal 1), 68607/125000
+(both alive, signal 0), and 107811/250000 (both alive, signal 1). They
+sum to one. Weighting the final values and subtracting first-slot
+acquisition/holding costs gives 249523577/1562500 exactly. The root
+comparison with every other retained-set/active choice is supplied in
+JSON and the main table.
+
+The independent enumerator pre-draws physical latent states, both
+potential signals, and both survival coins per case. It evaluates actual
+terminal correctness on each path, using a separately calculated
+likelihood-based action at the information available when that action is
+locked. The evaluator does not call the rational final-slot formula or
+root solver. It enumerates all root actions and all observable-history
+contingent final plans, including retention of the already researched
+case. Final idle plans are excluded only by the analytic dominance
+proof; root idle plans are enumerated.
+
+For positive-probability interior branches the number of final
+schedule/retention maps per root action, in order empty, idle A, active
+A alone, idle B, active B alone, idle both, active A with both, active B
+with both, is 1,2,1,2,1,20,18,18, totaling 63. For idle both, both-live
+states allow five plans (stop; A active with B stopped or retained; B
+active with A stopped or retained), each singleton survivor allows two,
+giving 5\emph{2}2=20. For active A with both retained, each both-live
+signal node allows three plans and the B-only survivor node allows two,
+giving 3\emph{3}2=18. Other nodes have no remaining experiment or no
+case. Branches of zero probability reduce counts. Bayes-optimal terminal
+actions are imposed, not counted as distinct deliberately mistaken
+policies.
+
+There are exactly three named checks, with 63,30,63 maps, totaling 156
+output rows. They are the full-support correlated example, a
+perfect-correlation zero-expiry boundary, and the product prior with the
+same marginal probabilities and other primitives. Both all-root
+comparisons and implementation boundary checks are executed, 37 in
+total. This is a finite exact calculation and enumeration, not a Monte
+Carlo simulation or a larger queue study.
+
+\section{Appendix E. Two-credit implementation: exact regional
+proof}\label{appendix-e.-two-credit-implementation-exact-regional-proof}
+
+\subsection{E.1 Fixed institution, no omitted
+payments}\label{e.1-fixed-institution-no-omitted-payments}
+
+This appendix proves Theorems 7-8 on I={[}17/100,23/100{]}. It retains
+Appendix D's latent binary states, public signal histories, independent
+.01 expiration, one experiment per case, local priority rights, and
+immediate-action options. C is earned by conducting initial A research,
+not by retaining both or by successful survival. B's credit requires
+that A was initially researched, both survived the first slot, A's
+delivered signal was 1, and B conducts its final experiment. The payment
+is earned before its second survival coin. No credits arise after
+initial B research, initial idling, or terminal action. Credits are sunk
+once earned and do not change subsequent terminal-action preferences. No
+experiment can be repeated to collect another credit.
+
+The zero-own-gain research/action tie selects action. A positive initial
+claim/release tie selects its priority claim, consistently with the
+original local institution. These are different ties. Conditional
+Bayes-action ties can use action 1 without affecting expected payoffs.
+Weak implementation means the outcome chosen by these conventions;
+strict supported implementation means strict root and discretionary
+on-path research/retention incentives. It does not require every unused
+off-path option to have a strict ranking.
+
+\subsection{E.2 Joint policy and complete exact interval
+certificate}\label{e.2-joint-policy-and-complete-exact-interval-certificate}
+
+Write s=99/100 and h=1/100. The target policy has the fixed
+research/retention decisions in Section 8.4. Terminal actions are also
+fixed on I: if only A survives its first experiment, act according to
+that signal; after both survive signal 0, both choose action 0; after
+both survive signal 1 and B is studied, both surviving cases choose B's
+signal, except that A uses its initial signal if B expires and no second
+signal arrives. If A expires initially, B's one experiment uses the
+prior and its own signal. All these terminal choices are Bayes optimal
+throughout I. This follows by comparing the unnormalized masses of each
+binary state after each observed signal. The only two-signal
+Bayes-action switch inside I is at 41/225 for A after (Y\_A,Y\_B)=(0,1),
+a signal pair the target policy never generates because it stops after
+Y\_A=0.
+
+The target's fixed physical resource components can be derived without
+posterior division. The relevant joint probabilities are
+
+\[\Pr(\theta_A=0,Y_A=0)=.48,\quad
+\Pr(\theta_A=1,Y_A=1)=.32,\]
+\[\Pr(Y_A=1,Y_B=\theta_A)=.202+.9\delta,\quad
+\Pr(\theta_B=0,Y_A=0)=.336+.6\delta.\]
+
+Consequently
+
+\[X_A=-1+100\{sh(.8)+s^2(.48)+s^3h(.32)
++s^4(.202+.9\delta)\},\] \[X_B=sh(64.05)+100s^2(.336+.6\delta)
++s^2(.44)(64.05). \tag{E1}\]
+
+The A cost is paid once even if it expires. B's research payoff 64.05
+already includes its final acquisition cost 30 and survival-weighted
+reward .99(95). The B-only branch uses that value, while the
+both-surviving signal-1 branch has probability s\^{}2(.44). Thus neither
+cost nor lost opportunity is counted twice. Expanding (E1) gives (14),
+so the target value is affine in delta.
+
+For completeness, the maximum physical payoff at every root choice is
+certified exactly at both interval endpoints:
+
+\begin{longtable}[]{@{}lrr@{}}
+\toprule\noalign{}
+Retained set, initial assignment & delta=17/100 & delta=23/100 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Neither, none & 120 & 120 \\
+A only, idle & 68709/500 & 68709/500 \\
+A only, A & 691/5 & 691/5 \\
+B only, idle & 246819/2000 & 246819/2000 \\
+B only, B & 2481/20 & 2481/20 \\
+Both, idle & 36853237179/250000000 & 38582309997/250000000 \\
+Both, A & 30486421447/200000000 & 161147685689/1000000000 \\
+Both, B & 729696081/5000000 & 312339/2000 \\
+\end{longtable}
+
+These fractions are finite sums over latent states, potential binary
+signals and the four potential independent survival coins. At each root
+the evaluator enumerates every final schedule/retention map, with
+terminal Bayes actions evaluated separately from the joint solver. There
+are 63 maps per prior. At both endpoints and the witness, the target is
+the unique maximizing map; the closest distinct map is lower by
+8019/200000=.040095. This is the loss from omitting the worthwhile
+B-only continuation on its positive-probability survival branch.
+
+To prove the continuum, fix any feasible pure physical policy, including
+its terminal actions. Its expected payoff is affine in delta because the
+joint prior is affine and signal/survival likelihoods are fixed. The
+maximum over terminal actions or any collection of policies is therefore
+convex. For any competing root choice, its optimized payoff is convex,
+while the target payoff (E1) is affine. The target strictly exceeds it
+at both endpoints by the table, hence strictly exceeds it throughout the
+closed interval by the defining convexity inequality. The same reasoning
+compares every distinct final schedule/retention map under the target
+root: its terminal-action-optimized value is convex, and the target
+exceeds each at both endpoints. This proves strict optimality of the
+target map on I. No extrapolation from a sampled grid or unproved
+monotonicity is used. Appendix D's final-idle dominance removes only
+decisions that cannot improve a payoff; root idle choices are explicitly
+included.
+
+\subsection{E.3 All final-slot local
+continuations}\label{e.3-all-final-slot-local-continuations}
+
+After initial A research and survival of both cases:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  If Y\_A=1, B's own uncredited research gain is -K. Its gain including
+  the observable-history credit is kappa-K. The zero-gain tie selects
+  action, so research occurs exactly when kappa\textgreater K. A's
+  passive cross-information gain is (4410450 delta-594259)/22000,
+  strictly positive on I, and it strictly retains if research occurs.
+  Otherwise both act. Joint research is strictly valuable because the
+  sum is (1410450 delta-65159)/22000\textgreater0.
+\item
+  If Y\_A=0, B's own gain is -3(5000 delta-189)/140\textless0 and no
+  credit is eligible. Thus it acts, and A acts as well. A's hypothetical
+  benefit from a B experiment cannot itself make B conduct it.
+\end{enumerate}
+
+If A expires but B survives, expiry is uninformative and B researches at
+gain 81/20. If only A survives, no experiment remains and it acts using
+its delivered signal. If neither survives, there is no choice or further
+payoff. All six positive-probability first-slot histories are thereby
+covered. Payment C was already earned and is irrelevant to all these
+continuations.
+
+Off the target route, after initial B research, no credit is ever
+eligible. If both survive B's signal 0, A's own research gain is -2(225
+delta+236)/295\textless0, and both act. After B's signal 1, A researches
+exactly when delta\textless delta\_0. On this profitable branch its own
+gain is (7831-45000 delta)/205, and B acts before the experiment because
+its passive gain is -38/41. At delta\_0 A's zero gain selects action.
+For delta\textgreater delta\_0 research remains unprofitable; beyond
+41/225 the uncredited own gain has the expression -(450 delta+287)/205,
+also strictly negative. B's passive cross gain after its signal 0 is
+-57/59. If B expires and A survives, A researches with uncredited gain
+91/5. If only B survives its own first experiment, it acts. These are
+all B-first survival/signal continuations.
+
+After initial idle retention of both cases, both experiments remain. If
+both survive, A's own immediate research gain is 91/5, whereas releasing
+to B gives A the larger cross gain
+
+\[a_{A|B}(\mu)=\frac{99^2}{100^2}100[(.518+1.8\delta)-.6]-.6>91/5.\]
+
+The inequality holds at 17/100 and increases thereafter. B's own gain is
+81/20\textgreater0, so A releases, B researches and A retains. The
+own/passive components are precisely those of the local game, not the
+joint-optimal final assignment. If only A or B survives, that case
+conducts its own profitable experiment. With a single case retained
+initially, the same singleton continuation applies; a case researched
+initially cannot repeat research. With no live cases, nothing occurs.
+This exhausts initial-idle, singleton and empty-root continuations as
+well as both research roots.
+
+For transparency about unused ties: the Bayes-action tie at 41/225 is on
+an unchosen two-signal route; A's hypothetical retention tie after
+initial Y\_A=0 and a subsequently conducted B experiment is at
+delta=137947/735075, because the cross gain above 41/225 is 3(735075
+delta-137947)/14000. B never chooses that uncredited experiment on I.
+Neither tie changes (17) or funding. A stronger requirement that every
+conceivable off-path action and terminal Bayes choice be strict would
+fail at these points and at delta\_0 without further instruments. The
+stated strict supported implementation deliberately does not claim that
+stronger property.
+
+\subsection{E.4 Root follower choices, including failed-continuation
+credits}\label{e.4-root-follower-choices-including-failed-continuation-credits}
+
+If A initially claims, B can act for 60 or retain. Let
+
+\[Y_B^0=50.815215+117.612\delta.\]
+
+This is its resource/private payoff from retention if it does not
+conduct research on the both-live signal-1 branch. It includes the
+uncredited B-only experiment after A expires. It is strictly above 60
+throughout I. If kappa\textgreater K, its retained private payoff is
+\(X_B+p\kappa=Y_B^0+p(\kappa-K)>60\). If kappa\textless=K, no eligible
+experiment occurs and the retained payoff is Y\_B\^{}0\textgreater60.
+Thus B strictly retains for \textbf{every} pair of nonnegative
+instruments, not only after imposing the target policy. This also proves
+the retention slack at the witness's limiting credit.
+
+If A releases but stays unresolved, B may (i) act immediately, leaving
+only A to wait, (ii) conduct its experiment with both retained, or (iii)
+wait with A. Its respective own payoffs are
+
+\[60,\qquad64.05,\qquad .99(64.05)=63.4095.\]
+
+The third value follows from the actual no-signal final local game just
+derived, including the cases in which A expires first. It is not
+inferred from a centrally imposed continuation. B strictly chooses (ii).
+If A acts and releases, B has exactly the same own three values and
+again researches initially. These comparisons fully resolve the follower
+sets C,R,X of Section 8.2, including idle and immediate-action
+alternatives.
+
+A's private payoffs for claim, release-and-retain, and act-and-release
+are therefore
+
+\[\begin{cases}(X_A+C,R_A,60),&\kappa>K,\\
+(78.2+C,R_A,60),&0\leq\kappa\leq K.
+\end{cases} \tag{E2}\]
+
+The second branch exists only when K is nonnegative. Without the later B
+experiment, A's research payoff is .99(80)-1=78.2. In both branches B's
+root retention is optimal. Since R\_A\textgreater60 and
+R\_A\textgreater78.2 on I, the actual local equilibrium is A-first
+exactly when C is at least R\_A minus its corresponding research
+component in (E2); otherwise it releases and waits. A's act-and-release
+option is feasible but strictly dominated by release-and-retain here.
+This solves root behavior also for instrument pairs that fail
+implementation.
+
+To derive R\_A, if B expires initially and A survives, A researches for
+78.2. If both survive, without A's further experiment it acts according
+to B's signal, whose unconditional correctness probability is .518+1.8
+delta. After B's signal 1, its possible own profitable research adds the
+positive part derived above. Hence
+
+\[R_A=sh(78.2)+100s^2(.518+1.8\delta)
++s^2(.41)[(7831-45000\delta)/205]^+,\]
+
+which is (18). Subtracting (E1) yields the two pieces (16). The low
+piece has positive intercept and slope; the high piece is increasing and
+agrees with the low piece at delta\_0. F is positive everywhere on I.
+Combining (E2) with B's strict research condition proves both directions
+of (17), not merely a sufficient deviation check. Once the continuation
+is induced, kappa has no further effect on A's resource component, so
+even an arbitrarily large continuation credit cannot replace C. A
+nonnegative initial toll makes its strict free-riding preference
+stronger.
+
+\subsection{E.5 Funding constraints and endpoint
+interpretation}\label{e.5-funding-constraints-and-endpoint-interpretation}
+
+The payment random variable on the implemented policy is
+\(C+\kappa\mathbf1_{\mathcal H}\), where
+\(\Pr(\mathcal H)=p=s^2(.44)>0\). The event is research after the first
+signal-1/both-survive history; it does not require either second-slot
+survival. Both events of receiving C alone and of receiving C+kappa have
+positive probability. Thus (19) is exact, including the payment after
+initial A expiry. No eventual realized reward need be observed for
+settlement.
+
+Put \(k=K^+\). The implementation set is the product of C\textgreater=F
+and the half-line kappa\textgreater=0,kappa\textgreater K; for strict
+supported implementation replace the first inequality by
+C\textgreater F. Consequently the weak expected/pathwise infimum
+functions are piecewise F below delta\_1 and F+pK/F+K at or above
+delta\_1, with F itself changing slope at delta\_0. At delta\_0 the two
+F formulas coincide; kappa=0 is feasible because K\textless0. At
+delta\_1, kappa=0 fails by the zero-gain action tie, so the continuous
+infimum ceases to be attained. At both closed endpoints of I the
+respective formulas and tie conventions apply without taking an unstated
+open neighborhood. No claim is made just outside I or at independence,
+where the target pattern need not persist.
+
+For weak implementation, a single cap equal to its infimum is feasible
+exactly when delta\textless delta\_1. For strict supported
+implementation no equality cap is feasible anywhere on I. Under
+simultaneous expected/pathwise caps, both corresponding slack or weak
+inequalities are required. Sufficiency follows by choosing sufficiently
+small increments in each payment, rather than treating an expected limit
+as permission to exceed a pathwise limit. Since both outlays are
+increasing in C and kappa, there is no unaccounted trade-off permitting
+a smaller initial payment in exchange for a larger continuation payment
+after the efficient branch is induced. These are gross funding
+requirements for this specified class, not firm resource costs or
+minimum funding over all possible mechanisms.
+
+\section{P.1 Status, unit, and estimands before
+methods}\label{p.1-status-unit-and-estimands-before-methods}
+
+No partner, data agreement, approved treatment, recruitment,
+observations, or experiments exist. This is a prospective protocol. The
+theoretical model has two one-experiment cases and two slots, with
+independent and correlated binary-state specifications. The study tests
+its shared-capacity mechanism in eligible operational queues, not its
+literal numerical calibration.
+
+Primary unit: an analyst-queue episode with a frozen intake cohort and a
+defined capacity window. A queue consists of all cases sharing the same
+analyst/reviewer resource. An episode can contain more than two cases;
+theoretical optimality is not asserted for that larger queue. A matched
+two-case substudy is possible only if the institution can document a
+bounded two-slot decision window and reserve capacity without displacing
+uncounted cases. Cases excluded from the cohort but affected by reserved
+capacity must be followed as spillovers.
+
+Primary estimand: intention-to-treat effect of offering an
+opportunity-loss scheduling aid on total 90-day net payoff summed over
+the episode's registered cases, averaged equally across a crossed
+evidence-provision assignment. The primary target is the mean episode
+total at the prespecified cohort definition, not a mean among completed
+purchases. Report case-weighted results secondarily. Unequal episode
+size and any weighting are frozen before assignment.
+
+If defensible monetary bounds are incomplete, the primary estimand is
+interval valued. Declare a favorable welfare effect only when its lower
+confidence bound is positive across the prespecified admissible
+valuation set. A faster queue with worse total expected payoff is not a
+successful treatment.
+
+Secondary confirmatory family, with Holm adjustment across seven
+contrasts: evidence provision effect on total payoff; aid-by-evidence
+interaction on total payoff; aid effect on all-worker analysis minutes;
+aid effect on summed unresolved case-hours through day 90; aid effect on
+cases completed by day 30; aid effect on expired cases; aid effect on
+total rework and switching expenditure through day 90. Case reversal
+rates and mechanism interactions are exploratory and explicitly labeled.
+
+\section{P.2 Feasibility and
+eligibility}\label{p.2-feasibility-and-eligibility}
+
+Seek a partner with routine, non-safety-critical procurement decisions,
+reliable intake for purchases and rejections, logged evidence requests,
+a shared analyst roster, verified quote expiry, and linked operational
+outcomes. Exclude safety-critical, legally mandated, personnel,
+emergency, and strategic high-value reviews. The partner defines
+exposure caps, authority limits, and reversible-action terms before
+enrollment. No such caps are invented here.
+
+A read-only feasibility audit must establish: the actual shared-resource
+boundary; how managers currently claim priority; whether immediate
+action really avoids analyst use; packet production durations; existing
+mandatory reviews; rejected/unresolved intake coverage; capacity window
+commitments; and spillovers to adjacent queues. If terminal approval
+itself uses the same scarce reviewer, the two-slot research-only model
+does not fit without redesign. Record that mismatch rather than silently
+treating both services as the same.
+
+Public BPI Challenge 2019 organizer documentation verifies a
+procurement-process event-log candidate. Repository/file access and
+license were not verified; no schema or rows were analyzed. It lacks a
+verified research-queue mapping in this work. It may inform process
+measurement if later accessed under its actual terms, but cannot
+identify the treatment effect without intake, resource links, and
+economic outcomes.
+
+\section{P.3 Design and treatments}\label{p.3-design-and-treatments}
+
+Use a parallel 2-by-2 design at the whole independent analyst-pool
+level. If too few pools exist, consider randomly assigned pool-period
+blocks only after demonstrating feasible washout and tracking all
+carryover cases; this changes assumptions and requires a new
+registration. Do not randomize individual cases independently in one
+shared queue and then assume no interference.
+
+Evidence factor: provide one frozen incremental packet for each eligible
+case, versus existing information. Packet production time, source costs,
+and worker effort count in the resource ledger. Keep purchasing
+alternatives, legal information, price opportunities, and formal
+authority comparable. Display design is held constant conditional on
+provided facts. A compressed-display substudy, if later chosen, must
+preserve accessible content and has an attention estimand rather than an
+acquisition estimand.
+
+Scheduling factor: offer a queue-level opportunity-loss aid versus
+existing priority practice. At a review point, the aid records for each
+case: current best action; available incremental experiment; credible
+expected action improvement; acquisition time; option to act
+immediately; consequences of waiting; quote expiry; recoverability; and
+the identity of other cases displaced by the next analyst slot. It
+distinguishes a research value estimate from a deferral-loss estimate.
+It displays a proposed research order and explicit act-now or
+retain-for-later decisions, with documented overrides.
+
+Record prespecified cross-case prior links, signal-source identities,
+posterior revisions in both cases, and whether an already researched
+case remains unresolved to receive another case's signal. Do not infer
+independence merely from separate case records. Correlated episodes
+require a joint prior and signal model; applying the independent u-score
+to updated marginals is not justified. The final-slot information credit
+is a theoretical incentive calculation, not an authorized transfer
+treatment.
+
+In verified independent two-case one-packet episodes, the aid can
+calculate b, w, and u under transparent parameter inputs. In larger
+queues it is only a documented scheduling recommendation, not a
+theorem-backed globally optimal index. Uncertain inputs must produce
+sensitivity ranges, not a falsely precise rank. Record when ranks are
+indeterminate over the full uncertainty set.
+
+The offered aid does not implement real marginal incentives
+automatically. No effect is labeled a toll-mechanism treatment effect.
+If management later authorizes actual internal charges, register a
+distinct arm specifying who pays, when, whether later service is
+uncharged, whether the charge changes the marginal budget, and whether
+the analyst's priority right is enforceable. A generic charge per minute
+is not the posted first-slot charge in Theorem 3. No actual charge,
+binding deadline, or authorization change is part of the present study.
+
+\section{P.4 Interference and
+identification}\label{p.4-interference-and-identification}
+
+Treatment directly changes delay on other cases; that spillover is the
+mechanism. The primary total episode payoff includes it. Randomization
+identifies the policy-offer effect if cohort registration is unaffected
+by assignment, outcomes are measured comparably, and cross-pool
+spillovers or carryover are either negligible or included in a
+prespecified exposure design.
+
+Use staffing and resource rosters to identify shared analysts,
+reviewers, vendors, stock constraints, and work redirected outside the
+pool. Log both treated and displaced cases, including unserved requests.
+Estimate exploratory effects by exposure to treated competing cases, but
+do not call those causal direct effects without a registered
+interference model. If resource sharing is organization-wide, the
+independent-pool design may be infeasible. The correct response is
+redesign, not inflated apparent sample size.
+
+Analyze with a saturated factorial regression or assignment-based
+contrast at episode level, retaining randomization strata and frozen
+baseline load, case mix, and holding exposure covariates. If episodes
+repeat within pools, inference clusters at the assignment pool. Use
+randomization inference consistent with the actual assignment, with
+small-cluster robust inference as a companion. Define the aid main
+contrast as equally averaged across the two evidence levels.
+
+Do not control in the main regression for post-treatment completed-case
+status, evidence requested/opened, research minutes, priority rank, or
+elapsed time. These are mediators/outcomes. Pre-treatment difficulty
+measures include novelty, baseline available evidence, stakes, number of
+alternatives, resource requirement, approval layers, and time
+sensitivity.
+
+The mechanism prediction is that changing priority rights or accounting
+for a rival's deferral loss matters most when local and joint orderings
+disagree. Define disagreement using frozen pre-treatment inputs and a
+documented valuation uncertainty set. Larger effects in queues with
+split budgets or severe load are descriptive heterogeneity unless those
+features are randomly manipulated. A future randomized display of
+verified competing-case costs could sharpen a mechanism test while
+holding the focal packet fixed.
+
+\section{P.5 Data dictionary and
+timing}\label{p.5-data-dictionary-and-timing}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Variable
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Definition and units
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Source/timing
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Main concern
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+pool\_id & All cases sharing analyst capacity & Baseline roster & Hidden
+shared workers \\
+episode\_id & Frozen cohort and capacity window & Intake before
+assignment & Selective episode construction \\
+case\_id & Unique decision, bundled lines resolved & Intake &
+Split/duplicate cases \\
+eligible & Pre-treatment inclusion rule & Intake attributes & Strategic
+exclusions \\
+assigned\_E, assigned\_S & Evidence/aid assignments & Randomization
+ledger & Offer versus uptake \\
+competing\_ids & Cases displaced by a requested slot & Resource ledger &
+Unrecorded opportunity loss \\
+priority\_owner & Existing first-slot right and override authority &
+Baseline process & Informal authority \\
+analyst\_available & Research capacity by slot and worker & Staffing log
+& Capacity altered by treatment \\
+request\_time & First research/decision intake & System log &
+Backdating \\
+research\_start\_end & Work on each experiment & Work log/time sample &
+Offline work \\
+passive\_exposure & Unresolved waiting time without own research &
+Derived log & Calendar time versus active effort \\
+action\_time\_type & Purchase, reject, expire, or unresolved &
+Authorization/terms & Missing rejections \\
+expiry\_time\_terms & Verified quote/opportunity expiry and extension &
+Vendor terms & Endogenous extension \\
+prior\_risk & Frozen uncertainty assessment & Pre-treatment rubric &
+Unvalidated probabilities \\
+packet\_quality & Likelihood/precision evidence where estimable &
+External historical validation & Availability not use \\
+stakes\_recovery & Documented action loss and recoverable share/cost &
+Baseline contracts & Recovery treated as free \\
+all\_worker\_minutes & Focal and displaced workers' active time & Linked
+work sampling & Unobserved displacement \\
+terminal\_net\_value & Realized action margin before other exclusive
+costs & Finance/operations & Missing unchosen outcome \\
+rework\_switching & Downstream corrections, reversal and replacement
+cost & 90-day follow-up & Delayed posting \\
+residual\_holding & Cost schedule not counted in margins/expiration &
+Independent costing & Double counting \\
+cost\_bounds & Justified lower/upper costs and dependencies & Before
+outcomes & Favorable valuation selection \\
+unresolved\_90 & Registered case still open at day 90 & Follow-up &
+Completer selection \\
+episode\_bounds & Sum of all case and resource payoff bounds & Derived
+ledger & Omitted cases and external work \\
+\end{longtable}
+
+This is a proposed schema, not verified columns from a firm dataset.
+Independent validation is needed before treating stated confidence as a
+calibrated prior or a packet's quality as a likelihood. Data
+availability, precision, actual evidence use, capacity rights, and
+outcomes are distinct variables.
+
+\section{P.6 Welfare ledger, missing outcomes, and bounded
+costs}\label{p.6-welfare-ledger-missing-outcomes-and-bounded-costs}
+
+Each resource cost and consequence has one ledger category. Acquisition
+expense counts actual production and analyst work once. Holding exposure
+counts residual lost capacity or operating costs not already counted in
+action margin or expiration losses. Expired cases have no realized
+opportunity payoff under the literal model, but real organizations may
+retain salvage; the field ledger must use verified institutional terms
+instead. Transfers for hypothetical internal priority charges are
+excluded from organization-wide payoff.
+
+The theoretical externality u\_j is not added to observed downstream
+loss. It is an opportunity-cost comparison used to schedule; realized
+policy payoff already includes the rival case. Adding both would double
+count. Likewise, a nominal time saving is not necessarily cash savings;
+report physical minutes and scarce-capacity shadow-price bounds
+separately.
+
+At a fixed implemented policy, mean payoff is evaluated for all enrolled
+cases over the same horizon. Random assignment identifies total realized
+policy value without observing every unchosen supplier's quality. It
+does not identify decision-specific regret relative to an oracle. Common
+independent ex post market information may support a secondary quality
+measure only under a validated mapping to economic outcomes.
+
+Report unresolved and missing-payoff fractions by arm. Never compare
+mean delay only among completed cases. Sum restricted case-hours through
+the fixed horizon, with explicit rejection treated as resolution and
+expiration as a competing event. If missing case payoff is
+institutionally bounded by {[}L\_i,U\_i{]}, use those bounds. Without
+defensible limits, do not assign zero or simulate informative losses.
+Report worst-case mean contrasts and sensitivity to missingness. MAR
+imputation may be secondary only with assumptions stated.
+
+For fixed policy z and known non-delay primitives, uncertain residual
+costs give \(W_z=A_z-\sum_i d_iT_{iz}\). Endpoint bounds hold that
+policy and the full signal/reward/expiration model fixed. They do not
+establish robustness to model error. With uncertain priors, recovery,
+precision, or hazards, define a full joint uncertainty set with
+documented dependencies and recompute every candidate policy contrast.
+Require uniform nonnegative lower comparison for a certified ordering;
+otherwise report ambiguity. No such real-data uncertainty set is
+currently estimated.
+
+\section{P.7 Precision and feasibility
+planning}\label{p.7-precision-and-feasibility-planning}
+
+Illustrative arithmetic only: with 120 genuinely independent analyst
+pools, 20 episodes per pool, balanced four-cell assignment, and
+episode-payoff ICC .05, the design effect is 1+19(.05)=1.95. The
+normal-approximation 80\% power, two-sided 5\% aid-main-effect MDE is
+\((1.96+.84)\sqrt{4(1.95)/2400}=.160\) episode-payoff standard
+deviations. The corresponding factorial interaction MDE is .319 SD. At
+ICC 0 and .10, main-effect MDEs are .114 and .195 SD. These are
+hypothetical pools and episodes, not observed sample sizes, variances,
+or power estimates.
+
+The independent assignment unit must be real. Twenty cases in one
+episode are not twenty independent queue experiments, and repeated
+episodes with the same analyst require clustered inference. Unequal
+episodes, fewer pools, carryover, uptake failures, and wide payoff
+bounds worsen precision. Final power requires a partner's baseline
+outcome variance, ICC, assignment structure, and economically meaningful
+currency or capacity effect, followed by simulation under the actual
+design. None is available.
+
+A feasibility pilot measures only nuisance quantities and operational
+limits, not a treatment-effect-driven outcome choice. Freeze final
+enrollment, cohort rules, hypotheses, valuation bounds, and analysis
+dates before examining treatment outcomes. No unadjusted repeated
+p-value peeking is planned. Any confirmatory interim analysis requires a
+separately registered alpha-spending or always-valid method.
+
+Go/no-go gates: complete intake; real independent capacity pools;
+auditable priority rights; comparable alternatives and capacity; bounded
+stakes; linked all-case outcomes; displaced-work coverage; and
+institutional authorization. Failure triggers redesign rather than a
+nominal larger N.
+
+\section{P.8 Unpopulated reporting
+template}\label{p.8-unpopulated-reporting-template}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Assignment
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Registered episodes
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+All cases
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Unresolved fraction
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Total minutes
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Payoff lower/upper
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Standard packet, local order & Not observed & Not observed & Not
+observed & Not observed & Not observed \\
+Added packet, local order & Not observed & Not observed & Not observed &
+Not observed & Not observed \\
+Standard packet, queue aid & Not observed & Not observed & Not observed
+& Not observed & Not observed \\
+Added packet, queue aid & Not observed & Not observed & Not observed &
+Not observed & Not observed \\
+\end{longtable}
+
+No empirical estimates, assignments, p-values, or implemented
+organizational outcomes are supplied. Synthetic model results belong to
+the theory section only.
+
+The two-credit result is theoretical only. A future feasibility audit
+could distinguish expected internal credit authorization from gross
+pathwise funding capacity and verify that research and the specified
+public signal history are observable. It supplies no authorization to
+pay credits or add an experimental treatment, and no real transfer data
+exist.
+
+\end{document}
